@@ -342,14 +342,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- Stylesheets -->
-<link href="analyze2/css/bootstrap.min.css" rel="stylesheet">
-<link href="analyze2/css/bootstrap-responsive.min.css" rel="stylesheet">
-<link href="analyze2/css/style.css" rel="stylesheet">
-<link href="analyze2/css/font-awesome.min.css" rel="stylesheet">
-<link rel="stylesheet" href="css/main.css">
-<link rel="stylesheet" href="css/normalize.css">
-<link rel="stylesheet" href="css/layout.css">
-<link href="analyze2/css/localseov3.css" rel="stylesheet">
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+<link href="assets/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/normalize.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link href="assets/css/localseov3.css" rel="stylesheet">
 
 <link href='http://fonts.googleapis.com/css?family=Alef:400,700' rel='stylesheet' type='text/css'>
 <!--[if lt IE 9]>
@@ -359,12 +359,12 @@
 <link href='http://fonts.googleapis.com/css?family=Alef:400,700' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 
-<script src="analyze2/js/jquery.min.js"></script>
-<script src="analyze2/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
 
-<script type='text/javascript' src="analyze2/js/bootstrap-progressbar.js"></script>
+<script type='text/javascript' src="assets/js/bootstrap-progressbar.js"></script>
 <!--[if IE]><script type="text/javascript" src="js/excanvas.js"></script><![endif]-->
-<script src="analyze2/js/jquery.knob.js"></script>
+<script src="assets/js/jquery.knob.js"></script>
     <script>
     $(function($) {
     $(".knob").knob();
@@ -608,13 +608,13 @@
                                 <input type="radio" name="logo" value="localseo"
                                     <?php if ((isset($_SESSION['logo']) && $_SESSION['logo'] == "localseo") || !isset($_SESSION['logo'])) echo ' checked' ?>
                                 >
-                                <img src="analyze2/img/logoPdf.png" height="75" />
+                                <img src="assets/img/logoPdf.png" height="75" />
                             </label>
                             <label class="radio-inline">
                                 <input type="radio" name="logo" value="nativerank"
                                     <?php if (isset($_SESSION['logo']) && $_SESSION['logo'] == "nativerank") echo ' checked' ?>
                                 >
-                                <img src="analyze2/img/nativerank_logo.png" height="75" />
+                                <img src="assets/img/nativerank_logo.png" height="75" />
                             </label>
                         </div>
                         <div class="input-group">
@@ -671,8 +671,8 @@
 		<div class="container hidden-pull-down"></div>
 		<?php include ('footer.php'); ?>
 	</div>
-	<script src='analyze2/js/smooth-scroll.js'></script>
-    <script src="analyze2/js/shevron.js"></script>
+	<script src='assets/js/smooth-scroll.js'></script>
+    <script src="assets/js/shevron.js"></script>
 	<script>
 		smoothScroll.init({
 			speed: 500,

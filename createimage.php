@@ -33,7 +33,8 @@ class WebsiteToImage
                     //}
             }
         }
-        return 'analyze2/'.$url;
+        // return 'analyze2/'.$url;
+        return $url;
     }
     public function getMainScreenShot(){
         $url = $this->_outputFile;
@@ -48,7 +49,8 @@ class WebsiteToImage
                 }
             }
         }
-        return 'analyze2/'.$url;
+        // return 'analyze2/'.$url;
+        return $url;
     }
     public function start()
     {

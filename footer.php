@@ -30,7 +30,18 @@
 						</div>
 						<div class="social_icon">
 						<h3>CONNECT WITH US</h3>
-							<a href="http://www.facebook.com/Localseocom" target="_blank"><img src="img/fb.png"></a>&nbsp;<a href="https://twitter.com/LocalSE0" target="_blank"><img src="img/twitter.png"></a>&nbsp;<a href="http://www.linkedin.com/company/2775414?trk=tyah" target="_blank"><img src="img/linked.png"></a>&nbsp;<a href="https://plus.google.com/110774817634613390977/posts" target="_blank"><img src="img/google.png"></a>
+							<a href="http://www.facebook.com/Localseocom" target="_blank">
+								<img src="assets/img/fb.png">
+							</a>&nbsp;
+							<a href="https://twitter.com/LocalSE0" target="_blank">
+								<img src="assets/img/twitter.png">
+							</a>&nbsp;
+							<a href="http://www.linkedin.com/company/2775414?trk=tyah" target="_blank">
+								<img src="assets/img/linked.png">
+							</a>&nbsp;
+							<a href="https://plus.google.com/110774817634613390977/posts" target="_blank">
+								<img src="assets/img/google.png">
+							</a>
 						</div>
 						<div class="clear"></div>
 						<p class="copy">Copyright © 2014 Local SEO. All rights reserved.</p>
