@@ -1,5 +1,5 @@
 <?php
-require_once '../../PHPThumb/vendor/autoload.php';
+require_once 'PHPThumb/vendor/autoload.php';
 class WebsiteToImage
 {
     const FORMAT_JPG  = 'jpg';

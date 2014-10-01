@@ -113,7 +113,7 @@ if (isset($_POST["url"])) {
         $_SESSION['pdfName'] = 'tmp/html/'.date("ymd_his", time()).rand(1,500);
         require_once('../../createimage.php');
         $websiteToImage = new WebsiteToImage();
-        $_SESSION['img'] = $websiteToImage->setProgramPath('./wkhtmltoimage')->setOutputFile()->setUrl($url)->start()->getMainScreenShot();
+        $_SESSION['img'] = $websiteToImage->setProgramPath('../../wkhtmltoimage')->setOutputFile()->setUrl($url)->start()->getMainScreenShot();
     } else if($serv == 'getWOT') {
         require_once('WOT.php');
         $wot = new WOT($url);
