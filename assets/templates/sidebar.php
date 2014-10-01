@@ -66,7 +66,7 @@
 
 <div class="accordion-group">
 	<div class="panel-heading sidebar-head websitereview optimizesite">
-		<a data-scroll href="/analyze2/getPdf.php">
+		<a data-scroll href="/Services/NATIVERANK/getPdf.php">
 		<span class="fa fa-star star-sidebar pull-left"></span>
 		<div class="headingtext">GET PDF</div></a>
 	</div>
@@ -79,7 +79,7 @@
     	url = $('#domainInput').val();
         $.ajax({
             type: "POST",
-            url: "analyze2/service.php",
+            url: "/Services/NATIVERANK/service.php",
             data: "url="+url+"&service=clean",
             success: function(msg){
                 location.reload();

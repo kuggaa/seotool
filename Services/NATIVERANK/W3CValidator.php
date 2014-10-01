@@ -1,5 +1,5 @@
 <?php
-require_once 'Services/W3C/HTMLValidator.php';
+require_once '../W3C/HTMLValidator.php';
 
 class W3CValidator {
 

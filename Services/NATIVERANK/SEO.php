@@ -1,5 +1,5 @@
 <?php
-require_once realpath(__DIR__ . '/SEOstats/vendor/autoload.php');
+require_once '../../SEOstats/vendor/autoload.php';
 use \SEOstats\Services\Alexa as Alexa;
 //class AlocateSeostatException extends Exception {}
 

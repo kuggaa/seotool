@@ -16,7 +16,7 @@
 /**
  * Extends from the Message class
  */
-require_once 'Services/W3C/HTMLValidator/Message.php';
+require_once 'Message.php';
 
 /**
  * The message class holds an error response from the W3 validator.

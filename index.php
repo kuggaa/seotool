@@ -385,9 +385,9 @@
 		<div id="mobileClass"></div>
 		<div class="container hidden-pull"></div>
         <?php if (!is_null($url)): ?>
-            <?php include ('analyze2/sidebar-sm.php'); ?>
-            <?php include ('analyze2/sidebar-smm.php'); ?>
-            <?php include ('analyze2/sidebar-xs.php'); ?>
+            <?php include ('assets/templates/sidebar-sm.php'); ?>
+            <?php include ('assets/templates/sidebar-smm.php'); ?>
+            <?php include ('assets/templates/sidebar-xs.php'); ?>
         <?php endif; ?>
         <script>
             var url;
@@ -411,12 +411,12 @@
                 }
                 $.ajax({
                     type: "POST",
-                    url: "analyze2/service.php",
+                    url: "/Services/NATIVERANK/service.php",
                     data: "url="+url+"&service=clean",
                     success: function(msg){
                         $.ajax({
                             type: "POST",
-                            url: "analyze2/service.php",
+                            url: "/Services/NATIVERANK/service.php",
                             data: "url="+url+"&service=start&userName="+userName+"&userEmail="+userEmail+"&userPhone="+userPhone+"&logo="+logo+
                                 "&competitorsType="+competitorsType+"&competitor1="+competitor1+"&competitor2="+competitor2+"&competitor3="+competitor3,
                             success: function(msg){
@@ -437,7 +437,7 @@
                     var serviceNameString = array[i];
                     $.ajax({
                         type: "POST",
-                        url: "analyze2/service.php",
+                        url: "/Services/NATIVERANK/service.php",
                         data: "url="+url+"&service="+array[i],
                         success: function(msg) {
                             if (msg == "")
@@ -457,7 +457,7 @@
                                     if (competitorsType) {
                                         $.ajax({
                                             type: "POST",
-                                            url: "analyze2/service.php",
+                                            url: "/Services/NATIVERANK/service.php",
                                             data: "url="+url+"&service=competitors",
                                             success: function(msg){
                                                 checkCompetitors(msg);
@@ -484,7 +484,7 @@
                                         }
                                         $.ajax({
                                             type: "POST",
-                                            url: "analyze2/service.php",
+                                            url: "/Services/NATIVERANK/service.php",
                                             data: urlCompetitor,
                                             success: function(msg){
                                                 checkCompetitorsManual(result);
@@ -503,10 +503,10 @@
                 if (result == 0){
                     $.ajax({
                         type: "POST",
-                        url: "analyze2/service.php",
+                        url: "/Services/NATIVERANK/service.php",
                         data: "url="+url+"&service=finish",
                         success: function(msg){
-                            window.location.href = 'SEOTool.php';
+                            window.location.href = 'index.php';
                         }
                     });
                     return;
@@ -515,7 +515,7 @@
                 for(var i = 0; i < result; i++){
                     $.ajax({
                         type: "POST",
-                        url: "analyze2/service.php",
+                        url: "/Services/NATIVERANK/service.php",
                         data: "url="+url+"&service=competitor"+i,
                         success: function(msg){
                             counter++;
@@ -523,10 +523,10 @@
                             if(counter == result) {
                                 $.ajax({
                                     type: "POST",
-                                    url: "analyze2/service.php",
+                                    url: "/Services/NATIVERANK/service.php",
                                     data: "url="+url+"&service=finish",
                                     success: function(msg){
-                                        window.location.href = 'SEOTool.php';
+                                        window.location.href = 'index.php';
                                     }
                                 });
                             }
@@ -539,10 +539,10 @@
                 if (result == 0){
                     $.ajax({
                         type: "POST",
-                        url: "analyze2/service.php",
+                        url: "/Services/NATIVERANK/service.php",
                         data: "url="+url+"&service=finish",
                         success: function(msg){
-                            window.location.href = 'SEOTool.php';
+                            window.location.href = 'index.php';
                         }
                     });
                     return;
@@ -550,7 +550,7 @@
                 for(var i = 0; i < result; i++){
                     $.ajax({
                         type: "POST",
-                        url: "analyze2/service.php",
+                        url: "/Services/NATIVERANK/service.php",
                         data: "url="+url+"&service=competitor"+i,
                         success: function(msg){
                             counter++;
@@ -558,10 +558,10 @@
                             if(counter == result) {
                                 $.ajax({
                                     type: "POST",
-                                    url: "analyze2/service.php",
+                                    url: "/Services/NATIVERANK/service.php",
                                     data: "url="+url+"&service=finish",
                                     success: function(msg){
-                                        window.location.href = 'SEOTool.php';
+                                        window.location.href = 'index.php';
                                     }
                                 });
                             }
@@ -661,10 +661,10 @@
 		<div id="main-container">
             <?php if (!is_null($url) && !is_null($finish)): ?>
                 <div class="col-md-4 visible-desktop">
-    			<?php include ('analyze2/sidebar.php'); ?>
+    			<?php include ('assets/templates/sidebar.php'); ?>
                 </div>
                 <div class="col-md-8">
-    			<?php include ('analyze2/content.php'); ?>
+    			<?php include ('assets/templates/content.php'); ?>
                 </div>
             <?php endif; ?>
 		</div>

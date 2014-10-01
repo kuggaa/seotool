@@ -111,7 +111,7 @@ if (isset($_POST["url"])) {
         $_SESSION['checkLang'] = $output['checkLang'] = $pageParser->checkLang();
         $_SESSION['checkMetaCharset'] = $output['checkMetaCharset'] = $pageParser->checkMetaCharset();
         $_SESSION['pdfName'] = 'tmp/html/'.date("ymd_his", time()).rand(1,500);
-        require_once('createimage.php');
+        require_once('../../createimage.php');
         $websiteToImage = new WebsiteToImage();
         $_SESSION['img'] = $websiteToImage->setProgramPath('./wkhtmltoimage')->setOutputFile()->setUrl($url)->start()->getMainScreenShot();
     } else if($serv == 'getWOT') {
