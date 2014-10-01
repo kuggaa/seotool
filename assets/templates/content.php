@@ -260,7 +260,7 @@
 								$Or = numberFormat($value['domainRank']['Or']);
 								$Ot = numberFormat($value['domainRank']['Ot']);
 							?>
-							<? 
+							<?php
 								switch ($i) {
 									case 1:
 										echo "[{$value['domainRank']['Or']}, null, null, null, {$value['domainRank']['Ot']}, '{$parsed["host"]}', createCustomHTMLContent('{$parsed["host"]}', '{$Or}', '{$Ot}'),";
