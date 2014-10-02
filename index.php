@@ -2,6 +2,7 @@
     session_start();     
     error_reporting(E_ERROR);
     $_SESSION['type'] = 'private';
+    $_SESSION['logo'] == "nativerank";
     $url =  $_SESSION['url'];
     $finish =  $_SESSION['finish'];
     /*if (!$url) {
@@ -64,7 +65,7 @@
         }
     }
     
-    function test_reputation($rep){
+    function test_reputation($rep){ 
         if($rep >= 80)return 'Excellent';
         if($rep >= 60 && $rep < 80)return 'Good';
         if($rep >= 40 && $rep < 60)return 'Unsatisfactory';
@@ -586,12 +587,12 @@
                                 <?php if (isset($userPhone)) echo ' value="'.$userPhone.'"' ?>
                             >
                         </div>
-                        <div class="input-group competitorsdata-container competitorsdata-container-checked">
+                        <div class="input-group competitorsdata-container">
                             <span class="input-group-addon competitors-checkbox">
-                                <input type="checkbox" id="competitors_checkbox" name="competitorsType" 
+                                <!-- <input type="checkbox" id="competitors_checkbox" name="competitorsType" 
                                     <?php if (!isset($competitorsType) || $competitorsType == "true") echo ' checked' ?>
-                                >
-                                Competitors: <span id="competitors_type">SEMrush</span>
+                                > -->
+                                Competitors:
                             </span>
                             <input class="form-control competitorsdata" type="text" name="competitor1" placeholder="Competitor #1 URL"
                                 <?php if (isset($competitor1)) echo ' value="'.$competitor1.'"' ?>
@@ -602,20 +603,6 @@
                             <input class="form-control competitorsdata" type="text" name="competitor3" placeholder="Competitor #3 URL"
                                 <?php if (isset($competitor3)) echo ' value="'.$competitor3.'"' ?>
                             >
-                        </div>
-                        <div class="input-group center">
-                            <label class="radio-inline">
-                                <input type="radio" name="logo" value="localseo"
-                                    <?php if ((isset($_SESSION['logo']) && $_SESSION['logo'] == "localseo") || !isset($_SESSION['logo'])) echo ' checked' ?>
-                                >
-                                <img src="assets/img/logoPdf.png" height="75" />
-                            </label>
-                            <label class="radio-inline">
-                                <input type="radio" name="logo" value="nativerank"
-                                    <?php if (isset($_SESSION['logo']) && $_SESSION['logo'] == "nativerank") echo ' checked' ?>
-                                >
-                                <img src="assets/img/nativerank_logo.png" height="75" />
-                            </label>
                         </div>
                         <div class="input-group">
                             <input class="form-control" id="domainInput" type="text" name="url" placeholder="domain.com"
@@ -628,24 +615,6 @@
 					</form>
 				</div>
 			</div>
-        <script>
-            $("#competitors_checkbox").change(function() {
-                if(this.checked) {
-                    $(".competitorsdata-container").addClass("competitorsdata-container-checked");
-                    $("#competitors_type")[0].innerHTML = "SEMrush";
-                } else {
-                    $(".competitorsdata-container").removeClass("competitorsdata-container-checked");
-                    $("#competitors_type")[0].innerHTML = "Manual";
-                }
-            });
-            if($("#competitors_checkbox")[0].checked) {
-                $(".competitorsdata-container").addClass("competitorsdata-container-checked");
-                $("#competitors_type")[0].innerHTML = "SEMrush";
-            } else {
-                $(".competitorsdata-container").removeClass("competitorsdata-container-checked");
-                $("#competitors_type")[0].innerHTML = "Manual";
-            }
-        </script>
             <div class="row">
                 <div class="progressbarmaintext hide">Analyzing your site!</div>
                 <div id="progressbarmain" class="hide">
