@@ -108,7 +108,7 @@
                 </div>
                 
                 <div class="col-md-3 col-sm-3 col-xs-0 col-md-offset-0 col-sm-offset-1 display-image main-preview hidden-phone">
-                    <img class="apple-display" width="191px" src="../../../<?php echo $img ?>" alt="preview">
+                    <img class="apple-display" width="191px" src="<?php echo $img ?>" alt="preview">
                 </div>
             </div>
           </div>
@@ -149,7 +149,7 @@
                     <?php endforeach ?>
                     <?php foreach ($allstat as $key=>$value): ?>
                         <tr>
-                            <td style="width:80px;"><img src="../../../<?php echo $value['img'] ?>" width="70px"/></td>
+                            <td style="width:80px;"><img src="<?php echo $value['img'] ?>" width="70px"/></td>
                             <?php $compUrls = parse_url($key); ?>
                             <td><a href="<?php echo $key ?>" target="_blank"><?php echo $compUrls['host'] ?></a></td>
                             <td><?php echo $value['getGoogleToolbarPageRank'] ?></td>
