@@ -89,6 +89,11 @@ input, select, textarea {
 	margin-right: auto;
 	position: relative;
 }
+
+.logo img {
+    height: 70px;
+    margin-top: -10px;
+}
 .shade {
 }
 .flt-l {
@@ -116,7 +121,7 @@ input, select, textarea {
 /*HEADER*/
 
 header {
-	height: 120px;
+	height: 90px;
 	position: relative;
 	padding-top: 20px;
 }
