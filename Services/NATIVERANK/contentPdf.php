@@ -315,7 +315,7 @@
         </div>
     <?php endif ?>
 
-<?php include ('panels.php'); ?>
+<?php include ('../../assets/templates/panels.php'); ?>
 
     <div class="row">
         <div class="panel" id="overall-perf">
