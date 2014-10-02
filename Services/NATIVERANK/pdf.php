@@ -292,35 +292,35 @@
 <meta name="description" content="Local SEO offers local SEO services to small and medium business. Our Local SEO services can help any local business acquire new customers through digital marketing, Google Local business marketing, small business SEO and online directories.">
 
 <!-- Stylesheets -->
-<link href="../../css/bootstrap.min.css" rel="stylesheet" media="all">
-<link href="../../css/bootstrap-responsive.min.css" rel="stylesheet" media="all">
-<link href="../../css/font-awesome.min.css" rel="stylesheet" media="all">
-<link href="../../css/localseov3PDF.css" rel="stylesheet" media="all">
+<link href="../../assets/css/bootstrap.min.css" rel="stylesheet" media="all">
+<link href="../../assets/css/bootstrap-responsive.min.css" rel="stylesheet" media="all">
+<link href="../../assets/css/font-awesome.min.css" rel="stylesheet" media="all">
+<link href="../../assets/css/localseov3PDF.css" rel="stylesheet" media="all">
 
 <style type="text/css" media="all">
     @font-face {
         font-family: 'Alef' !important;
         font-style: normal !important;
         font-weight: 400 !important;
-        src: local('Alef Regular'), local('Alef-Regular'), url('../../fonts/Alef400.woff') format('woff') !important;
+        src: local('Alef Regular'), local('Alef-Regular'), url('../../assets/fonts/Alef400.woff') format('woff') !important;
     }
     @font-face {
         font-family: 'Alef' !important;
         font-style: normal !important;
         font-weight: 700 !important;
-        src: local('Alef Bold'), local('Alef-Bold'), url('../../fonts/Alef700.woff') format('woff') !important;
+        src: local('Alef Bold'), local('Alef-Bold'), url('../../assets/fonts/Alef700.woff') format('woff') !important;
     }
     @font-face {
         font-family: 'Oswald' !important;
         font-style: normal !important;
         font-weight: 400 !important;
-        src: local('Oswald Regular'), local('Oswald-Regular'), url('../../fonts/Oswald.woff') format('woff') !important;
+        src: local('Oswald Regular'), local('Oswald-Regular'), url('../../assets/fonts/Oswald.woff') format('woff') !important;
     }
 </style>
 
-<script src="../../js/jquery.min.js"></script>
-<script src="../../js/bootstrap-progressbar.js"></script>
-<script src="../../js/jquery.knob.js"></script>
+<script src="../../assets/js/jquery.min.js"></script>
+<script src="../../assets/js/bootstrap-progressbar.js"></script>
+<script src="../../assets/js/jquery.knob.js"></script>
 <script>
     $(function($) {
         $(".knob").knob();
@@ -395,11 +395,11 @@
 <body style="width:770px;">
     <div style="color:#000;background-color: #EBEBEC;margin-left:15px;margin-right:15px;">
         <?php if ($_SESSION['logo'] == 'nativerank'): ?>
-            <img src="../../img/nativerank_logo.png" style="float:left" height="75"/>
+            <img src="../../assets/img/nativerank_logo.png" style="float:left" height="75"/>
         <?php else: ?>
-            <img src="../../img/logoPdf.png" style="float:left" height="75"/>
+            <img src="../../assets/img/logoPdf.png" style="float:left" height="75"/>
         <?php endif; ?>
-        <span style="float:right; background: url(../../img/phonePdf.png) no-repeat scroll left center rgba(0, 0, 0, 0); color: #C90D0D; font-weight: 700; font-family: 'Alef',sans-serif;padding-left: 24px;margin-top: 25px;">
+        <span style="float:right; background: url(../../assets/img/phonePdf.png) no-repeat scroll left center rgba(0, 0, 0, 0); color: #C90D0D; font-weight: 700; font-family: 'Alef',sans-serif;padding-left: 24px;margin-top: 25px;">
         <?php if ($_SESSION['logo'] == 'nativerank'): ?>
             1 800-520-8850
         <?php else: ?>
