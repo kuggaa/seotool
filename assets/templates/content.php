@@ -79,7 +79,7 @@
 				<div class="col-xs-4 col-xs-offset-1 visible-phone pull-right progress-bars-op pb-relative" style="width:200px;">
 					<div class="progress-bars">
 					<span class="progress-label-left"style="font-size: 18px;">Organic Site SEO:</span>
-					<span class="progress-label-right3" style="padding-left: 21%;"><?php echo getLetterScore($SEOScore) ?><!--<span style="font-size: 12px;">%</span>--></span>
+					<span class="progress-label-right3" style="padding-left: 0;"><?php echo getLetterScore($SEOScore) ?><!--<span style="font-size: 12px;">%</span>--></span>
 					<div class="progress bar-progress">
 				  		<div class="progress-bar bar-3" role="progressbar" style="width: <?php echo $SEOScore ?>%;">
 							<span class="sr-only"><?php echo $SEOScore ?>% Complete</span>
