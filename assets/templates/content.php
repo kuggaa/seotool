@@ -4,7 +4,7 @@
 		  <div class="panel-heading overal-performance-head">
 		  	<span class="fa fa-list-alt panel-iceo-awesome pull-left"></span>
 		  	<span class="visible-phone pull-left">Review</span>
-		  	<span class="hidden-phone pull-left">Website / Business Review</span>
+		  	<span class="hidden-phone pull-left">Digital Presence Report for </span>
 		  	<b class="donaimname"><?php echo $url ?></b>
 		  </div>
 		  <div class="panel-body overal-performance-body">
