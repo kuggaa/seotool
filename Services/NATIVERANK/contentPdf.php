@@ -25,7 +25,7 @@
                 
                 <div class="col-md-3 col-sm-3 col-md-offset-0 hidden-phone progress-bars-op">
                     <div class="progress-bars">
-                    <span class="progress-label-left">Organic SEO:</span>
+                    <span class="progress-label-left">Organic Site SEO:</span>
                     <span class="progress-label-right3"><?php echo getLetterScore($SEOScore) ?><!--<span style="font-size: 12px;">%</span>--></span>
                     <div class="progress bar-progress">
                         <div class="progress-bar bar-3" role="progressbar" style="width: <?php echo $SEOScore ?>%;">

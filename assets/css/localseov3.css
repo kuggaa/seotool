@@ -899,6 +899,7 @@ body .form-inline {
 	background: #90d03f;
 }
 .headingtext {
+	text-transform: uppercase;
 	position: relative;
 	bottom: 5px;
 	padding-left:60px;

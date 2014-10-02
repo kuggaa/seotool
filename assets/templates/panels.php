@@ -1,7 +1,7 @@
     <div class="row unbreakable">
         <div id="seo-panel" class="panel panel-default">
           <div class="heading-main section-heading section-heading-seo">
-                Organic SEO - Do you pass the test?
+                Organic Site SEO - Do you pass the test?
           </div>
           <div class="panel-body body-main">
             <div class="row">
@@ -39,8 +39,7 @@
                 </div>
                 <div class="col-md-9 col-sm-9">
                     <span class="body-text">
-                        The eight check's below investigate some of the most overlooked SEO items for your website.<br/>
-                        These eight item's could possibaly rocket you to the 1st page, or keep you buried.
+                        These eight check's investigate some of the basic items your business needs to succeed online. While these items are vital to your digital success there are only one small factor in your overall digital landscape.
                     </span>
                 </div>
             </div>
