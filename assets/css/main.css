@@ -514,10 +514,10 @@ header .menu {
 footer {
 	background: #ccc;
 	overflow: auto;
-	position: relative !important;
 	bottom: 0;
 	left: 0;
-	margin-top: 20px;/*    height: 305px;*/
+	position: absolute !important;
+	margin-top: 20px;
 }
 footer h2 {
 	text-align: center;
@@ -2132,14 +2132,6 @@ footer .cont-w {
 	height: inherit;
 	padding: 20px;
 	width: 88%;
-}
-footer {
-	background: none repeat scroll 0 0 #CCCCCC;
-	bottom: 0;
-	height: 770px;
-	left: 0;
-	overflow: hidden;
-	position: relative !important;
 }
 #nav > li:last-of-type > a {
 	border-radius: 0 0 0 0;
