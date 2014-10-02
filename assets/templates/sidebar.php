@@ -66,7 +66,7 @@
 
 <div class="accordion-group">
 	<div class="panel-heading sidebar-head websitereview optimizesite">
-		<a data-scroll href="/Services/NATIVERANK/getPdf.php">
+		<a data-scroll href="../../Services/NATIVERANK/getPdf.php">
 		<span class="fa fa-star star-sidebar pull-left"></span>
 		<div class="headingtext">GET PDF</div></a>
 	</div>
