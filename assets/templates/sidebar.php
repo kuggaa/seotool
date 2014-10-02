@@ -21,54 +21,65 @@
 <?php endif; ?>
 
 <div class="accordion-group">
-	<div class="panel-heading sidebar-head seo-review"><a class="accordion-toggle" data-scroll data-parent="#accordion" href="#seo-panel">
-	<span class="glyphicon glyphicon-chevron-right pull-right"></span>
-		<div class="headingtext">ORGANIC SITE SEO</div></a>
+	<div class="panel-heading sidebar-head seo-review">
+		<a class="accordion-toggle" data-scroll data-parent="#accordion" href="#seo-panel">
+			<span class="glyphicon glyphicon-chevron-right pull-right"></span>
+			<div class="headingtext">ORGANIC SITE SEO</div>
+		</a>
 	</div>
 </div>
 
 <div class="accordion-group">
-	<div class="panel-heading sidebar-head se-review"><a class="accordion-toggle" data-scroll data-parent="#accordion" href="#searchengines-panel">
-	<span class="glyphicon glyphicon-chevron-right pull-right"></span>
-		<div class="headingtext">SEARCH ENGINES</div></a>
+	<div class="panel-heading sidebar-head se-review">
+		<a class="accordion-toggle" data-scroll data-parent="#accordion" href="#searchengines-panel">
+			<span class="glyphicon glyphicon-chevron-right pull-right"></span>
+			<div class="headingtext">SEARCH ENGINES</div>
+		</a>
 	</div>
 </div>
 
 <div class="accordion-group">
-	<div class="panel-heading sidebar-head sm-review"><a class="accordion-toggle" data-scroll data-parent="#accordion" href="#social-panel">
-	<span class="glyphicon glyphicon-chevron-right pull-right"></span>
-		<div class="headingtext">SOCIAL MEDIA</div></a>
+	<div class="panel-heading sidebar-head se-review">
+		<a class="accordion-toggle" data-scroll data-parent="#accordion" href="#searchengines-panel">
+			<span class="glyphicon glyphicon-chevron-right pull-right"></span>
+			<div class="headingtext">Paid Search</div>
+		</a>
 	</div>
 </div>
 
 <div class="accordion-group">
-	<div class="panel-heading sidebar-head codereview"><a class="accordion-toggle" data-scroll data-parent="#accordion" href="#code-panel">
-	<span class="glyphicon glyphicon-chevron-right pull-right"></span>
-	<div class="headingtext">System Performance</div></a>
+	<div class="panel-heading sidebar-head sm-review">
+		<a class="accordion-toggle" data-scroll data-parent="#accordion" href="#social-panel">
+			<span class="glyphicon glyphicon-chevron-right pull-right"></span>
+			<div class="headingtext">SOCIAL MEDIA</div>
+		</a>
 	</div>
 </div>
 
-<!-- <div class="accordion-group">
-	<div class="panel-heading sidebar-head websitereview optimizesite">
-		<a data-scroll href="#">
-		<span class="fa fa-star star-sidebar pull-left"></span>
-		<div class="headingtext">OPTIMIZE THIS SITE!</div></a>
+<div class="accordion-group">
+	<div class="panel-heading sidebar-head codereview">
+		<a class="accordion-toggle" data-scroll data-parent="#accordion" href="#code-panel">
+			<span class="glyphicon glyphicon-chevron-right pull-right"></span>
+			<div class="headingtext">System Performance</div>
+		</a>
 	</div>
-</div> -->
+</div>
 
 <div class="accordion-group">
 	<div class="panel-heading sidebar-head websitereview optimizesite">
 		<a data-scroll href="#" onclick="ajax_clean();return false;">
-		<span class="fa fa-star star-sidebar pull-left"></span>
-		<div class="headingtext">Start Over</div></a>
+			<span class="fa fa-star star-sidebar pull-left"></span>
+			<div class="headingtext">Start Over</div>
+		</a>
 	</div>
 </div>
 
 <div class="accordion-group">
 	<div class="panel-heading sidebar-head websitereview optimizesite">
 		<a data-scroll href="../../Services/NATIVERANK/getPdf.php">
-		<span class="fa fa-star star-sidebar pull-left"></span>
-		<div class="headingtext">GET PDF</div></a>
+			<span class="fa fa-star star-sidebar pull-left"></span>
+			<div class="headingtext">GET PDF</div>
+		</a>
 	</div>
 </div>
 
