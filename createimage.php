@@ -54,30 +54,33 @@ class WebsiteToImage
     }
     public function start()
     {
+        
         $programPath = escapeshellcmd($this->_programPath);
         $outputFile  = escapeshellarg($this->_outputFile);
         $url         = escapeshellarg($this->_url);
         $format      = escapeshellarg($this->_format);
         $quality     = escapeshellarg($this->_quality);
  
+        
         //$command = "$programPath --format $format --quality $quality $url $outputFile";
         $command = "$programPath --disable-javascript --width 1280 --crop-h 722 $url $outputFile";
         //$command = 'xvfb-run --server-args="-screen 0, 1024x768x24" '."$programPath --format $format --quality $quality $url $outputFile";
- 
+        
         exec($command);
         return $this;
     }
  
     public function setProgramPath($programPath)
     {
-        $this->_programPath = './wkhtmltoimage';
+        $this->_programPath = $programPath;//'./wkhtmltoimage';
         return $this;
     }
 
-    public function setOutputFile()
+    public function setOutputFile($baseDir='/tmp')
     {
         clearstatcache();
-        $this->_outputFile = 'tmp/'.date("ymd_his", time()).rand(1,500).'.png';
+        $this->_outputFile = $baseDir.'/'.date("ymd_his", time()).rand(1,500).'.png';
+        //$this->_outputFile = date("ymd_his", time()).rand(1,500).'.png';
         return $this;
     }
  

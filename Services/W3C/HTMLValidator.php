@@ -16,7 +16,7 @@
 
 /**
  * require the HTTP_Request2 class for sending requests to the validator.
- */
+ */            
 require_once '../HTTP/Request2.php';
 
 /**
@@ -26,7 +26,9 @@ require_once 'HTMLValidator/Response.php';
 
 require_once 'HTMLValidator/Error.php';
 
-require_once 'HTMLValidator/Warning.php';
+require_once 'HTMLValidator/Warning.php';            
+
+require_once 'HTMLValidator/Exception.php';
 
 /**
  * A simple class for utilizing the W3C HTML Validator service.

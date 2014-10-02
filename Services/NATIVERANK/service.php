@@ -15,7 +15,7 @@ function getAllStat($i,$url){
     require_once('BING.php');
     require_once('SiteUtils.php');
     require_once('SEMRush.php');
-    require_once('createimage.php');
+    require_once('../../createimage.php');
     
     $_validator = new W3CValidator($url);
     $_SESSION['allstat'][$url]['validate'] = $_validator->validate();
@@ -63,7 +63,7 @@ function getAllStat($i,$url){
     $_SESSION['allstat'][$url]['getFacebookInteractions'] = $_seo->getFacebookInteractions();
     $_SESSION['allstat'][$url]['getTwitterMentions'] = $_seo->getTwitterMentions();
     $websiteToImage = new WebsiteToImage();
-    $_SESSION['allstat'][$url]['img'] = $websiteToImage->setProgramPath('./wkhtmltoimage')->setOutputFile()->setUrl($url)->start()->getScreenShot();
+    $_SESSION['allstat'][$url]['img'] = $websiteToImage->setProgramPath('../../wkhtmltoimage')->setOutputFile('../../tmp')->setUrl($url)->start()->getScreenShot();
     require_once('SEMRush.php');
     $a = new SEMRush($url);
     $_SESSION['allstat'][$url]['adwords'] = $a->getSEMRushAdWords();
@@ -113,7 +113,7 @@ if (isset($_POST["url"])) {
         $_SESSION['pdfName'] = 'tmp/html/'.date("ymd_his", time()).rand(1,500);
         require_once('../../createimage.php');
         $websiteToImage = new WebsiteToImage();
-        $_SESSION['img'] = $websiteToImage->setProgramPath('../../wkhtmltoimage')->setOutputFile()->setUrl($url)->start()->getMainScreenShot();
+        $_SESSION['img'] = $websiteToImage->setProgramPath('../../wkhtmltoimage')->setOutputFile('../../tmp')->setUrl($url)->start()->getMainScreenShot();
     } else if($serv == 'getWOT') {
         require_once('WOT.php');
         $wot = new WOT($url);
