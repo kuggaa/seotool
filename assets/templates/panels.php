@@ -982,7 +982,7 @@
     <div class="row unbreakable">
         <div id="code-panel" class="panel panel-default">
           <div class="heading-main section-heading section-heading-code">
-                CODE - How well is your site coded?
+                System Performance - How well is your site coded?
           </div>
           <div class="panel-body body-main">
             <div class="row">
