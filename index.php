@@ -401,7 +401,7 @@
                 var userName = $('[name=userName]').val();
                 var userEmail = $('[name=userEmail]').val();
                 var userPhone = $('[name=userPhone]').val();
-                competitorsType = $('[name=competitorsType]')[0].checked;
+                competitorsType = "false";
                 competitor1 = $('[name=competitor1]').val();
                 competitor2 = $('[name=competitor2]').val();
                 competitor3 = $('[name=competitor3]').val();
