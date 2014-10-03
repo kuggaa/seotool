@@ -1,4 +1,5 @@
-		<div id="main-container" class="menu-smm-container visible-phone hidden-new">
+<?php if(count($allstat) > 0): ?>
+	<div id="main-container" class="menu-smm-container visible-phone hidden-new">
 		<div class="sidebar-xs" style="z-index:2;" data-spy="affix" data-offset-top="190" data-offset-bottom="200">
 			<div class="row">
 				<div class="col-xs-12 col-xs-offset-0 col-sm-12 col-sm-offset-0 review-menu-smm">
@@ -16,4 +17,5 @@
 				</div>
 			</div>
 		</div>
-		</div>
+	</div>
+<?php endif; ?>

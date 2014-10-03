@@ -1,114 +1,102 @@
 <?php 
     session_start();     
     error_reporting(E_ERROR);
+    $user = $_SESSION['user'];
     $_SESSION['type'] = 'private';
     $_SESSION['logo'] == "nativerank";
     $url =  $_SESSION['url'];
     $finish =  $_SESSION['finish'];
-    /*if (!$url) {
-      header("Location: index.php");
-      die();
-    }*/
-    /*
-    *   Domain Age
-    */
-    $getDomainAge = json_decode($_SESSION['getDomainAge'],true);
-    //file_put_contents("/tmp/my.log",$_SESSION['getDomainAge'].'\r\n',FILE_APPEND);
-    //file_put_contents("/tmp/my.log",$getDomainAge['created'],FILE_APPEND);
-    /*
-    *   End Domain Age
-    */
-    /*
-    *   Alexa Rank
-    */
-    $getAlexaGlobalRank =  $_SESSION['getAlexaGlobalRank'];
-    if ($getAlexaGlobalRank == 0)
-        $getAlexaGlobalRank = 100000;
-    /*
-    *   END Alexa Rank
-    */
+
+    /**
+     *   Domain Age
+     */
+        $getDomainAge = json_decode($_SESSION['getDomainAge'],true);
+
+    /**
+     *   Alexa Rank
+     */
+        $getAlexaGlobalRank =  $_SESSION['getAlexaGlobalRank'];
+        if ($getAlexaGlobalRank == 0)
+            $getAlexaGlobalRank = 100000;
 
 
-    /*
-    *   Page Size
-    */
-    $pagesize =  $_SESSION['pagesize'];
-    /*
-    *   Page Size
-    */
+    /**
+     *   Page Size
+     */
+        $pagesize =  $_SESSION['pagesize'];
 
-    /*
-    *   SEMRush
-    */
-    $getSEMRushDomainRank =  $_SESSION['getSEMRushDomainRank'];
-    $getSEMRushOrganicKeywords =  $_SESSION['getSEMRushOrganicKeywords'];
-    /*
-    *   END SEMRush
-    */
-    /*
-    *   WOT Reputation - get all json data  from wot api server
-    */
-    $getWOT = $_SESSION['getWOT'];
-    if ($getWOT == null)
-        $getWOT = array();
-    $getWOT =  reset($getWOT);
+    /**
+     *   SEMRush
+     */
+        $getSEMRushDomainRank =  $_SESSION['getSEMRushDomainRank'];
+        $getSEMRushOrganicKeywords =  $_SESSION['getSEMRushOrganicKeywords'];
+
+    /**
+     *   WOT Reputation - get all json data  from wot api server
+     */
+        $getWOT = $_SESSION['getWOT'];
+        if ($getWOT == null)
+            $getWOT = array();
+        $getWOT =  reset($getWOT);
     
-    function objectToArray($d) {
-        if (is_object($d)) {
-                $d = get_object_vars($d);
+        function objectToArray($d) {
+            if (is_object($d)) {
+                    $d = get_object_vars($d);
+            }
+            if (is_array($d)) {
+                    return array_map(__FUNCTION__, $d);
+            } else {
+                // Return array
+                    return $d;
+            }
         }
-        if (is_array($d)) {
-                return array_map(__FUNCTION__, $d);
-        } else {
-            // Return array
-                return $d;
+        
+        function test_reputation($rep){ 
+            if($rep >= 80)return 'Excellent';
+            if($rep >= 60 && $rep < 80)return 'Good';
+            if($rep >= 40 && $rep < 60)return 'Unsatisfactory';
+            if($rep >= 20 && $rep < 40)return 'Poor';
+            if($rep > 0 && $rep < 20)return 'Very poor';
+            return "not available";
         }
-    }
-    
-    function test_reputation($rep){ 
-        if($rep >= 80)return 'Excellent';
-        if($rep >= 60 && $rep < 80)return 'Good';
-        if($rep >= 40 && $rep < 60)return 'Unsatisfactory';
-        if($rep >= 20 && $rep < 40)return 'Poor';
-        if($rep > 0 && $rep < 20)return 'Very poor';
-        return "not available";
-    }
-    
-     function test_categories($cat){
-        if($cat == '101')return 'Malware or viruses';
-        if($cat == '102')return 'Poor customer experience';
-        if($cat == '103')return 'Phishing';
-        if($cat == '104')return 'Scam';
-        if($cat == '105')return 'Potentially illegal';
-        if($cat == '201')return 'Misleading claims or unethical';
-        if($cat == '202')return 'Privacy risks';
-        if($cat == '203')return 'Suspicious';
-        if($cat == '204')return 'Hate, discrimination';
-        if($cat == '205')return 'Spam';
-        if($cat == '206')return 'Potentially unwanted programs';
-        if($cat == '207')return 'Ads / pop-ups';
-        if($cat == '301')return 'Online tracking';
-        if($cat == '302')return 'Alternative or controversial medicine';
-        if($cat == '303')return 'Opinions, religion, politics';
-        if($cat == '304')return 'Other';
-        if($cat == '501')return 'Good site';
-        if($cat == '401')return 'Adult content';
-        if($cat == '402')return 'Incidental nudity';
-        if($cat == '403')return 'Gruesome or shocking';
-        if($cat == '404')return 'Site for kids';
-        return 'Not available';
-    }
-    $_0 = '0';
-    $_4 = '4';
+        
+        function test_categories($cat){
+            if($cat == '101')return 'Malware or viruses';
+            if($cat == '102')return 'Poor customer experience';
+            if($cat == '103')return 'Phishing';
+            if($cat == '104')return 'Scam';
+            if($cat == '105')return 'Potentially illegal';
+            if($cat == '201')return 'Misleading claims or unethical';
+            if($cat == '202')return 'Privacy risks';
+            if($cat == '203')return 'Suspicious';
+            if($cat == '204')return 'Hate, discrimination';
+            if($cat == '205')return 'Spam';
+            if($cat == '206')return 'Potentially unwanted programs';
+            if($cat == '207')return 'Ads / pop-ups';
+            if($cat == '301')return 'Online tracking';
+            if($cat == '302')return 'Alternative or controversial medicine';
+            if($cat == '303')return 'Opinions, religion, politics';
+            if($cat == '304')return 'Other';
+            if($cat == '501')return 'Good site';
+            if($cat == '401')return 'Adult content';
+            if($cat == '402')return 'Incidental nudity';
+            if($cat == '403')return 'Gruesome or shocking';
+            if($cat == '404')return 'Site for kids';
+            return 'Not available';
+        }
 
-    $trustworthiness = $getWOT->$_0;
-    $trustworthiness = $trustworthiness[0];
-    $childsafety = $getWOT->$_4;
-    $childsafety = $childsafety[0];
-    $categories = $getWOT->categories;
-    /*
-    *   END WOT Reputation
-    */
+
+        $_0 = '0';
+        $_4 = '4';
+
+        $trustworthiness = $getWOT->$_0;
+        $trustworthiness = $trustworthiness[0];
+        $childsafety = $getWOT->$_4;
+        $childsafety = $childsafety[0];
+        $categories = $getWOT->categories;
+        /*
+        *   END WOT Reputation
+        */
 
     $countImagesAltTexts = $_SESSION['countImagesAltTexts'];
     $checkTitle = $_SESSION['checkTitle'];
@@ -119,17 +107,14 @@
     $checkCleanUrls = $_SESSION['checkCleanUrls'];
     $getGoogleToolbarPageRank = $_SESSION['getGoogleToolbarPageRank'];
     $getGoogleBacklinksTotal = $_SESSION['getGoogleBacklinksTotal'];
-    //var_dump($getGoogleBacklinksTotal);die();
     $getGooglePlusOnes = $_SESSION['getGooglePlusOnes'];
     $getPagespeedScore = $_SESSION['getPagespeedScore'];
     $getSiteindexTotal = $_SESSION['getSiteindexTotal'];
-    //var_dump($getPagespeedScore);die();
     $getSiteindexTotalBing = $_SESSION['getSiteindexTotalBing'];
     $getFacebookInteractions = $_SESSION['getFacebookInteractions'];
     $getTwitterMentions = $_SESSION['getTwitterMentions'];
     $hasRobots = $_SESSION['hasRobots'];
     $hasSitemaps = $_SESSION['hasSitemaps'];
-    //var_dump($getSitemaps);die();
     $validate =  $_SESSION['validate'];
     $getWWWResolve = $_SESSION['getWWWResolve'];
     $getIpCanonicalization = $_SESSION['getIpCanonicalization'];
@@ -323,335 +308,260 @@
     }
 
 ?>
-
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="en">
-<!--<![endif]-->
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>Local SEO Company | Local Search Engine Optimization Services</title>
-<meta name="description" content="Local SEO offers local SEO services to small and medium business. Our Local SEO services can help any local business acquire new customers through digital marketing, Google Local business marketing, small business SEO and online directories.">
-
-<!-- Responsive and mobile friendly stuff -->
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- Stylesheets -->
-<link href="assets/css/bootstrap.min.css" rel="stylesheet">
-<link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet">
-<link href="assets/css/style.css" rel="stylesheet">
-<link href="assets/css/font-awesome.min.css" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/main.css">
-<link rel="stylesheet" href="assets/css/normalize.css">
-<link rel="stylesheet" href="assets/css/layout.css">
-<link href="assets/css/localseov3.css" rel="stylesheet">
-
-<link href='http://fonts.googleapis.com/css?family=Alef:400,700' rel='stylesheet' type='text/css'>
-<!--[if lt IE 9]>
-          <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-        <![endif]-->
-
-<link href='http://fonts.googleapis.com/css?family=Alef:400,700' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-
-<script type='text/javascript' src="assets/js/bootstrap-progressbar.js"></script>
-<!--[if IE]><script type="text/javascript" src="js/excanvas.js"></script><![endif]-->
-<script src="assets/js/jquery.knob.js"></script>
+	<?php include ('assets/templates/header.php'); ?>
+	<div id="mobileClass"></div>
+	<div class="container hidden-pull"></div>
+    <?php if (!is_null($url)): ?>
+        <?php include ('assets/templates/sidebar-sm.php'); ?>
+        <?php include ('assets/templates/sidebar-smm.php'); ?>
+        <?php include ('assets/templates/sidebar-xs.php'); ?>
+    <?php endif; ?>
     <script>
-    $(function($) {
-    $(".knob").knob();
-    });
-    </script>
-
-
-
-</head>
-
-
-
-<body>
-
-	<div class="container-full block">
-		<a href="#mobileClass" id="anchor">.</a>
-		<?php include ('assets/templates/header.php'); ?>
-		<div id="mobileClass"></div>
-		<div class="container hidden-pull"></div>
-        <?php if (!is_null($url)): ?>
-            <?php include ('assets/templates/sidebar-sm.php'); ?>
-            <?php include ('assets/templates/sidebar-smm.php'); ?>
-            <?php include ('assets/templates/sidebar-xs.php'); ?>
-        <?php endif; ?>
-        <script>
-            var url;
-            counter_end = 31;
-            function ajax_submit(form) {
-                counter = 0;
-                url = $('#domainInput').val();
-                $('.progressbarmaintext').removeClass('hide');
-                $('#progressbarmain').removeClass('hide');
-                var userName = $('[name=userName]').val();
-                var userEmail = $('[name=userEmail]').val();
-                var userPhone = $('[name=userPhone]').val();
-                competitorsType = false;
-                competitor1 = $('[name=competitor1]').val();
-                competitor2 = $('[name=competitor2]').val();
-                competitor3 = $('[name=competitor3]').val();
-                logo = $('[name=logo]:checked').val();
-                if (userName == "" || userEmail == "" || userPhone == "") {
-                    alert("Please fill all fields!");
-                    return;
+        var url;
+        counter_end = 31;
+        function ajax_submit(form) {
+            counter = 0;
+            url = $('#domainInput').val();
+            $('.progressbarmaintext').removeClass('hide');
+            $('#progressbarmain').removeClass('hide');
+            var userName = $('[name=userName]').val();
+            var userEmail = $('[name=userEmail]').val();
+            var userPhone = $('[name=userPhone]').val();
+            competitorsType = false;
+            competitor1 = $('[name=competitor1]').val();
+            competitor2 = $('[name=competitor2]').val();
+            competitor3 = $('[name=competitor3]').val();
+            logo = $('[name=logo]:checked').val();
+            if (userName == "" || userEmail == "" || userPhone == "") {
+                alert("Please fill all fields!");
+                return;
+            }
+            $.ajax({
+                type: "POST",
+                url: "/Services/NATIVERANK/service.php",
+                data: "url="+url+"&service=clean",
+                success: function(msg){
+                    $.ajax({
+                        type: "POST",
+                        url: "/Services/NATIVERANK/service.php",
+                        data: "url="+url+"&service=start&userName="+userName+"&userEmail="+userEmail+"&userPhone="+userPhone+"&logo="+logo+
+                            "&competitorsType="+competitorsType+"&competitor1="+competitor1+"&competitor2="+competitor2+"&competitor3="+competitor3,
+                        success: function(msg){
+                            check();
+                        }
+                    });
                 }
+            });
+        }
+        function check() {
+            var array = new Array( "validate", "getPagespeedScore", "parser","getDomainAge","getWWWResolve","getIpCanonicalization","hasFavicon",
+                        "hasRobots", "hasSitemaps", "getGoogleToolbarPageRank", "getGoogleBacklinksTotal", 
+                        "getGooglePlusOnes", "getSiteindexTotal", "getSiteindexTotalBing", "getFacebookInteractions", 
+                        "getTwitterMentions", "getAlexaGlobalRank","getSEMRushDomainRank","getSEMRushOrganicKeywords",
+                        "getWOT" );
+            for(var i = 0; i < array.length; i++){
+            // for(var i = 2; i < 3; i++){
+                var serviceNameString = array[i];
                 $.ajax({
                     type: "POST",
                     url: "/Services/NATIVERANK/service.php",
-                    data: "url="+url+"&service=clean",
-                    success: function(msg){
-                        $.ajax({
-                            type: "POST",
-                            url: "/Services/NATIVERANK/service.php",
-                            data: "url="+url+"&service=start&userName="+userName+"&userEmail="+userEmail+"&userPhone="+userPhone+"&logo="+logo+
-                                "&competitorsType="+competitorsType+"&competitor1="+competitor1+"&competitor2="+competitor2+"&competitor3="+competitor3,
-                            success: function(msg){
-                                check();
-                            }
-                        });
-                    }
-                });
-            }
-            function check() {
-                var array = new Array( "validate", "getPagespeedScore", "parser","getDomainAge","getWWWResolve","getIpCanonicalization","hasFavicon",
-                            "hasRobots", "hasSitemaps", "getGoogleToolbarPageRank", "getGoogleBacklinksTotal", 
-                            "getGooglePlusOnes", "getSiteindexTotal", "getSiteindexTotalBing", "getFacebookInteractions", 
-                            "getTwitterMentions", "getAlexaGlobalRank","getSEMRushDomainRank","getSEMRushOrganicKeywords",
-                            "getWOT" );
-                for(var i = 0; i < array.length; i++){
-                // for(var i = 2; i < 3; i++){
-                    var serviceNameString = array[i];
-                    $.ajax({
-                        type: "POST",
-                        url: "/Services/NATIVERANK/service.php",
-                        data: "url="+url+"&service="+array[i],
-                        success: function(msg) {
-                            if (msg == "")
-                                alert("Right now!");
-                            else
-                                console.log(msg);
-                            var result = $.parseJSON(msg);
-                            
-                            for(key in result) {
-                                counter++;
-                                $('#barmain')[0].style.width=counter/counter_end*100+'%';
-                                if(counter == counter_end){
-                                    $('.progressbarmaintext').addClass('hide');
-                                    $('#progressbarmain').addClass('hide');
-                                    $('.progressbarcompetitorstext').removeClass('hide');
-                                    $('#progressbarcompetitors').removeClass('hide');
-                                    if (competitorsType) {
-                                        $.ajax({
-                                            type: "POST",
-                                            url: "/Services/NATIVERANK/service.php",
-                                            data: "url="+url+"&service=competitors",
-                                            success: function(msg){
-                                                checkCompetitors(msg);
-                                            }
-                                        });
-                                    } else {
-                                        result = 0;
-                                        competitors = new Array();
-                                        if (competitor1 != "") {
-                                            competitors[result] = competitor1;
-                                            result++;
+                    data: "url="+url+"&service="+array[i],
+                    success: function(msg) {
+                        if (msg == "")
+                            console.log("response is empty.");
+                        else
+                            console.log(msg);
+                        var result = $.parseJSON(msg);
+                        
+                        for(key in result) {
+                            counter++;
+                            $('#barmain')[0].style.width=counter/counter_end*100+'%';
+                            if(counter == counter_end){
+                                $('.progressbarmaintext').addClass('hide');
+                                $('#progressbarmain').addClass('hide');
+                                $('.progressbarcompetitorstext').removeClass('hide');
+                                $('#progressbarcompetitors').removeClass('hide');
+                                if (competitorsType) {
+                                    $.ajax({
+                                        type: "POST",
+                                        url: "/Services/NATIVERANK/service.php",
+                                        data: "url="+url+"&service=competitors",
+                                        success: function(msg){
+                                            checkCompetitors(msg);
                                         }
-                                        if (competitor2 != "") {
-                                            competitors[result] = competitor2;
-                                            result++;
-                                        }
-                                        if (competitor3 != "") {
-                                            competitors[result] = competitor3;
-                                            result++;
-                                        }
-                                        urlCompetitor = "url="+url+"&service=competitorsManual&count="+result;
-                                        for(var i = 0; i < result; i++){
-                                            urlCompetitor = urlCompetitor+"&competitor"+i+"="+competitors[i];
-                                        }
-                                        $.ajax({
-                                            type: "POST",
-                                            url: "/Services/NATIVERANK/service.php",
-                                            data: urlCompetitor,
-                                            success: function(msg){
-                                                checkCompetitorsManual(result);
-                                            }
-                                        });
+                                    });
+                                } else {
+                                    result = 0;
+                                    competitors = new Array();
+                                    if (competitor1 != "") {
+                                        competitors[result] = competitor1;
+                                        result++;
                                     }
+                                    if (competitor2 != "") {
+                                        competitors[result] = competitor2;
+                                        result++;
+                                    }
+                                    if (competitor3 != "") {
+                                        competitors[result] = competitor3;
+                                        result++;
+                                    }
+                                    urlCompetitor = "url="+url+"&service=competitorsManual&count="+result;
+                                    for(var i = 0; i < result; i++){
+                                        urlCompetitor = urlCompetitor+"&competitor"+i+"="+competitors[i];
+                                    }
+                                    $.ajax({
+                                        type: "POST",
+                                        url: "/Services/NATIVERANK/service.php",
+                                        data: urlCompetitor,
+                                        success: function(msg){
+                                            checkCompetitorsManual(result);
+                                        }
+                                    });
                                 }
                             }
                         }
-                    });
-                }
+                    }
+                });
             }
-            function checkCompetitors(msg) {
-                result = parseInt($.parseJSON(msg));
-                counter = 0;
-                if (result == 0){
-                    $.ajax({
-                        type: "POST",
-                        url: "/Services/NATIVERANK/service.php",
-                        data: "url="+url+"&service=finish",
-                        success: function(msg){
-                            window.location.href = 'index.php';
-                        }
-                    });
-                    return;
-                }
+        }
+        function checkCompetitors(msg) {
+            result = parseInt($.parseJSON(msg));
+            counter = 0;
+            if (result == 0){
+                $.ajax({
+                    type: "POST",
+                    url: "/Services/NATIVERANK/service.php",
+                    data: "url="+url+"&service=finish",
+                    success: function(msg){
+                        window.location.href = 'index.php';
+                    }
+                });
+                return;
+            }
 
-                for(var i = 0; i < result; i++){
-                    $.ajax({
-                        type: "POST",
-                        url: "/Services/NATIVERANK/service.php",
-                        data: "url="+url+"&service=competitor"+i,
-                        success: function(msg){
-                            counter++;
-                            $('#barcompetitors')[0].style.width=counter/result*100+'%';
-                            if(counter == result) {
-                                $.ajax({
-                                    type: "POST",
-                                    url: "/Services/NATIVERANK/service.php",
-                                    data: "url="+url+"&service=finish",
-                                    success: function(msg){
-                                        window.location.href = 'index.php';
-                                    }
-                                });
-                            }
+            for(var i = 0; i < result; i++){
+                $.ajax({
+                    type: "POST",
+                    url: "/Services/NATIVERANK/service.php",
+                    data: "url="+url+"&service=competitor"+i,
+                    success: function(msg){
+                        counter++;
+                        $('#barcompetitors')[0].style.width=counter/result*100+'%';
+                        if(counter == result) {
+                            $.ajax({
+                                type: "POST",
+                                url: "/Services/NATIVERANK/service.php",
+                                data: "url="+url+"&service=finish",
+                                success: function(msg){
+                                    window.location.href = 'index.php';
+                                }
+                            });
                         }
-                    });
-                }
+                    }
+                });
             }
-            function checkCompetitorsManual(result) {
-                counter = 0;
-                if (result == 0){
-                    $.ajax({
-                        type: "POST",
-                        url: "/Services/NATIVERANK/service.php",
-                        data: "url="+url+"&service=finish",
-                        success: function(msg){
-                            window.location.href = 'index.php';
-                        }
-                    });
-                    return;
-                }
-                for(var i = 0; i < result; i++){
-                    $.ajax({
-                        type: "POST",
-                        url: "/Services/NATIVERANK/service.php",
-                        data: "url="+url+"&service=competitor"+i,
-                        success: function(msg){
-                            counter++;
-                            $('#barcompetitors')[0].style.width=counter/result*100+'%';
-                            if(counter == result) {
-                                $.ajax({
-                                    type: "POST",
-                                    url: "/Services/NATIVERANK/service.php",
-                                    data: "url="+url+"&service=finish",
-                                    success: function(msg){
-                                        window.location.href = 'index.php';
-                                    }
-                                });
-                            }
-                        }
-                    });
-                }
+        }
+        function checkCompetitorsManual(result) {
+            counter = 0;
+            if (result == 0){
+                $.ajax({
+                    type: "POST",
+                    url: "/Services/NATIVERANK/service.php",
+                    data: "url="+url+"&service=finish",
+                    success: function(msg){
+                        window.location.href = 'index.php';
+                    }
+                });
+                return;
             }
-        </script>
+            for(var i = 0; i < result; i++){
+                $.ajax({
+                    type: "POST",
+                    url: "/Services/NATIVERANK/service.php",
+                    data: "url="+url+"&service=competitor"+i,
+                    success: function(msg){
+                        counter++;
+                        $('#barcompetitors')[0].style.width=counter/result*100+'%';
+                        if(counter == result) {
+                            $.ajax({
+                                type: "POST",
+                                url: "/Services/NATIVERANK/service.php",
+                                data: "url="+url+"&service=finish",
+                                success: function(msg){
+                                    window.location.href = 'index.php';
+                                }
+                            });
+                        }
+                    }
+                });
+            }
+        }
+    </script>
 
-		<div id="main-container" class="button-container">
-			<div class="row">
-				<div class="col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 main-butt">
-					<form name="form" method="post" onsubmit="ajax_submit(this);return false;" class="form-inline form-domain">
-                        <div class="input-group userdata-container">
-                            <input class="form-control userdata" type="text" name="userName" placeholder="Name"
-                                <?php if (isset($userName)) echo ' value="'.$userName.'"' ?>
-                            >
-                            <input class="form-control userdata" type="text" name="userEmail" placeholder="Email"
-                                <?php if (isset($userEmail)) echo ' value="'.$userEmail.'"' ?>
-                            >
-                            <input class="form-control userdata" type="text" name="userPhone" placeholder="Phone"
-                                <?php if (isset($userPhone)) echo ' value="'.$userPhone.'"' ?>
-                            >
+	<div id="main-container" class="button-container">
+		<div class="row">
+			<div class="col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 main-butt">
+				<form name="form" method="post" onsubmit="ajax_submit(this);return false;" class="form-inline form-domain">
+                    <div class="input-group userdata-container">
+                        <input class="form-control userdata" type="text" name="userName" placeholder="Name"
+                            <?php if (isset($userName)) echo ' value="'.$userName.'"' ?>
+                        >
+                        <input class="form-control userdata" type="text" name="userEmail" placeholder="Email"
+                            <?php if (isset($userEmail)) echo ' value="'.$userEmail.'"' ?>
+                        >
+                        <input class="form-control userdata" type="text" name="userPhone" placeholder="Phone"
+                            <?php if (isset($userPhone)) echo ' value="'.$userPhone.'"' ?>
+                        >
+                    </div>
+                    <div class="input-group competitorsdata-container">
+                        <span class="input-group-addon competitors-checkbox">
+                            <!-- <input type="checkbox" id="competitors_checkbox" name="competitorsType" 
+                                <?php if (!isset($competitorsType) || $competitorsType == "true") echo ' checked' ?>
+                            > -->
+                            Competitors:
+                        </span>
+                        <input class="form-control competitorsdata" type="text" name="competitor1" placeholder="Competitor #1 URL"
+                            <?php if (isset($competitor1)) echo ' value="'.$competitor1.'"' ?>
+                        >
+                        <input class="form-control competitorsdata" type="text" name="competitor2" placeholder="Competitor #2 URL"
+                            <?php if (isset($competitor2)) echo ' value="'.$competitor2.'"' ?>
+                        >
+                        <input class="form-control competitorsdata" type="text" name="competitor3" placeholder="Competitor #3 URL"
+                            <?php if (isset($competitor3)) echo ' value="'.$competitor3.'"' ?>
+                        >
+                    </div>
+                    <div class="input-group">
+                        <input class="form-control" id="domainInput" type="text" name="url" placeholder="domain.com"
+                            <?php if (isset($url)) echo ' value="'.$url.'"' ?>
+                        >
+                        <div class="input-group-btn">
+                            <button type="submit" class="btn btn-primary">Analyze!</button>
                         </div>
-                        <div class="input-group competitorsdata-container">
-                            <span class="input-group-addon competitors-checkbox">
-                                <!-- <input type="checkbox" id="competitors_checkbox" name="competitorsType" 
-                                    <?php if (!isset($competitorsType) || $competitorsType == "true") echo ' checked' ?>
-                                > -->
-                                Competitors:
-                            </span>
-                            <input class="form-control competitorsdata" type="text" name="competitor1" placeholder="Competitor #1 URL"
-                                <?php if (isset($competitor1)) echo ' value="'.$competitor1.'"' ?>
-                            >
-                            <input class="form-control competitorsdata" type="text" name="competitor2" placeholder="Competitor #2 URL"
-                                <?php if (isset($competitor2)) echo ' value="'.$competitor2.'"' ?>
-                            >
-                            <input class="form-control competitorsdata" type="text" name="competitor3" placeholder="Competitor #3 URL"
-                                <?php if (isset($competitor3)) echo ' value="'.$competitor3.'"' ?>
-                            >
-                        </div>
-                        <div class="input-group">
-                            <input class="form-control" id="domainInput" type="text" name="url" placeholder="domain.com"
-                                <?php if (isset($url)) echo ' value="'.$url.'"' ?>
-                            >
-                            <div class="input-group-btn">
-                                <button type="submit" class="btn btn-primary">Analyze!</button>
-                            </div>
-                        </div>
-					</form>
-				</div>
+                    </div>
+				</form>
 			</div>
-            <div class="row">
-                <div class="progressbarmaintext hide">Analyzing your site!</div>
-                <div id="progressbarmain" class="hide">
-                    <div class="row" style="width: 0%" id="barmain"></div>
-                </div>
-                <div class="progressbarcompetitorstext hide">Analyzing your competitors!</div>
-                <div id="progressbarcompetitors" class="hide">
-                    <div style="width: 0%" id="barcompetitors"></div>
-                </div>
+		</div>
+        <div class="row">
+            <div class="progressbarmaintext hide">Analyzing your site!</div>
+            <div id="progressbarmain" class="hide">
+                <div class="row" style="width: 0%" id="barmain"></div>
             </div>
-			
-		</div>
-		<div id="main-container">
-            <?php if (!is_null($url) && !is_null($finish)): ?>
-                <div class="col-md-4 visible-desktop">
-    			<?php include ('assets/templates/sidebar.php'); ?>
-                </div>
-                <div class="col-md-8" style="padding-bottom:90px;">
-    			<?php include ('assets/templates/content.php'); ?>
-                </div>
-            <?php endif; ?>
-		</div>
-		<div class="container hidden-pull-down"></div>
-		<?php include ('assets/templates/footer.php'); ?>
+            <div class="progressbarcompetitorstext hide">Analyzing your competitors!</div>
+            <div id="progressbarcompetitors" class="hide">
+                <div style="width: 0%" id="barcompetitors"></div>
+            </div>
+        </div>
+		
 	</div>
-	<script src='assets/js/smooth-scroll.js'></script>
-    <script src="assets/js/shevron.js"></script>
-	<script>
-		smoothScroll.init({
-			speed: 500,
-			easing: 'easeInOutCubic',
-			offset: 0,
-			updateURL: false,
-			callbackBefore: function ( toggle, anchor ) {},
-			callbackAfter: function ( toggle, anchor ) {}
-		});
-	</script>
-
-</body>
-</html>
+	<div id="main-container">
+        <?php if (!is_null($url) && !is_null($finish)): ?>
+            <div class="col-md-4 visible-desktop">
+			<?php include ('assets/templates/sidebar.php'); ?>
+            </div>
+            <div class="col-md-8" style="padding-bottom:90px;">
+			<?php include ('assets/templates/content.php'); ?>
+            </div>
+        <?php endif; ?>
+	</div>
+	<div class="container hidden-pull-down"></div>
+	<?php include ('assets/templates/footer.php'); ?>

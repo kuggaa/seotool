@@ -257,7 +257,6 @@ footer > div > div:nth-of-type(2) {
 	width: 400px;
 }
 input[type="text"] {
-	width: 98% !important;
 }
 form {
 	width: 100% !important;
@@ -384,7 +383,7 @@ nav a#pull:after {
 }
 #login {
 	right: 0 !important;
-	width: 74%;
+	/*width: 74%;*/
 }
 #login li:last-of-type {
 	float: right;
@@ -481,7 +480,6 @@ ul.parentUl {
 }
 #login {
 	left: 0 !important;
-	width: 100%;
 }
 #login li:last-of-type {
 	float: right;
@@ -569,8 +567,8 @@ footer > div > div {
 #login {
 	left: inherit !important;
 	right: 0 !important;
-	width: 100%;
-	top: 1px;
+	/*width: 100%;*/
+	top: 20px;
 }
 #container {
 	margin: 0 auto;
@@ -735,7 +733,7 @@ nav a#pull:after {
 #login {
 	left: 32px;
 	right: inherit;
-	top: 1px;
+	top: 20px;
 }
 #hero {
 	background:none;
