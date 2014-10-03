@@ -574,7 +574,7 @@
 
 		<div id="main-container" class="button-container">
 			<div class="row">
-				<div class="col-md-10 col-md-offset-1 col-sm-12 col-sm-offset-0 main-butt">
+				<div class="col-lg-10 col-lg-offset-1 col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 main-butt">
 					<form name="form" method="post" onsubmit="ajax_submit(this);return false;" class="form-inline form-domain">
                         <div class="input-group userdata-container">
                             <input class="form-control userdata" type="text" name="userName" placeholder="Name"
@@ -629,10 +629,10 @@
 		</div>
 		<div id="main-container">
             <?php if (!is_null($url) && !is_null($finish)): ?>
-                <div class="col-md-4 visible-desktop">
+                <div class="col-lg-3 col-lg-offset-1 col-md-4 visible-desktop">
     			<?php include ('assets/templates/sidebar.php'); ?>
                 </div>
-                <div class="col-md-8" style="padding-bottom:90px;">
+                <div class="col-lg-7 col-md-8" style="padding-bottom:90px;">
     			<?php include ('assets/templates/content.php'); ?>
                 </div>
             <?php endif; ?>

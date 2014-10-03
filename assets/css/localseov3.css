@@ -39,6 +39,9 @@ body {
 	margin-left: 10px; 
 	z-index: 1;
 }
+.form-control#domain-input {
+	margin-left: 0;
+}
 .btn-primary:hover, .btn-primary:focus {
 	width: 170px;
 	z-index: 0 !important;
@@ -1006,17 +1009,17 @@ html {
 }
 .userdata-container {
 	width: 100% !important;
-	margin-left: 10px;
+	/*margin-left: 10px;*/
 	margin-bottom: 5px;
 }
 .competitorsdata-container {
 	width: 100% !important;
-	margin-left: 10px;
+	/*margin-left: 10px;*/
 	margin-bottom: 5px;
 	height: 45px;
 }
 .userdata, .competitorsdata {
-	width: 33% !important;
+	width: 33.33% !important;
 	margin-left: 0 !important;
 }
 #main-container {
