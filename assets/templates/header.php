@@ -51,7 +51,9 @@
 		<a href="#mobileClass" id="anchor">.</a>
 		<header class="cont-w">
 		    <ul id="login">
-	    	<?php if ($user == null) { ?>
+	    	<?php 
+	    		$user = $_SESSION['user'];
+	    		if ($user == null) { ?>
 	        	<li><a href="login.php">Login</a></li>
 	        <?php } else { ?>
 	        	<div class="dropdown">
