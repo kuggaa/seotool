@@ -516,7 +516,6 @@ footer {
 	overflow: auto;
 	bottom: 0;
 	left: 0;
-	position: fixed !important;
 	margin-top: 20px;
 }
 footer h2 {
