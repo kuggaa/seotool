@@ -5,7 +5,7 @@
     </ul>
     <h1>
         <a href="index.php" class="logo">
-            <img src="../img/nr-logo.png" alt="Native Rank" title="Back to the home page">
+            <img src="../../img/nr-logo.png" alt="Native Rank" title="Back to the home page">
         </a>
     </h1>   
 </header>
