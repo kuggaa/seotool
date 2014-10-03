@@ -3,9 +3,17 @@
     error_reporting(E_ERROR | E_WARNING);
 
     $user = $_SESSION['user'];
-    $alertStyle = $_SESSION['alertStyle'];
 
-    include ('assets/templates/header.php');
+    if ($user != null)
+    {
+    	header("location: index.php");
+    }
+    else
+    {
+    	$alertMsg = $_SESSION['notification_msg'];
+	    $alertStyle = $_SESSION['alertStyle'];
+
+	    include ('assets/templates/header.php');
 ?>
 	<div>
 	</div>
@@ -13,7 +21,7 @@
 		<div class="row">
 			<div class=<?php echo "\"notification alert " . $alertStyle . "\""; ?> style="text-align:center;">
 				<?php 
-					echo $_SESSION['notification_msg'];
+					echo $alertMsg;
 				?>
 			</div>
 			<div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-12">
@@ -27,7 +35,7 @@
 			</div>
 		</div>
 	</div>
-
 <?php
-	include ('assets/templates/footer.php');
+		include ('assets/templates/footer.php');
+	}
 ?>
