@@ -441,7 +441,7 @@ header .menu {
 	font-weight: 700;
 }
 .popup input[type="text"] {
-	font-weight: 400;
+ 	font-weight: 400;
 	padding: 0px;
 	margin-bottom: 5px;
 }
@@ -516,7 +516,7 @@ footer {
 	overflow: auto;
 	bottom: 0;
 	left: 0;
-	position: absolute !important;
+	position: fixed !important;
 	margin-top: 20px;
 }
 footer h2 {
