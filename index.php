@@ -382,7 +382,7 @@
 
 	<div class="container-full block">
 		<a href="#mobileClass" id="anchor">.</a>
-		<?php include ('header.php'); ?>
+		<?php include ('assets/templates/header.php'); ?>
 		<div id="mobileClass"></div>
 		<div class="container hidden-pull"></div>
         <?php if (!is_null($url)): ?>
@@ -638,7 +638,7 @@
             <?php endif; ?>
 		</div>
 		<div class="container hidden-pull-down"></div>
-		<?php include ('footer.php'); ?>
+		<?php include ('assets/templates/footer.php'); ?>
 	</div>
 	<script src='assets/js/smooth-scroll.js'></script>
     <script src="assets/js/shevron.js"></script>
