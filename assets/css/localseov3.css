@@ -39,7 +39,7 @@ body {
 	margin-left: 10px; 
 	z-index: 1;
 }
-.form-control#domain-input {
+.form-control#domainInput {
 	margin-left: 0;
 }
 .btn-primary:hover, .btn-primary:focus {
