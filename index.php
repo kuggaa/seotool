@@ -565,6 +565,13 @@ if ($user != null)
                 </div>
             <?php endif; ?>
     	</div>
+        <script>
+            $(document).ready(function() {
+                $sideBarContainer = $('.sidebar').parent();
+                $resultSection = $('.resultSection');
+                $sideBarContainer.height($resultSection.height());
+            })
+        </script>
 <?php 
     }
     else {
