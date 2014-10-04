@@ -2,7 +2,7 @@
 session_start();
 error_reporting(E_ERROR | E_PARSE);
 
-$user = $_SESSION['user'];
+$user = $_SESSION['user'];         
 
 function getAllStat($i,$url){
 
