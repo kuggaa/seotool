@@ -1,11 +1,9 @@
 <?php
-error_reporting(E_ERROR | E_PARSE);
 session_start();
+error_reporting(E_ERROR | E_PARSE);
+
 $user = $_SESSION['user'];
-if ($user == null)
-{
-    exit;
-}
+
 function getAllStat($i,$url){
 
     if(strpos($url,"://")===false && substr($url,0,1)!="/") $url = "http://".$url;
