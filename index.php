@@ -567,8 +567,8 @@ if ($user != null)
     	</div>
         <script>
             $(document).ready(function() {
-                $sideBarContainer = $('.sidebar').parent();
-                $resultSection = $('.resultSection');
+                var $sideBarContainer = $('.sidebar').parent(),
+                    $resultSection = $('.resultSection');
                 $sideBarContainer.height($resultSection.height());
             })
         </script>
