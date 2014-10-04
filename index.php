@@ -1,7 +1,11 @@
 <?php 
-    session_start();     
-    error_reporting(E_ERROR);
-    $user = $_SESSION['user'];
+
+session_start();     
+error_reporting(E_ERROR);
+$user = $_SESSION['user'];
+include ('assets/templates/header.php');
+if ($user != null)
+{
     $_SESSION['type'] = 'private';
     $_SESSION['logo'] == "nativerank";
     $url =  $_SESSION['url'];
@@ -176,9 +180,9 @@
     $socialScore = round(0.3*$googlePlusScore*100 + 0.35*$facebookScore*100 + 0.35*$twitterScore*100);
     $totalScore = round(($codeScore + $searchEngineScore + $SEOScore + $socialScore)/4);
 
-    $userName = $_SESSION["userName"];
-    $userEmail = $_SESSION["userEmail"];
-    $userPhone = $_SESSION["userPhone"];
+    $userName = $user->firstname . " " . $user->lastname;//$_SESSION["userName"];
+    $userEmail = $user->email;//$_SESSION["userEmail"];
+    $userPhone = $user->phone;//$_SESSION["userPhone"];
     $competitorsType = $_SESSION["competitorsType"];
     $competitor1 = $_SESSION["competitor1"];
     $competitor2 = $_SESSION["competitor2"];
@@ -306,12 +310,6 @@
             return 'A';
         }
     }
-
-?>
-<?php 
-    include ('assets/templates/header.php');
-    if ($user != null)
-    {
 ?>
     	<div id="mobileClass"></div>
     	<div class="container hidden-pull"></div>
@@ -572,7 +570,7 @@
     }
     else {
 ?>
-        <div style="text-align:center;">
+        <div style="text-align:center;font-size:16px;margin-top:50px;">
             Welcome to SEO Tool! Click <a href="login.php">here</a> to use the tool
         </div>
 <?php
