@@ -311,8 +311,8 @@ if ($user != null)
         }
     }
 ?>
-    	<div id="mobileClass"></div>
-    	<div class="container hidden-pull"></div>
+    	<!-- <div id="mobileClass"></div>
+    	<div class="container hidden-pull"></div> -->
         <?php if (!is_null($url)): ?>
             <?php include ('assets/templates/sidebar-sm.php'); ?>
             <?php include ('assets/templates/sidebar-smm.php'); ?>
@@ -499,62 +499,62 @@ if ($user != null)
                 }
             }
         </script>
-
-    	<div id="main-container" class="button-container">
-    		<div class="row">
-    			<div class="col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 main-butt">
-    				<form name="form" method="post" onsubmit="ajax_submit(this);return false;" class="form-inline form-domain">
-                        <div class="input-group userdata-container">
-                            <input class="form-control userdata" type="text" name="userName" placeholder="Name"
-                                <?php if (isset($userName)) echo ' value="'.$userName.'"' ?>
-                            >
-                            <input class="form-control userdata" type="text" name="userEmail" placeholder="Email"
-                                <?php if (isset($userEmail)) echo ' value="'.$userEmail.'"' ?>
-                            >
-                            <input class="form-control userdata" type="text" name="userPhone" placeholder="Phone"
-                                <?php if (isset($userPhone)) echo ' value="'.$userPhone.'"' ?>
-                            >
-                        </div>
-                        <div class="input-group competitorsdata-container">
-                            <span class="input-group-addon competitors-checkbox">
-                                <!-- <input type="checkbox" id="competitors_checkbox" name="competitorsType" 
-                                    <?php if (!isset($competitorsType) || $competitorsType == "true") echo ' checked' ?>
-                                > -->
-                                Competitors:
-                            </span>
-                            <input class="form-control competitorsdata" type="text" name="competitor1" placeholder="Competitor #1 URL"
-                                <?php if (isset($competitor1)) echo ' value="'.$competitor1.'"' ?>
-                            >
-                            <input class="form-control competitorsdata" type="text" name="competitor2" placeholder="Competitor #2 URL"
-                                <?php if (isset($competitor2)) echo ' value="'.$competitor2.'"' ?>
-                            >
-                            <input class="form-control competitorsdata" type="text" name="competitor3" placeholder="Competitor #3 URL"
-                                <?php if (isset($competitor3)) echo ' value="'.$competitor3.'"' ?>
-                            >
-                        </div>
-                        <div class="input-group">
-                            <input class="form-control" id="domainInput" type="text" name="url" placeholder="domain.com"
-                                <?php if (isset($url)) echo ' value="'.$url.'"' ?>
-                            >
-                            <div class="input-group-btn">
-                                <button type="submit" class="btn btn-primary">Analyze!</button>
+        <div class="button-container-wrapper">
+        	<div id="main-container" class="container button-container">
+        		<div class="row">
+        			<div class="col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 main-butt">
+        				<form name="form" method="post" onsubmit="ajax_submit(this);return false;" class="form-inline form-domain">
+                            <div class="input-group userdata-container">
+                                <input class="form-control userdata" type="hidden" name="userName" placeholder="Name"
+                                    <?php if (isset($userName)) echo ' value="'.$userName.'"' ?>
+                                >
+                                <input class="form-control userdata" type="hidden" name="userEmail" placeholder="Email"
+                                    <?php if (isset($userEmail)) echo ' value="'.$userEmail.'"' ?>
+                                >
+                                <input class="form-control userdata" type="hidden" name="userPhone" placeholder="Phone"
+                                    <?php if (isset($userPhone)) echo ' value="'.$userPhone.'"' ?>
+                                >
                             </div>
-                        </div>
-    				</form>
-    			</div>
-    		</div>
-            <div class="row">
-                <div class="progressbarmaintext hide">Analyzing your site!</div>
-                <div id="progressbarmain" class="hide">
-                    <div class="row" style="width: 0%" id="barmain"></div>
+                            <div class="input-group competitorsdata-container">
+                                <span class="input-group-addon competitors-checkbox">
+                                    <!-- <input type="checkbox" id="competitors_checkbox" name="competitorsType" 
+                                        <?php if (!isset($competitorsType) || $competitorsType == "true") echo ' checked' ?>
+                                    > -->
+                                    Competitors:
+                                </span>
+                                <input class="form-control competitorsdata" type="text" name="competitor1" placeholder="Competitor #1 URL"
+                                    <?php if (isset($competitor1)) echo ' value="'.$competitor1.'"' ?>
+                                >
+                                <input class="form-control competitorsdata" type="text" name="competitor2" placeholder="Competitor #2 URL"
+                                    <?php if (isset($competitor2)) echo ' value="'.$competitor2.'"' ?>
+                                >
+                                <input class="form-control competitorsdata" type="text" name="competitor3" placeholder="Competitor #3 URL"
+                                    <?php if (isset($competitor3)) echo ' value="'.$competitor3.'"' ?>
+                                >
+                            </div>
+                            <div class="input-group">
+                                <input class="form-control" id="domainInput" type="text" name="url" placeholder="domain.com"
+                                    <?php if (isset($url)) echo ' value="'.$url.'"' ?>
+                                >
+                                <div class="input-group-btn">
+                                    <button type="submit" class="btn btn-primary">Analyze!</button>
+                                </div>
+                            </div>
+        				</form>
+        			</div>
+        		</div>
+                <div class="row">
+                    <div class="progressbarmaintext hide">Analyzing your site!</div>
+                    <div id="progressbarmain" class="hide">
+                        <div class="row" style="width: 0%" id="barmain"></div>
+                    </div>
+                    <div class="progressbarcompetitorstext hide">Analyzing your competitors!</div>
+                    <div id="progressbarcompetitors" class="hide">
+                        <div style="width: 0%" id="barcompetitors"></div>
+                    </div>
                 </div>
-                <div class="progressbarcompetitorstext hide">Analyzing your competitors!</div>
-                <div id="progressbarcompetitors" class="hide">
-                    <div style="width: 0%" id="barcompetitors"></div>
-                </div>
-            </div>
-    		
-    	</div>
+        	</div>
+        </div>
     	<div id="main-container">
             <?php if (!is_null($url) && !is_null($finish)): ?>
                 <div class="col-md-4 visible-desktop">
@@ -565,7 +565,6 @@ if ($user != null)
                 </div>
             <?php endif; ?>
     	</div>
-    	<div class="container hidden-pull-down"></div>
 <?php 
     }
     else {

@@ -47,38 +47,39 @@
 	</script>
 </head>
 <body>
-	<div class="container-full block">
-		<a href="#mobileClass" id="anchor">.</a>
-		<header class="cont-w">
-		    <ul id="login">
-	    	<?php 
-	    		$user = $_SESSION['user'];
-	    		if ($user == null) { ?>
-	        	<li><a href="login.php">Login</a></li>
-	        <?php } else { ?>
-	        	<div class="dropdown">
-					<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-						<?php echo $user->firstname . " " . $user->lastname; ?>
-						<span class="caret"></span>
-					</button>
-					<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-						<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Update profile</a></li>
-						<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Change password</a></li>
-						<?php
-						if ($user->role == "1") {
-						?>
-						<li role="presentation"><a role="menuitem" tabindex="-1" href="register.php">Create user</a></li>
-						<?php } ?>
-						<li role="presentation" class="divider"></li>
-						<li role="presentation"><a role="menuitem" tabindex="-1" href="signout.php">Log out</a></li>
-					</ul>
-				</div>
-	        <?php } ?>
-		        
-		    </ul>
-		    <h1>
-		        <a href="index.php" class="logo">
-		            <img src="assets/img/nr-logo.png" alt="Native Rank" title="Back to the home page">
-		        </a>
-		    </h1>   
+	<div class="wrapper">
+		<header>
+			<div class="cont-w">
+			    <ul id="login">
+		    	<?php 
+		    		$user = $_SESSION['user'];
+		    		if ($user == null) { ?>
+		        	<li><a href="login.php">Login</a></li>
+		        <?php } else { ?>
+		        	<div class="dropdown">
+						<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+							<?php echo $user->firstname . " " . $user->lastname; ?>
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Update profile</a></li>
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Change password</a></li>
+							<?php
+							if ($user->role == "1") {
+							?>
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="register.php">Create user</a></li>
+							<?php } ?>
+							<li role="presentation" class="divider"></li>
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="signout.php">Log out</a></li>
+						</ul>
+					</div>
+		        <?php } ?>
+			        
+			    </ul>
+			    <h1>
+			        <a href="index.php" class="logo">
+			            <img src="assets/img/nr-logo.png" alt="Native Rank" title="Back to the home page">
+			        </a>
+			    </h1>
+			</div>
 		</header>

@@ -92,7 +92,7 @@ input, select, textarea {
 
 .logo img {
     height: 70px;
-    margin-top: -10px;
+    margin-top: 10px;
 }
 .shade {
 }
@@ -121,9 +121,12 @@ input, select, textarea {
 /*HEADER*/
 
 header {
-	height: 90px;
+	height: 73px;
 	position: relative;
-	padding-top: 20px;
+	background: #f9fafc;
+	border-bottom: solid 1px #898a8c;
+	box-shadow: 0px 3px 10px #898a8c;
+	margin-bottom: -5px;
 }
 #login {
 	list-style-type: none;

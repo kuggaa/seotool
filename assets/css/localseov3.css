@@ -5,6 +5,10 @@ html {
 body {
 	overflow-y: hide;
 }
+.wrapper {
+	height: 100%;
+	background: white;
+}
 @media (min-width: 768px) and (max-width: 992px) {
   .hidden-desktop {
     display: inherit !important;
@@ -83,7 +87,9 @@ box-shadow:         0px 13px 30px -11px rgba(50, 50, 48, 0.57);
 	border-bottom: 2px solid #b2b2b2; 
 }
 body {
-		overflow-x: hidden;
+	overflow-x: hidden;
+	padding-left: 0;
+	padding-right: 0;
 }
 .hidden-pull {
 		display: inline-block;
@@ -117,8 +123,14 @@ body {
 	width: 370px;
 	*background: red;
 }
+.button-container-wrapper {
+	background: #1965a3;//rgb(25,101,163);
+}
 .button-container {
-	/*height: 80px;*/
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-left: 0;
+	margin-right: 0;
 }
 body .form-inline {
     -webkit-box-shadow: 0 0px 0px rgba(0,0,0,0);
@@ -970,6 +982,7 @@ body .form-inline {
 	text-align: center;
 	font-weight: bold;
 	font-size: 20px;
+	color: white;
 }
 #progressbarcompetitors {
     background-color: #FFFFFF;
