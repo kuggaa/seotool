@@ -292,7 +292,9 @@ body .form-inline {
 .body-main,.overal-performance-body {
 	margin: -1px;
 	border-radius: 0px;
-	border-bottom: 3px solid #cccccc;
+	border-bottom: 1px solid #e5e5e5;
+	border-left: 2px solid #e5e5e5;
+	border-right: 2px solid #e5e5e5;
 }
 .op-name {
 	font-weight: bold;
@@ -404,7 +406,7 @@ body .form-inline {
 	padding-left: 10px;
 }
 .panel-fa-icon-sitemap {
-	padding-top: 10px;
+	padding-top: 2px;
 	padding-left: 12px;
 }
 .panel-fa-icon-pt {
