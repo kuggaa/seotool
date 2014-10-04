@@ -3611,9 +3611,14 @@ a.list-group-item-danger.active,a.list-group-item-danger.active:hover,a.list-gro
     border-color: #ddd;
 }
 .panel-default>.panel-heading {
-    color: #333;
-    background-color: #f5f5f5;
-    border-color: #ddd;
+    font-family: "Segoe UI";
+    font-size: 18px;
+    color: #b0b0b0;
+    background-color: #f3f1f2;
+    border-radius: 0px;
+    margin: -1px;
+    border: solid 2px #dadcdb;
+    padding: 5px 20px;
 }
 .panel-default>.panel-heading+.panel-collapse .panel-body {
     border-top-color: #ddd;

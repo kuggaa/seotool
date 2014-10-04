@@ -273,13 +273,14 @@ body .form-inline {
 }
 /*--panels-content*/
 .overal-performance-head {
-	color: white;
 	font-family: "Segoe UI";
 	font-size: 18px;
-	color: white;
-	background-color: #333333;
+	color: #b0b0b0;
+	background-color: #f3f1f2;
 	border-radius: 0px;
 	margin: -1px;
+	border: solid 2px #dadcdb;
+	padding: 5px 20px;
 }
 .heading-main {
 	
@@ -311,14 +312,14 @@ body .form-inline {
 .panel-label-icon-code, .panel-label-icon-social {
 	display: inline-block;
 	position: relative;
-	bottom: 10px;
+	top: 0;
 	right: 15px;
-	height: 46px;
-	width: 46px;
-	background: #830b0f;
+	height: 30px;
+	width: 38px;
+	background: #f3f1f2;
 	font-family: Arial;
 	font-weight: Bold;
-	color: #fffcd5;
+	color: #9C9C9C;
 	font-size: 22px;
 	padding-top: 8px;
 	padding-left: 6px;
@@ -330,50 +331,53 @@ body .form-inline {
 	height: 60px;
 }
 .panel-fa-icon-gps {
-	background: #a1141a;
-	height: 46px;
-	padding-top: 9px;
+	padding-top: 0px;
 	padding-left: 10px;
 }
 .panel-fa-icon-itc {
-	background: #b8181e;
-	padding-top: 9px;
+	padding-top: 0px;
 	padding-left: 10px;
 }
 .panel-fa-icon-cuc {
-	background: #cc0000;
-	padding-top: 12px;
-	padding-left: 12px;
-	height: 46px;
+	padding-top: 2px;
+	padding-left: 10px;
 }
 .panel-label-icon-gpr{
-	background: #f15a22;
-    padding-left: 8px;
-	height: 46px;
-	bottom: 10px;
+	background: #9C9C9C;
+	padding-left: 4px;
+	color: white;
+	padding-top: 1px;
+	margin-top: -2px;
 }
 .panel-label-icon-dns{
     font-size: 17px;
-    padding-top: 11px;
+    padding-top: 2px;
 }
 .panel-label-icon-ip{
     font-size: 23px;
-    padding-left: 13px;
+	padding-left: 12px;
+	padding-top: 0;
+	margin-top: -3px;
 }
 .panel-label-icon-lang{
     font-size: 20px;
-    padding-top: 10px;
+	padding-top: 0;
+	margin-top: -1px;
 }
 .panel-label-icon-charset{
     font-size: 18px;
-    padding-top: 11px;
+    padding-top: 1px;
 }
 .panel-label-icon-size{
     font-size: 23px;
-    padding-left: 10px;
+	padding-left: 10px;
+	padding-top: 0;
+	margin-top: -2px;
 }
 .panel-label-icon-ico{
     padding-left: 8px;
+	padding-top: 0;
+	margin-top: -2px;
 }
 .panel-label-icon-h1{
     font-size: 23px;
@@ -381,62 +385,59 @@ body .form-inline {
 }
 .panel-label-icon-www{
 	font-size: 12px;
-	padding-top: 15px;
+	padding-top: 6px;
 }
 .panel-label-icon-gpi {
-	background: #f3811f;
-    padding-left: 16px;
+	background: #9C9C9C;
+	padding-left: 14px;
+	color: white;
+	padding-top: 1px;
+	margin-top: -2px;
 }
 .panel-fa-icon-g-chain {
-	background: #faa61a;
-	padding-top: 12px;
-	padding-left: 12px;
+	padding-top: 2px;
+	padding-left: 8px;
+	color: #9C9C9C;
 }
 .panel-fa-icon-robots {
-	background: #1b3281;
-	padding-top: 10px;
-	padding-left: 12px;
+	padding-top: 0px;
+	padding-left: 10px;
 }
 .panel-fa-icon-sitemap {
-	background: #1e398d;
 	padding-top: 10px;
 	padding-left: 12px;
 }
 .panel-fa-icon-pt {
-	background: #034ea2;
-	height: 46px;
-	padding-top: 10px;
+	padding-top: 0px;
 	padding-left: 14px;
 }
 .panel-label-icon-meta-d {
-	background: #005baa;
-	padding-top: 7px;
-	padding-left: 9px;
+	padding-top: 0;
+	padding-left: 12px;
 }
 .panel-label-icon-meta-k {
-	background: #1268b3;
-	padding-top: 9px;
+	padding-top: 0;
 	padding-left: 6px;
 }
 .panel-label-icon-wc {
-	background: #0073cc;
-	padding-top: 9px;
-	padding-left: 7px;
+	padding-top: 0;
+	padding-left: 5px;
 }
-.panel-fa-icon-twitter  {
-	background: #0db14b;
-	padding-top: 11px;
-	padding-left: 12px;
+.panel-fa-icon-twitter {
+	padding-top: 2px;
+	padding-left: 13px;
+}
+.panel-label-icon-w3 {
+	padding-top: 0;
+	margin-top: -1px;
+	padding-left: 5px;
 }
 .panel-fa-icon-facebook  {
-	background: #72bf44;
-	height: 46px;
-	padding-top: 11px;
+	padding-top: 3px;
 	padding-left: 16px;
 }
 .panel-fa-icon-g-plus  {
-	background: #90d03f;
-	padding-top: 11px;
+	padding-top: 2px;
 	padding-left: 12px;
 }
 .panel-fa-icon-itc ,.panel-fa-icon-g-plus,.panel-fa-icon-facebook,.panel-fa-icon-twitter,.panel-fa-icon-pt,.panel-fa-icon-sitemap,.panel-fa-icon-robots,.panel-fa-icon-g-chain,.panel-fa-icon-cuc,.panel-fa-icon-gps:before {   
@@ -444,14 +445,13 @@ body .form-inline {
     font-style: normal;
     font-weight: normal;
     text-decoration: inherit;
-    color: #fffcd5;
     font-size: 24px;
 }
 .panel-fa-icon-twitter ,.panel-fa-icon-g-plus,.panel-fa-icon-facebook {
-	color: #e4f2e7;
+	color: #9C9C9C;
 }
 .panel-label-icon-wc,.panel-label-icon-meta-k,.panel-label-icon-meta-d,.panel-fa-icon-pt,.panel-fa-icon-sitemap,.panel-fa-icon-robots {
-	color: #c7eafb;
+	color: #9C9C9C;
 }
 .pb-relative {
 	position: relative;
@@ -810,7 +810,7 @@ body .form-inline {
 /*sidebar*/
 .glyphicon-chevron-down,.glyphicon-chevron-right {
 	padding-top: 0px;
-	color: white;
+	color: #adaeb2;
 }
 .inner-link-text-seo ,.inner-link-text {
 	padding-top: 7px;
@@ -1123,9 +1123,9 @@ html {
 }
 .section-heading {
 	text-align: center;
-	color: white !important;
-    border-bottom: 1px solid transparent;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-    padding: 10px 15px;
+	border-bottom: 1px solid transparent;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	padding: 10px 15px;
+	font-weight: bold;
 }

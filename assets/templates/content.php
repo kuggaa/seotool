@@ -2,8 +2,7 @@
 	<div class="row">
 		<div class="panel" id="overall-perf">
 		  <div class="panel-heading overal-performance-head">
-		  	<span class="fa fa-list-alt panel-iceo-awesome pull-left"></span>
-		  	<span class="visible-phone pull-left">Review</span>
+		  	<span class="visible-phone pull-left">DPR for </span>
 		  	<span class="hidden-phone pull-left">Digital Presence Report for </span>
 		  	<b class="donaimname"><?php echo $url ?></b>
 		  </div>
@@ -329,7 +328,6 @@
 	<div class="row">
 		<div class="panel" id="overall-perf">
 		  <div class="panel-heading overal-performance-head">
-		  	<span class="fa fa-list-alt panel-iceo-awesome pull-left"></span>
 		  	<span class="visible-phone pull-left">Overall</span>
 		  	<span class="hidden-phone pull-left">Overall Performance Summary</span>
 		  	<b class="donaimname"><?php echo $url ?></b>

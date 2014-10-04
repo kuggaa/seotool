@@ -21,7 +21,7 @@
 		<div class="accordion-group">
 			<div class="panel-heading sidebar-head">
 				<a class="accordion-toggle" data-scroll data-parent="#accordion" href="#seo-panel">
-					<span class="glyphicon glyphicon-chevron-right pull-right"></span>
+					<span class="glyphicon glyphicon-chevron-right"></span>
 					<div class="headingtext">ORGANIC SITE SEO</div>
 				</a>
 			</div>
@@ -30,7 +30,7 @@
 		<div class="accordion-group">
 			<div class="panel-heading sidebar-head">
 				<a class="accordion-toggle" data-scroll data-parent="#accordion" href="#searchengines-panel">
-					<span class="glyphicon glyphicon-chevron-right pull-right"></span>
+					<span class="glyphicon glyphicon-chevron-right"></span>
 					<div class="headingtext">SEARCH ENGINES</div>
 				</a>
 			</div>
@@ -39,7 +39,7 @@
 		<div class="accordion-group">
 			<div class="panel-heading sidebar-head">
 				<a class="accordion-toggle" data-scroll data-parent="#accordion" href="#searchengines-panel">
-					<span class="glyphicon glyphicon-chevron-right pull-right"></span>
+					<span class="glyphicon glyphicon-chevron-right"></span>
 					<div class="headingtext">Paid Search</div>
 				</a>
 			</div>
@@ -48,7 +48,7 @@
 		<div class="accordion-group">
 			<div class="panel-heading sidebar-head">
 				<a class="accordion-toggle" data-scroll data-parent="#accordion" href="#social-panel">
-					<span class="glyphicon glyphicon-chevron-right pull-right"></span>
+					<span class="glyphicon glyphicon-chevron-right"></span>
 					<div class="headingtext">SOCIAL MEDIA</div>
 				</a>
 			</div>
@@ -57,7 +57,7 @@
 		<div class="accordion-group">
 			<div class="panel-heading sidebar-head">
 				<a class="accordion-toggle" data-scroll data-parent="#accordion" href="#code-panel">
-					<span class="glyphicon glyphicon-chevron-right pull-right"></span>
+					<span class="glyphicon glyphicon-chevron-right"></span>
 					<div class="headingtext">System Performance</div>
 				</a>
 			</div>

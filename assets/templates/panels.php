@@ -1,6 +1,6 @@
     <div class="row unbreakable">
         <div id="seo-panel" class="panel panel-default">
-          <div class="heading-main section-heading section-heading-seo">
+          <div class="heading-main panel-heading section-heading">
                 Organic Site SEO - Do you pass the test?
           </div>
           <div class="panel-body body-main">
@@ -374,7 +374,7 @@
 
     <div class="row unbreakable">
         <div id="searchengines-panel" class="panel panel-default">
-          <div class="heading-main section-heading section-heading-searchengines">
+          <div class="heading-main panel-heading section-heading">
                 SEARCH ENGINES - How do the Search Engines See Your Business?
           </div>
           <div class="panel-body body-main">
@@ -816,7 +816,7 @@
 
     <div class="row unbreakable">
         <div id="social-panel" class="panel panel-default">
-          <div class="heading-main section-heading section-heading-social">
+          <div class="heading-main panel-heading section-heading">
                 SOCIAL MEDIA - Why is Social Media Imporant?
           </div>
           <div class="panel-body body-main">
@@ -981,7 +981,7 @@
 
     <div class="row unbreakable">
         <div id="code-panel" class="panel panel-default">
-          <div class="heading-main section-heading section-heading-code">
+          <div class="heading-main panel-heading section-heading">
                 System Performance - How well is your site coded?
           </div>
           <div class="panel-body body-main">
