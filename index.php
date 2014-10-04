@@ -563,15 +563,15 @@ if ($user != null)
                 <div class="col-md-8 result-section">
     			<?php include ('assets/templates/content.php'); ?>
                 </div>
+                <script>
+                    $(document).ready(function() {
+                        var $sideBarContainer = $('.sidebar').parent(),
+                            $resultSection = $('.resultSection');
+                        $sideBarContainer.height($resultSection.height());
+                    });
+                </script>
             <?php endif; ?>
     	</div>
-        <script>
-            $(document).ready(function() {
-                var $sideBarContainer = $('.sidebar').parent(),
-                    $resultSection = $('.resultSection');
-                $sideBarContainer.height($resultSection.height());
-            })
-        </script>
 <?php 
     }
     else {
