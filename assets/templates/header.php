@@ -8,8 +8,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>Local SEO Company | Local Search Engine Optimization Services</title>
-	<meta name="description" content="Local SEO offers local SEO services to small and medium business. Our Local SEO services can help any local business acquire new customers through digital marketing, Google Local business marketing, small business SEO and online directories.">
+	<title>NATIVERANK | Search Engine Optimization Services</title>
+	<meta name="description" content="Native rank offers SEO services to small and medium business. Our services can help any local business acquire new customers through digital marketing, Google Local business marketing, small business SEO and online directories.">
 
 	<!-- Responsive and mobile friendly stuff -->
 	<meta name="HandheldFriendly" content="True">
