@@ -452,3 +452,12 @@
 		  </div>
 		</div>
 	</div>
+	<script>
+		$(function($) {
+	        $(document).ready(function() {
+	            var $sideBarContainer = $('.sidebar').parent(),
+	                $resultSection = $('.resultSection');
+	            $sideBarContainer.height($resultSection.height());
+	        });
+	    });
+    </script>
