@@ -560,7 +560,7 @@ if ($user != null)
                 <div class="col-md-4 visible-desktop">
     			<?php include ('assets/templates/sidebar.php'); ?>
                 </div>
-                <div class="col-md-8" style="padding-bottom:90px;">
+                <div class="col-md-8 result-section">
     			<?php include ('assets/templates/content.php'); ?>
                 </div>
             <?php endif; ?>

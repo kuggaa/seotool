@@ -6,22 +6,20 @@
 
 	<?php if(count($allstat) > 0): ?>
 		<div class="accordion-group">
-			<div class="panel-heading sidebar-head websitereview"><a data-scroll href="#overall-perf">
-				<span class="fa fa-list-alt pull-left"></span>
+			<div class="panel-heading sidebar-head"><a data-scroll href="#overall-perf">
 				<div class="headingtext">DIGITAL AUDIT</div></a>
 			</div>
 		</div>
 
 
 		<div class="accordion-group">
-		    <div class="panel-heading sidebar-head websitereview"><a data-scroll href="#competitors-panel">
-		        <span class="fa fa-star star-sidebar pull-left"></span>
+		    <div class="panel-heading sidebar-head"><a data-scroll href="#competitors-panel">
 		        <div class="headingtext">COMPETITORS</div></a>
 		    </div>
 		</div>
 
 		<div class="accordion-group">
-			<div class="panel-heading sidebar-head seo-review">
+			<div class="panel-heading sidebar-head">
 				<a class="accordion-toggle" data-scroll data-parent="#accordion" href="#seo-panel">
 					<span class="glyphicon glyphicon-chevron-right pull-right"></span>
 					<div class="headingtext">ORGANIC SITE SEO</div>
@@ -30,7 +28,7 @@
 		</div>
 
 		<div class="accordion-group">
-			<div class="panel-heading sidebar-head se-review">
+			<div class="panel-heading sidebar-head">
 				<a class="accordion-toggle" data-scroll data-parent="#accordion" href="#searchengines-panel">
 					<span class="glyphicon glyphicon-chevron-right pull-right"></span>
 					<div class="headingtext">SEARCH ENGINES</div>
@@ -39,7 +37,7 @@
 		</div>
 
 		<div class="accordion-group">
-			<div class="panel-heading sidebar-head se-review">
+			<div class="panel-heading sidebar-head">
 				<a class="accordion-toggle" data-scroll data-parent="#accordion" href="#searchengines-panel">
 					<span class="glyphicon glyphicon-chevron-right pull-right"></span>
 					<div class="headingtext">Paid Search</div>
@@ -48,7 +46,7 @@
 		</div>
 
 		<div class="accordion-group">
-			<div class="panel-heading sidebar-head sm-review">
+			<div class="panel-heading sidebar-head">
 				<a class="accordion-toggle" data-scroll data-parent="#accordion" href="#social-panel">
 					<span class="glyphicon glyphicon-chevron-right pull-right"></span>
 					<div class="headingtext">SOCIAL MEDIA</div>
@@ -57,7 +55,7 @@
 		</div>
 
 		<div class="accordion-group">
-			<div class="panel-heading sidebar-head codereview">
+			<div class="panel-heading sidebar-head">
 				<a class="accordion-toggle" data-scroll data-parent="#accordion" href="#code-panel">
 					<span class="glyphicon glyphicon-chevron-right pull-right"></span>
 					<div class="headingtext">System Performance</div>
@@ -66,18 +64,16 @@
 		</div>
 
 		<div class="accordion-group">
-			<div class="panel-heading sidebar-head websitereview optimizesite">
+			<div class="panel-heading sidebar-head">
 				<a data-scroll href="#" onclick="ajax_clean();return false;">
-					<span class="fa fa-star star-sidebar pull-left"></span>
 					<div class="headingtext">Start Over</div>
 				</a>
 			</div>
 		</div>
 
 		<div class="accordion-group">
-			<div class="panel-heading sidebar-head websitereview optimizesite">
+			<div class="panel-heading sidebar-head">
 				<a data-scroll href="../../Services/NATIVERANK/getPdf.php">
-					<span class="fa fa-star star-sidebar pull-left"></span>
 					<div class="headingtext">GET PDF</div>
 				</a>
 			</div>

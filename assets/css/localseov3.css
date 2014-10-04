@@ -6,7 +6,6 @@ body {
 	overflow-y: hide;
 }
 .wrapper {
-	height: 100%;
 	background: white;
 }
 @media (min-width: 768px) and (max-width: 992px) {
@@ -837,7 +836,7 @@ body .form-inline {
 	border-top: 3px solid #ebebec;
 }
 .websitereview {
-	background: #333333;
+	background: #000;
 	border-radius: 0px;
 	border-bottom: 1px solid #ebebec;
 }
@@ -917,10 +916,9 @@ body .form-inline {
 	text-transform: uppercase;
 	position: relative;
 	bottom: 5px;
-	padding-left:60px;
 	font-family: "Segoe UI";
 	font-size: 18px;
-	color: white;
+	color: #b0b0b2;
 }
 .seo-icon,.W3-icon {
 	padding-top: 5px;
@@ -1037,6 +1035,16 @@ html {
 }
 #main-container {
 	margin-top: 10px;
+}
+#main-container > .visible-desktop {
+	padding-top: 15px;
+	border: solid 1px #e5e5e5;
+	border-right: none;
+}
+#main-container > .result-section {
+	margin-bottom: 20px;
+	padding-top: 15px;
+	border: solid 1px #e5e5e5;
 }
 .competitors-checkbox {
 	color: black;
