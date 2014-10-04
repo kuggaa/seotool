@@ -64,6 +64,11 @@
 					<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
 						<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Update profile</a></li>
 						<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Change password</a></li>
+						<?php
+						if ($user->role == "1") {
+						?>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="register.php">Create user</a></li>
+						<?php } ?>
 						<li role="presentation" class="divider"></li>
 						<li role="presentation"><a role="menuitem" tabindex="-1" href="signout.php">Log out</a></li>
 					</ul>
