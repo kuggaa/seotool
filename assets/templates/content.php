@@ -37,7 +37,7 @@
 					<span class="progress-label-left">Organic Site SEO:</span>
 					<span class="progress-label-right3"><?php echo getLetterScore($SEOScore) ?><!--<span style="font-size: 12px;">%</span>--></span>
 					<div class="progress bar-progress">
-				  		<div class="progress-bar bar-3" role="progressbar" style="width: <?php echo $SEOScore ?>%;">
+				  		<div class="progress-bar" role="progressbar" style="width: <?php echo $SEOScore ?>%;">
 							<span class="sr-only"><?php echo $SEOScore ?>% Complete</span>
 						</div>
 					</div>
@@ -47,7 +47,7 @@
 					<span class="progress-label-left">Search Engines:</span>
 					<span class="progress-label-right2"><?php echo getLetterScore($searchEngineScore) ?><!--<span style="font-size: 12px;">%</span>--></span>
 					<div class="progress bar-progress">
-				  		<div class="progress-bar bar-2" role="progressbar" style="width: <?php echo $searchEngineScore ?>%;">
+				  		<div class="progress-bar" role="progressbar" style="width: <?php echo $searchEngineScore ?>%;">
 							<span class="sr-only"><?php echo $searchEngineScore ?>% Complete</span>
 						</div>
 					</div>
@@ -57,7 +57,7 @@
 					<span class="progress-label-left">Social Media:</span>
 					<span class="progress-label-right4"><?php echo getLetterScore($socialScore) ?><!--<span style="font-size: 12px;">%</span>--></span>
 					<div class="progress bar-progress">
-				  		<div class="progress-bar bar-4" role="progressbar" style="width: <?php echo $socialScore ?>%;">
+				  		<div class="progress-bar" role="progressbar" style="width: <?php echo $socialScore ?>%;">
 							<span class="sr-only"><?php echo $socialScore ?>% Complete</span>
 						</div>
 					</div>
@@ -67,7 +67,7 @@
 					<span class="progress-label-left">Code:</span>
 					<span class="progress-label-right1"><?php echo getLetterScore($codeScore) ?><!--<span style="font-size: 12px;">%</span>--></span>
 					<div class="progress bar-progress">
-				  		<div class="progress-bar bar-1" role="progressbar" style="width: <?php echo $codeScore ?>%;">
+				  		<div class="progress-bar" role="progressbar" style="width: <?php echo $codeScore ?>%;">
 							<span class="sr-only"><?php echo $codeScore ?>% Complete</span>
 						</div>
 					</div>
@@ -80,7 +80,7 @@
 					<span class="progress-label-left"style="font-size: 18px;">Organic Site SEO:</span>
 					<span class="progress-label-right3" style="padding-left: 0;"><?php echo getLetterScore($SEOScore) ?><!--<span style="font-size: 12px;">%</span>--></span>
 					<div class="progress bar-progress">
-				  		<div class="progress-bar bar-3" role="progressbar" style="width: <?php echo $SEOScore ?>%;">
+				  		<div class="progress-bar" role="progressbar" style="width: <?php echo $SEOScore ?>%;">
 							<span class="sr-only"><?php echo $SEOScore ?>% Complete</span>
 						</div>
 					</div>
@@ -90,7 +90,7 @@
 					<span class="progress-label-left"style="font-size: 18px;">Search Engines:</span>
 					<span class="progress-label-right2" style="padding-left: 9%;"><?php echo getLetterScore($searchEngineScore) ?><!--<span style="font-size: 12px;">%</span>--></span>
 					<div class="progress bar-progress">
-				  		<div class="progress-bar bar-2" role="progressbar" style="width: <?php echo $searchEngineScore ?>%;">
+				  		<div class="progress-bar" role="progressbar" style="width: <?php echo $searchEngineScore ?>%;">
 							<span class="sr-only"><?php echo $searchEngineScore ?>% Complete</span>
 						</div>
 					</div>
@@ -100,7 +100,7 @@
 					<span class="progress-label-left"style="font-size: 18px;">Social Media:</span>
 					<span class="progress-label-right4" style="padding-left: 20%;"><?php echo getLetterScore($socialScore) ?><!--<span style="font-size: 12px;">%</span>--></span>
 					<div class="progress bar-progress">
-				  		<div class="progress-bar bar-4" role="progressbar" style="width: <?php echo $socialScore ?>%;">
+				  		<div class="progress-bar" role="progressbar" style="width: <?php echo $socialScore ?>%;">
 							<span class="sr-only"><?php echo $socialScore ?>% Complete</span>
 						</div>
 					</div>
@@ -110,7 +110,7 @@
 					<span class="progress-label-left"style="font-size: 18px;">Code:</span>
 					<span class="progress-label-right1" style="padding-left: 55%;"><?php echo getLetterScore($codeScore) ?><!--<span style="font-size: 12px;">%</span>--></span>
 					<div class="progress bar-progress">
-				  		<div class="progress-bar bar-1" role="progressbar" style="width: <?php echo $codeScore ?>%;">
+				  		<div class="progress-bar" role="progressbar" style="width: <?php echo $codeScore ?>%;">
 							<span class="sr-only"><?php echo $codeScore ?>% Complete</span>
 						</div>
 					</div>
@@ -363,7 +363,7 @@
 					<span class="progress-label-left">SEO:</span>
 					<span class="progress-label-right3"><?php echo getLetterScore($SEOScore) ?><!--<span style="font-size: 12px;">%</span>--></span>
 					<div class="progress bar-progress">
-				  		<div class="progress-bar bar-3" role="progressbar" style="width: <?php echo $SEOScore ?>%;">
+				  		<div class="progress-bar" role="progressbar" style="width: <?php echo $SEOScore ?>%;">
 							<span class="sr-only"><?php echo $SEOScore ?>% Complete</span>
 						</div>
 					</div>
@@ -373,7 +373,7 @@
 					<span class="progress-label-left">Search Engines:</span>
 					<span class="progress-label-right2"><?php echo getLetterScore($searchEngineScore) ?><!--<span style="font-size: 12px;">%</span>--></span>
 					<div class="progress bar-progress">
-				  		<div class="progress-bar bar-2" role="progressbar" style="width: <?php echo $searchEngineScore ?>%;">
+				  		<div class="progress-bar" role="progressbar" style="width: <?php echo $searchEngineScore ?>%;">
 							<span class="sr-only"><?php echo $searchEngineScore ?>% Complete</span>
 						</div>
 					</div>
@@ -383,7 +383,7 @@
 					<span class="progress-label-left">Social Media:</span>
 					<span class="progress-label-right4"><?php echo getLetterScore($socialScore) ?><!--<span style="font-size: 12px;">%</span>--></span>
 					<div class="progress bar-progress">
-				  		<div class="progress-bar bar-4" role="progressbar" style="width: <?php echo $socialScore ?>%;">
+				  		<div class="progress-bar" role="progressbar" style="width: <?php echo $socialScore ?>%;">
 							<span class="sr-only"><?php echo $socialScore ?>% Complete</span>
 						</div>
 					</div>
@@ -393,7 +393,7 @@
 					<span class="progress-label-left">Code:</span>
 					<span class="progress-label-right1"><?php echo getLetterScore($codeScore) ?><!--<span style="font-size: 12px;">%</span>--></span>
 					<div class="progress bar-progress">
-				  		<div class="progress-bar bar-1" role="progressbar" style="width: <?php echo $codeScore ?>%;">
+				  		<div class="progress-bar" role="progressbar" style="width: <?php echo $codeScore ?>%;">
 							<span class="sr-only"><?php echo $codeScore ?>% Complete</span>
 						</div>
 					</div>
@@ -406,7 +406,7 @@
 					<span class="progress-label-left"style="font-size: 18px;">SEO:</span>
 					<span class="progress-label-right3" style="padding-left: 51%;"><?php echo getLetterScore($SEOScore) ?><!--<span style="font-size: 12px;">%</span>--></span>
 					<div class="progress bar-progress">
-				  		<div class="progress-bar bar-3" role="progressbar" style="width: <?php echo $SEOScore ?>%;">
+				  		<div class="progress-bar" role="progressbar" style="width: <?php echo $SEOScore ?>%;">
 							<span class="sr-only"><?php echo $SEOScore ?>% Complete</span>
 						</div>
 					</div>
@@ -416,7 +416,7 @@
 					<span class="progress-label-left"style="font-size: 18px;">Search Engines:</span>
 					<span class="progress-label-right2" style="padding-left: 0%;"><?php echo getLetterScore($searchEngineScore) ?><!--<span style="font-size: 12px;">%</span>--></span>
 					<div class="progress bar-progress">
-				  		<div class="progress-bar bar-2" role="progressbar" style="width: <?php echo $searchEngineScore ?>%;">
+				  		<div class="progress-bar" role="progressbar" style="width: <?php echo $searchEngineScore ?>%;">
 							<span class="sr-only"><?php echo $searchEngineScore ?>% Complete</span>
 						</div>
 					</div>
@@ -426,7 +426,7 @@
 					<span class="progress-label-left"style="font-size: 18px;">Social Media:</span>
 					<span class="progress-label-right4" style="padding-left: 10%;"><?php echo getLetterScore($socialScore) ?><!--<span style="font-size: 12px;">%</span>--></span>
 					<div class="progress bar-progress">
-				  		<div class="progress-bar bar-4" role="progressbar" style="width: <?php echo $socialScore ?>%;">
+				  		<div class="progress-bar" role="progressbar" style="width: <?php echo $socialScore ?>%;">
 							<span class="sr-only"><?php echo $socialScore ?>% Complete</span>
 						</div>
 					</div>
@@ -436,7 +436,7 @@
 					<span class="progress-label-left"style="font-size: 18px;">Code:</span>
 					<span class="progress-label-right1" style="padding-left: 45%;"><?php echo getLetterScore($codeScore) ?><!--<span style="font-size: 12px;">%</span>--></span>
 					<div class="progress bar-progress">
-				  		<div class="progress-bar bar-1" role="progressbar" style="width: <?php echo $codeScore ?>%;">
+				  		<div class="progress-bar" role="progressbar" style="width: <?php echo $codeScore ?>%;">
 							<span class="sr-only"><?php echo $codeScore ?>% Complete</span>
 						</div>
 					</div>
