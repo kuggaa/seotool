@@ -1,8 +1,6 @@
 <?php
-session_start();
+//session_start();
 error_reporting(E_ERROR | E_PARSE);
-
-$user = $_SESSION['user'];         
 
 function getAllStat($i,$url){
 
@@ -99,6 +97,7 @@ if (isset($_POST["url"])) {
     $_SESSION["url"] = $url;
     
     if($serv == 'parser') {
+        $output = array();
         require_once('PageParser.php');
         $pageParser = new PageParser($url);
         $pageParser->parsePage();
@@ -260,6 +259,7 @@ if (isset($_POST["url"])) {
 } 
 $output = json_encode($output);
 echo $output;
+//var_dump($output);
 function fixUrl($url) {
     if(strpos($url,"://")===false && substr($url,0,1)!="/") $url = "http://".$url;
     $parsed = parse_url($url);
