@@ -1,5 +1,10 @@
 		<div>
-			<?php var_dump($_SESSION); ?>
+			<?php 
+				if ($ENV == "dev" || $ENV == "test")
+				{
+					var_dump($_SESSION); 
+				}
+			?>
 		</div>
 		<footer class="full-w" style="<?php if (count($allstat) == 0) echo 'position: fixed  !important;'; ?>">
 			<div class="cont-w">
