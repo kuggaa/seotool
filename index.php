@@ -332,7 +332,8 @@ if ($_SESSION['userEmail'] != null)
         <?php endif; ?>
         <script>
             var url,
-                serviceURL = "http://seotools.dev.local/Services/NATIVERANK/service.php";
+                // serviceURL = "http://seotools.dev.local/Services/NATIVERANK/service.php";
+                serviceURL = "Services/NATIVERANK/service.php";
             counter_end = 31;
             function ajax_submit(form) {
                 counter = 0;
