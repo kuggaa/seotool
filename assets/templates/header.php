@@ -54,12 +54,12 @@
 			    <ul id="login">
 		    	<?php 
 		    		$user = $_SESSION['user'];
-		    		if ($user == null) { ?>
+		    		if ($_SESSION['userEmail'] == null) { ?>
 		        	<li><a href="login.php">Login</a></li>
 		        <?php } else { ?>
 		        	<div class="dropdown">
 						<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-							<?php echo $user->firstname . " " . $user->lastname; ?>
+							<?php echo $_SESSION['userName']; ?>
 							<span class="caret"></span>
 						</button>
 						<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">

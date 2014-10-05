@@ -18,6 +18,10 @@ if ($_POST) {
 	if ($result = $mysql->query($query)) {
 		if ( $account = $result->fetch_object() ) {
 			$_SESSION['user'] = $account;
+			$_SESSION['userName'] = $account->firstname . " " . $account->lastname;
+			$_SESSION['userEmail'] = $account->email;
+			$_SESSION['userPhone'] = $account->phone;
+			$_SESSION['userRole'] = $account->role;
 			header("Location: index.php");
 		} else {
 			echo "Something went wrong...";

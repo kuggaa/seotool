@@ -1,13 +1,16 @@
 <?php 
 
-session_start();     
+session_start();
 error_reporting(E_ERROR);
+
 $user = $_SESSION['user'];
+
 include ('assets/templates/header.php');
-if ($user != null)
+if ($_SESSION['userEmail'] != null)
 {
     $_SESSION['type'] = 'private';
     $_SESSION['logo'] == "nativerank";
+    $_SESSION['user'] = $user;
     $url =  $_SESSION['url'];
     $finish =  $_SESSION['finish'];
 
@@ -132,23 +135,29 @@ if ($user != null)
     $warnScore = (count($validate['warnings'])/30 > 1) ? 100 : count($validate['warnings'])/30*100;
     $w3CScore = 100 - (0.6*$errorScore + 0.4*$warnScore);
     $arr = explode('/', $countImagesAltTexts);
+
     if ($arr[1] == 0) {
       $imageAltScore = 100;
     } else {
       $imageAltScore = round($arr[0]/$arr[1]*100);
     }
+
     $arr = explode('/', $checkCleanUrls);
+
     if ($arr[1] == 0) {
       $cleanUrlScore = 100;
     } else {
       $cleanUrlScore = round($arr[0]/$arr[1]*100);
     }
+
     $codeScore = 0.3*$w3CScore + 0.2*$getPagespeedScore + 0.1*$imageAltScore + 0.05*$cleanUrlScore;
+
     if ($getWWWResolve) {$codeScore = $codeScore + 0.1*100;}
     if ($getIpCanonicalization) {$codeScore = $codeScore + 0.05*100;}
     if ($hasFavicon) {$codeScore = $codeScore + 0.05*100;}
     if ($checkLang != '') {$codeScore = $codeScore + 0.05*100;}
     if ($checkMetaCharset != '') {$codeScore = $codeScore + 0.1*100;}
+
     $codeScore = round($codeScore);
 
     $googleIndexScore = log($getSiteindexTotal+1)/10;
@@ -163,6 +172,7 @@ if ($user != null)
         0.15*$alexaScore*100 + 0.15*$trustworthiness + 0.1*$childsafety);
 
     $SEOScore = 0;
+
     if ($hasRobots == 'true') $SEOScore += 5;
     if ($hasSitemaps != 'false') $SEOScore += 20;
     if (strlen($checkTitle) >= 5) $SEOScore += 20;
@@ -172,6 +182,7 @@ if ($user != null)
     if($countH1 == 1) $SEOScore += 20;
 
     $googlePlusScore = log($getGooglePlusOnes+1)/10;
+
     if ($googlePlusScore > 1) {$googlePlusScore = 1;}
     $facebookScore = log($getFacebookInteractions['total_count']+1)/10;
     if ($facebookScore > 1) {$facebookScore = 1;}
@@ -180,15 +191,16 @@ if ($user != null)
     $socialScore = round(0.3*$googlePlusScore*100 + 0.35*$facebookScore*100 + 0.35*$twitterScore*100);
     $totalScore = round(($codeScore + $searchEngineScore + $SEOScore + $socialScore)/4);
 
-    $userName = $user->firstname . " " . $user->lastname;//$_SESSION["userName"];
-    $userEmail = $user->email;//$_SESSION["userEmail"];
-    $userPhone = $user->phone;//$_SESSION["userPhone"];
+    $userName = $_SESSION["userName"];
+    $userEmail = $_SESSION["userEmail"];
+    $userPhone = $_SESSION["userPhone"];
     $competitorsType = $_SESSION["competitorsType"];
     $competitor1 = $_SESSION["competitor1"];
     $competitor2 = $_SESSION["competitor2"];
     $competitor3 = $_SESSION["competitor3"];
 
     $allstat = $_SESSION["allstat"];
+
     function getScore($urlstmp, $allstat){
         $_validate =  $allstat[$urlstmp]['validate'];
         $_countImagesAltTexts = $allstat[$urlstmp]['countImagesAltTexts'];
@@ -319,7 +331,8 @@ if ($user != null)
             <?php include ('assets/templates/sidebar-xs.php'); ?>
         <?php endif; ?>
         <script>
-            var url;
+            var url,
+                serviceURL = "http://seotools.dev.local/Services/NATIVERANK/service.php";
             counter_end = 31;
             function ajax_submit(form) {
                 counter = 0;
@@ -340,12 +353,12 @@ if ($user != null)
                 }
                 $.ajax({
                     type: "POST",
-                    url: "/Services/NATIVERANK/service.php",
+                    url: serviceURL,
                     data: "url="+url+"&service=clean",
                     success: function(msg){
                         $.ajax({
                             type: "POST",
-                            url: "/Services/NATIVERANK/service.php",
+                            url: serviceURL,
                             data: "url="+url+"&service=start&userName="+userName+"&userEmail="+userEmail+"&userPhone="+userPhone+"&logo="+logo+
                                 "&competitorsType="+competitorsType+"&competitor1="+competitor1+"&competitor2="+competitor2+"&competitor3="+competitor3,
                             success: function(msg){
@@ -356,17 +369,18 @@ if ($user != null)
                 });
             }
             function check() {
-                var array = new Array( "validate", "getPagespeedScore", "parser","getDomainAge","getWWWResolve","getIpCanonicalization","hasFavicon",
-                            "hasRobots", "hasSitemaps", "getGoogleToolbarPageRank", "getGoogleBacklinksTotal", 
-                            "getGooglePlusOnes", "getSiteindexTotal", "getSiteindexTotalBing", "getFacebookInteractions", 
-                            "getTwitterMentions", "getAlexaGlobalRank","getSEMRushDomainRank","getSEMRushOrganicKeywords",
-                            "getWOT" );
+                var array = new Array(  "validate", "getPagespeedScore", "parser","getDomainAge","getWWWResolve",
+                                        "getIpCanonicalization","hasFavicon","hasRobots", "hasSitemaps", 
+                                        "getGoogleToolbarPageRank", "getGoogleBacklinksTotal", "getGooglePlusOnes", 
+                                        "getSiteindexTotal", "getSiteindexTotalBing", "getFacebookInteractions", 
+                                        "getTwitterMentions", "getAlexaGlobalRank","getSEMRushDomainRank",
+                                        "getSEMRushOrganicKeywords", "getWOT" );
                 for(var i = 0; i < array.length; i++){
                 // for(var i = 2; i < 3; i++){
                     var serviceNameString = array[i];
                     $.ajax({
                         type: "POST",
-                        url: "/Services/NATIVERANK/service.php",
+                        url: serviceURL,
                         data: "url="+url+"&service="+array[i],
                         success: function(msg) {
                             if (msg == "")
@@ -386,7 +400,7 @@ if ($user != null)
                                     if (competitorsType) {
                                         $.ajax({
                                             type: "POST",
-                                            url: "/Services/NATIVERANK/service.php",
+                                            url: serviceURL,
                                             data: "url="+url+"&service=competitors",
                                             success: function(msg){
                                                 checkCompetitors(msg);
@@ -413,7 +427,7 @@ if ($user != null)
                                         }
                                         $.ajax({
                                             type: "POST",
-                                            url: "/Services/NATIVERANK/service.php",
+                                            url: serviceURL,
                                             data: urlCompetitor,
                                             success: function(msg){
                                                 checkCompetitorsManual(result);
@@ -432,7 +446,7 @@ if ($user != null)
                 if (result == 0){
                     $.ajax({
                         type: "POST",
-                        url: "/Services/NATIVERANK/service.php",
+                        url: serviceURL,
                         data: "url="+url+"&service=finish",
                         success: function(msg){
                             window.location.href = 'index.php';
@@ -444,7 +458,7 @@ if ($user != null)
                 for(var i = 0; i < result; i++){
                     $.ajax({
                         type: "POST",
-                        url: "/Services/NATIVERANK/service.php",
+                        url: serviceURL,
                         data: "url="+url+"&service=competitor"+i,
                         success: function(msg){
                             counter++;
@@ -452,7 +466,7 @@ if ($user != null)
                             if(counter == result) {
                                 $.ajax({
                                     type: "POST",
-                                    url: "/Services/NATIVERANK/service.php",
+                                    url: serviceURL,
                                     data: "url="+url+"&service=finish",
                                     success: function(msg){
                                         window.location.href = 'index.php';
@@ -468,7 +482,7 @@ if ($user != null)
                 if (result == 0){
                     $.ajax({
                         type: "POST",
-                        url: "/Services/NATIVERANK/service.php",
+                        url: serviceURL,
                         data: "url="+url+"&service=finish",
                         success: function(msg){
                             window.location.href = 'index.php';
@@ -479,7 +493,7 @@ if ($user != null)
                 for(var i = 0; i < result; i++){
                     $.ajax({
                         type: "POST",
-                        url: "/Services/NATIVERANK/service.php",
+                        url: serviceURL,
                         data: "url="+url+"&service=competitor"+i,
                         success: function(msg){
                             counter++;
@@ -487,7 +501,7 @@ if ($user != null)
                             if(counter == result) {
                                 $.ajax({
                                     type: "POST",
-                                    url: "/Services/NATIVERANK/service.php",
+                                    url: serviceURL,
                                     data: "url="+url+"&service=finish",
                                     success: function(msg){
                                         window.location.href = 'index.php';
