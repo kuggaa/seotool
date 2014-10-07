@@ -20,20 +20,22 @@
                     </div>
                     
                     <div class="radial-progress hidden-phone gps-radial">
-                        <input class="knob-seo" data-fgColor="<?php 
-                            if($SEOScore >= 0 && $SEOScore <= 33)echo 'red';
-                            if($SEOScore > 33 && $SEOScore <= 66)echo 'orange';
-                            if($SEOScore > 66)echo 'green';
-                        ?>" data-step="1" data-min="0" data-max="100" data-thickness=".1" data-width="90" data-height="90" readonly value="<?php echo $SEOScore ?>">
+                        <style type="text/css">
+                            strong.detail {
+                                position: absolute;
+                                top: 50px;
+                                font-size: 20px;
+                                left: 45px;
+                            }
+                        </style>
+                        <strong class="detail"><?php echo getLetterScore($SEOScore) ?></strong>
                     </div>  
                     <script>
-                        $(function($) {
-                            $(".knob-seo").knob({
-                              'draw' : function () { 
-                                $(this.i).val('<?php echo getLetterScore($SEOScore) ?>')
-                              }
-                            });
-                            $(".knob-seo").css('font-family-size','25px').css('color','#666666').css('font-family','Segoe UI').css('font-weight','100').css('display','inline-block');
+                        $('.radial-progress.overal-radial').circleProgress({
+                            value: <?php echo $SEOScore ?>,
+                            size: 90,
+                            startAngle: Math.PI / 2,
+                            fill: {gradient: ['#1256c3', '#4cbfff']}
                         });
                     </script>
                 </div>
