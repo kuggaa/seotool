@@ -379,10 +379,10 @@
                         </div>
                     </div>
                     
-                    <div class="radial-progress hidden-phone gps-radial">
+                    <div class="radial-progress hidden-phone gps-radial searchEngineScore">
                         <strong class="detail"><?php echo getLetterScore($searchEngineScore) ?></strong>
                         <script type="text/javascript">
-                            $('.radial-progress.hidden-phone.gps-radial').circleProgress({
+                            $('.radial-progress.hidden-phone.gps-radial.searchEngineScore').circleProgress({
                                 value: <?php echo $searchEngineScore / 100 ?>,
                                 size: 90,
                                 startAngle: Math.PI / 2,
@@ -433,10 +433,10 @@
                     </div>
                     </div>
                     
-                    <div class="radial-progress hidden-phone gps-radial">
+                    <div class="radial-progress hidden-phone gps-radial getGoogleToolbarPageRank">
                         <strong class="detail-rank"><?php echo $getGoogleToolbarPageRank . "<br/>" . "of 10"; ?></strong>
                         <script type="text/javascript">
-                            $('.radial-progress.hidden-phone.gps-radial').circleProgress({
+                            $('.radial-progress.hidden-phone.gps-radial.getGoogleToolbarPageRank').circleProgress({
                                 value: <?php echo $getGoogleToolbarPageRank / 10 ?>,
                                 size: 90,
                                 startAngle: Math.PI / 2,
@@ -675,11 +675,7 @@
                     <span class="progress-label-left"><?php echo $trustworthiness ?> <span style="font-size: 12px;">of 100</span></span>
                     <span class="pull-right"><?php echo $trustworthiness ?><span style="font-size: 12px;">%</span></span>
                     <div class="progress bar-progress">
-                        <div class="progress-bar bar-3" role="progressbar" style="width: <?php echo $trustworthiness ?>%; background:   <?php 
-                            if($trustworthiness >= 0 && $trustworthiness <= 33)echo 'red';
-                            if($trustworthiness > 33 && $trustworthiness <= 66)echo 'orange';
-                            if($trustworthiness > 66)echo 'green';
-                        ?>;">
+                        <div class="progress-bar bar-3" role="progressbar" style="width: <?php echo $trustworthiness ?>%;">
                             <span class="sr-only"><?php echo $trustworthiness ?>% Complete</span>
                         </div>
                     </div>
@@ -746,17 +742,13 @@
                     <span class="progress-label-left"><?php echo $childsafety ?> <span style="font-size: 12px;">of 100</span></span></span>
                     <span class="pull-right"><?php echo $childsafety ?><span style="font-size: 12px;">%</span></span>
                     <div class="progress bar-progress">
-                        <div class="progress-bar bar-3" role="progressbar" style="width: <?php echo $childsafety ?>%; background:   <?php 
-                            if($childsafety >= 0 && $childsafety <= 33)echo 'red';
-                            if($childsafety > 33 && $childsafety <= 66)echo 'orange';
-                            if($childsafety > 66)echo 'green';
-                        ?>;">
+                        <div class="progress-bar bar-3" role="progressbar" style="width: <?php echo $childsafety ?>%;">
                             <span class="sr-only"><?php echo $childsafety ?>% Complete</span>
                         </div>
                     </div>
                     </div>
                     <div class="radial-progress hidden-phone gps-radial childsafety">
-                        <strong class="detail"><?php echo childsafety. "<br/>of 100" ?></strong>
+                        <strong class="detail"><?php echo $childsafety. "<br/>of 100" ?></strong>
                         <script type="text/javascript">
                             $('radial-progress.hidden-phone.gps-radial.childsafety').circleProgress({
                                 value: <?php echo $childsafety / 100 ?>,
@@ -816,10 +808,10 @@
                         </div>
                     </div>
                     
-                    <div class="radial-progress hidden-phone gps-radial">
+                    <div class="radial-progress hidden-phone gps-radial socialScore">
                         <strong class="detail"><?php echo getLetterScore($socialScore) ?></strong>
                         <script>
-                            $('.radial-progress.hidden-phone.gps-radial').circleProgress({
+                            $('.radial-progress.hidden-phone.gps-radial.socialScore').circleProgress({
                                 value: <?php echo $socialScore / 100 ?>,
                                 size: 90,
                                 startAngle: Math.PI / 2,
@@ -971,10 +963,10 @@
                         </div>
                     </div>
                     
-                    <div class="radial-progress hidden-phone gps-radial">
+                    <div class="radial-progress hidden-phone gps-radial codeScore">
                         <strong class="detail"><?php echo getLetterScore($codeScore) ?></strong>
                         <script type="text/javascript">
-                            $('.radial-progress.hidden-phone.gps-radial').circleProgress({
+                            $('.radial-progress.hidden-phone.gps-radial.codeScore').circleProgress({
                                 value: <?php echo $codeScore / 100 ?>,
                                 size: 90,
                                 startAngle: Math.PI / 2,
@@ -1057,11 +1049,7 @@
                     <span class="progress-label-left"><?php echo $getPagespeedScore ?> <span style="font-size: 12px;">of 100</span></span></span>
                     <span class="pull-right"><?php echo $getPagespeedScore ?><span style="font-size: 12px;">%</span></span>
                     <div class="progress bar-progress">
-                        <div class="progress-bar bar-3" role="progressbar" style="width: <?php echo $getPagespeedScore ?>%; background: <?php 
-                            if($getPagespeedScore >= 0 && $getPagespeedScore <= 33)echo 'red';
-                            if($getPagespeedScore > 33 && $getPagespeedScore <= 66)echo 'orange';
-                            if($getPagespeedScore > 66)echo 'green';
-                        ?>;">
+                        <div class="progress-bar bar-3" role="progressbar" style="width: <?php echo $getPagespeedScore ?>%;">
                             <span class="sr-only"><?php echo $getPagespeedScore ?>% Complete</span>
                         </div>
                     </div>
@@ -1129,17 +1117,13 @@
                     <span class="progress-label-left"><?php echo $arr[0] ?> <span style="font-size: 12px;">of <?php echo $arr[1] ?></span></span></span>
                     <span class="pull-right"><?php echo $imageAltScore ?><span style="font-size: 12px;">%</span></span>
                     <div class="progress bar-progress">
-                        <div class="progress-bar bar-3" role="progressbar" style="width: <?php echo $imageAltScore ?>%; background: <?php 
-                            if($imageAltScore >= 0 && $imageAltScore <= 33)echo 'red';
-                            if($imageAltScore > 33 && $imageAltScore <= 66)echo 'orange';
-                            if($imageAltScore > 66)echo 'green';
-                        ?>;">
+                        <div class="progress-bar bar-3" role="progressbar" style="width: <?php echo $imageAltScore ?>%;">
                             <span class="sr-only"><?php echo $imageAltScore ?>% Complete</span>
                         </div>
                     </div>
                     </div>
                     <div class="radial-progress hidden-phone gps-radial imageAltScore">
-                        <strong class="detail"><?php echo $imageAltScore . "<br/>of" . $arr[1]; ?></strong>
+                        <strong class="detail"><?php echo $imageAltScore . "<br/>of " . $arr[1]; ?></strong>
                         <script type="text/javascript">
                             $('.radial-progress.hidden-phone.gps-radial.imageAltScore').circleProgress({
                                 value: <?php echo $imageAltScore / $arr[1]; ?>,
@@ -1205,21 +1189,17 @@
                     <span class="progress-label-left"><?php echo $arr[0] ?>of <?php echo $arr[1] ?></span></span></span>
                     <span class="pull-right"><?php echo $cleanUrlScore ?><span style="font-size: 12px;">%</span></span>
                     <div class="progress bar-progress">
-                        <div class="progress-bar bar-3" role="progressbar" style="width: 100%; background:<?php 
-                            if($cleanUrlScore >= 0 && $cleanUrlScore <= 33)echo 'red';
-                            if($cleanUrlScore > 33 && $cleanUrlScore <= 66)echo 'orange';
-                            if($cleanUrlScore > 66)echo 'green';
-                        ?>;">
+                        <div class="progress-bar bar-3" role="progressbar" style="width: 100%;">
                             <span class="sr-only"><?php echo $cleanUrlScore ?>%</span>
                         </div>
                     </div>
                     </div>
                     
                     <div class="radial-progress gps-radial hidden-phone cleanUrlScore">
-                        <strong class="detail"><?php echo $cleanUrlScore . "<br/>of " . $arr[1]; ?></strong>
+                        <strong class="detail"><?php echo $arr[0] . "<br/>of " . $arr[1]; ?></strong>
                         <script type="text/javascript">
                             $('.radial-progress.hidden-phone.gps-radial.cleanUrlScore').circleProgress({
-                                value: <?php echo $cleanUrlScore / $arr[1]; ?>,
+                                value: <?php echo $cleanUrlScore / 100; ?>,
                                 size: 90,
                                 startAngle: Math.PI / 2,
                                 fill: {gradient: ['#1256c3', '#4cbfff']}
