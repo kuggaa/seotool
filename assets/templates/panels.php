@@ -15,11 +15,11 @@
                         </div>
                     </div>
                     
-                    <div class="radial-progress hidden-phone gps-radial">
+                    <div class="radial-progress hidden-phone gps-radial SEOScore">
                         <strong class="detail"><?php echo getLetterScore($SEOScore) ?></strong>
                     </div>  
                     <script>
-                        $('.radial-progress.hidden-phone.gps-radial').circleProgress({
+                        $('.radial-progress.hidden-phone.gps-radial.SEOScore').circleProgress({
                             value: <?php echo $SEOScore / 100 ?>,
                             size: 90,
                             startAngle: Math.PI / 2,
