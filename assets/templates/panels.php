@@ -684,13 +684,16 @@
                         </div>
                     </div>
                     </div>
-                    <div class="radial-progress hidden-phone gps-radial">
-                        <input class="knob" data-fgColor="<?php 
-                            if($trustworthiness >= 0 && $trustworthiness <= 33)echo 'red';
-                            if($trustworthiness > 33 && $trustworthiness <= 66)echo 'orange';
-                            if($trustworthiness > 66)echo 'green';
-                        ?>" data-thickness=".1" data-width="90" data-height="90" readonly value="<?php echo $trustworthiness ?>">
-                        <span class="radial-inside-content">of 100</span>
+                    <div class="radial-progress hidden-phone gps-radial trustworthiness">
+                        <strong class="detail"><?php echo $trustworthiness. "<br/>of 100"; ?></strong>
+                        <script type="text/javascript">
+                            $('radial-progress.hidden-phone.gps-radial.trustworthiness').circleProgress({
+                                value: <?php echo $trustworthiness / 100 ?>,
+                                size: 90,
+                                startAngle: Math.PI / 2,
+                                fill: {gradient: ['#1256c3', '#4cbfff']}
+                            });
+                        </script>
                     </div>
                     <?php if($trustworthiness >= 60): ?>
                         <p class="passed">Passed</p>
@@ -752,13 +755,16 @@
                         </div>
                     </div>
                     </div>
-                    <div class="radial-progress hidden-phone gps-radial">
-                        <input class="knob" data-fgColor="<?php 
-                            if($childsafety >= 0 && $childsafety <= 33)echo 'red';
-                            if($childsafety > 33 && $childsafety <= 66)echo 'orange';
-                            if($childsafety > 66)echo 'green';
-                        ?>" data-thickness=".1" data-width="90" data-height="90" readonly value="<?php echo $childsafety ?>">
-                        <span class="radial-inside-content">of 100</span>
+                    <div class="radial-progress hidden-phone gps-radial childsafety">
+                        <strong class="detail"><?php echo childsafety. "<br/>of 100" ?></strong>
+                        <script type="text/javascript">
+                            $('radial-progress.hidden-phone.gps-radial.childsafety').circleProgress({
+                                value: <?php echo $childsafety / 100 ?>,
+                                size: 90,
+                                startAngle: Math.PI / 2,
+                                fill: {gradient: ['#1256c3', '#4cbfff']}
+                            });
+                        </script>
                     </div>
                     <?php if($childsafety >= 60): ?>
                         <p class="passed">Passed</p>
@@ -1060,13 +1066,16 @@
                         </div>
                     </div>
                     </div>
-                    <div class="radial-progress hidden-phone gps-radial">
-                        <input class="knob" data-fgColor="<?php 
-                            if($getPagespeedScore >= 0 && $getPagespeedScore <= 33)echo 'red';
-                            if($getPagespeedScore > 33 && $getPagespeedScore <= 66)echo 'orange';
-                            if($getPagespeedScore > 66)echo 'green';
-                        ?>" data-thickness=".1" data-width="90" data-height="90" readonly value="<?php echo $getPagespeedScore ?>">
-                        <span class="radial-inside-content">of 100</span>
+                    <div class="radial-progress hidden-phone gps-radial getPagespeedScore">
+                        <strong class="detail"><?php echo $getPagespeedScore . "<br/>of 100" ?></strong>
+                        <script type="text/javascript">
+                            $('.radial-progress.hidden-phone.gps-radial.getPagespeedScore').circleProgress({
+                                value: <?php echo $getPagespeedScore / 100 ?>,
+                                size: 90,
+                                startAngle: Math.PI / 2,
+                                fill: {gradient: ['#1256c3', '#4cbfff']}
+                            });
+                        </script>
                     </div>
                     <p class="attention <?php
                         if($getPagespeedScore <= 33 || $getPagespeedScore > 66)echo 'hide';
@@ -1129,13 +1138,16 @@
                         </div>
                     </div>
                     </div>
-                    <div class="radial-progress hidden-phone gps-radial">
-                        <input class="knob" data-fgColor="<?php 
-                            if($imageAltScore >= 0 && $imageAltScore <= 33)echo 'red';
-                            if($imageAltScore > 33 && $imageAltScore <= 66)echo 'orange';
-                            if($imageAltScore > 66)echo 'green';
-                        ?>" data-thickness=".1" data-width="90" data-height="90" data-max="<?php echo $arr[1] ?>" readonly value="<?php echo $arr[0] ?>">
-                        <span class="radial-inside-content">of <?php echo $arr[1] ?></span>
+                    <div class="radial-progress hidden-phone gps-radial imageAltScore">
+                        <strong class="detail"><?php echo $imageAltScore . "<br/>of" . $arr[1]; ?></strong>
+                        <script type="text/javascript">
+                            $('.radial-progress.hidden-phone.gps-radial.imageAltScore').circleProgress({
+                                value: <?php echo $imageAltScore / $arr[1]; ?>,
+                                size: 90,
+                                startAngle: Math.PI / 2,
+                                fill: {gradient: ['#1256c3', '#4cbfff']}
+                            });
+                        </script>
                     </div>
                     <p class="attention <?php
                         if($imageAltScore <= 33 || $imageAltScore > 66)echo 'hide';
@@ -1203,14 +1215,16 @@
                     </div>
                     </div>
                     
-                    <div class="radial-progress gps-radial hidden-phone">
-                        <input class="knob" data-fgColor="<?php 
-                            if($cleanUrlScore >= 0 && $cleanUrlScore <= 33)echo 'red';
-                            if($cleanUrlScore > 33 && $cleanUrlScore <= 66)echo 'orange';
-                            if($cleanUrlScore > 66)echo 'green';
-                        ?>" data-step="1" data-min="0" data-max="<?php echo $arr[1] ?>" data-thickness=".1" data-width="90" 
-                            data-height="90" readonly value="<?php echo $arr[0] ?>">
-                        <span class="radial-inside-content">of <?php echo $arr[1] ?></span>
+                    <div class="radial-progress gps-radial hidden-phone cleanUrlScore">
+                        <strong class="detail"><?php echo $cleanUrlScore . "<br/>of " . $arr[1]; ?></strong>
+                        <script type="text/javascript">
+                            $('.radial-progress.hidden-phone.gps-radial.cleanUrlScore').circleProgress({
+                                value: <?php echo $cleanUrlScore / $arr[1]; ?>,
+                                size: 90,
+                                startAngle: Math.PI / 2,
+                                fill: {gradient: ['#1256c3', '#4cbfff']}
+                            });
+                        </script>
                     </div>
                     <p class="attention <?php
                         if($cleanUrlScore <= 33 || $cleanUrlScore > 66)echo 'hide';
