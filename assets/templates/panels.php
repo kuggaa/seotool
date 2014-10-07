@@ -31,7 +31,7 @@
                         <strong class="detail"><?php echo getLetterScore($SEOScore) ?></strong>
                     </div>  
                     <script>
-                        $('.radial-progress.overal-radial').circleProgress({
+                        $('.radial-progress.hidden-phone.gps-radial').circleProgress({
                             value: <?php echo $SEOScore ?>,
                             size: 90,
                             startAngle: Math.PI / 2,
