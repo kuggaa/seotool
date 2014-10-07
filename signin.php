@@ -1,4 +1,4 @@
-<?php
+<?php  
 session_start();     
 error_reporting(E_ERROR | E_WARNING);
 require_once 'Services/NATIVERANK/DB.php';

@@ -1,6 +1,7 @@
-<?php 
-
+<?php                        
+//session_id( uniqid() );
 session_start();
+//session_regenerate_id();
 error_reporting(E_ERROR);
 
 $user = $_SESSION['user'];
