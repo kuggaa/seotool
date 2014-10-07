@@ -427,23 +427,22 @@
                     <div class="progress-bars visible-phone">
                     <span class="progress-label-left"><?php echo $getGoogleToolbarPageRank ?><span style="font-size: 12px;">of 10</span></span></span>
                     <div class="progress bar-progress">
-                        <div class="progress-bar bar-3" role="progressbar" style="width: <?php echo $getGoogleToolbarPageRank/10*100 ?>%; background:<?php 
-                            if($getGoogleToolbarPageRank >= 0 && $getGoogleToolbarPageRank <= 3)echo 'red';
-                            if($getGoogleToolbarPageRank > 3 && $getGoogleToolbarPageRank <= 6)echo 'orange';
-                            if($getGoogleToolbarPageRank > 6)echo 'green';
-                        ?>;">
+                        <div class="progress-bar bar-3" role="progressbar" style="width: <?php echo $getGoogleToolbarPageRank/10*100 ?>%;">
                             <span class="sr-only"><?php echo $getGoogleToolbarPageRank ?></span>
                         </div>
                     </div>
                     </div>
                     
                     <div class="radial-progress hidden-phone gps-radial">
-                        <input class="knob" data-fgColor="<?php 
-                            if($getGoogleToolbarPageRank >= 0 && $getGoogleToolbarPageRank <= 3)echo 'red';
-                            if($getGoogleToolbarPageRank > 3 && $getGoogleToolbarPageRank <= 6)echo 'orange';
-                            if($getGoogleToolbarPageRank > 6)echo 'green';
-                        ?>" data-step="1" data-min="0" data-max="10" data-thickness=".1" data-width="90" data-height="90" readonly value="<?php echo $getGoogleToolbarPageRank ?>">
-                        <span class="radial-inside-content">of 10</span>
+                        <strong class="detail-rank"><?php echo $getGoogleToolbarPageRank . "<br/>" . "of 10"; ?></strong>
+                        <script type="text/javascript">
+                            $('.radial-progress.hidden-phone.gps-radial').circleProgress({
+                                value: <?php echo $getGoogleToolbarPageRank / 10 ?>,
+                                size: 90,
+                                startAngle: Math.PI / 2,
+                                fill: {gradient: ['#1256c3', '#4cbfff']}
+                            });
+                        </script>
                     </div>  
                     <p class="passed <?php
                     if($getGoogleToolbarPageRank <= 6)echo 'hide';
