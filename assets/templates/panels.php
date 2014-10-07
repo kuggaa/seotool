@@ -1055,7 +1055,7 @@
                     </div>
                     </div>
                     <div class="radial-progress hidden-phone gps-radial getPagespeedScore">
-                        <strong class="detail"><?php echo $getPagespeedScore . "<br/>of 100" ?></strong>
+                        <strong class="detail-rank"><?php echo $getPagespeedScore . "<br/>of 100" ?></strong>
                         <script type="text/javascript">
                             $('.radial-progress.hidden-phone.gps-radial.getPagespeedScore').circleProgress({
                                 value: <?php echo $getPagespeedScore / 100 ?>,

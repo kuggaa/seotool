@@ -4162,6 +4162,22 @@ body .radial-progress strong.detail {
     top: 30px;
     left: 54px;
 }
+body .radial-progress.getGoogleToolbarPageRank strong.detail-rank {
+    top: 20px;
+    left: 40px;
+}
+body .radial-progress.getPagespeedScore strong.detail-rank {
+    top: 18px;
+    left: 36px;
+}
+body .radial-progress.imageAltScore strong.detail-rank {
+    top: 20px;
+    left: 47px;
+}
+body .radial-progress.cleanUrlScore strong.detail-rank {
+    top: 20px;
+    left: 41px;
+}
 .radial-progress-wide {
     width: 100% !important;
 }
