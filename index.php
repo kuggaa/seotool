@@ -24,8 +24,8 @@ if ($_SESSION['userEmail'] != null)
      *   Alexa Rank
      */
         $getAlexaGlobalRank =  $_SESSION['getAlexaGlobalRank'];
-        if ($getAlexaGlobalRank == 0)
-            $getAlexaGlobalRank = 100000;
+        // if ($getAlexaGlobalRank == 0)
+        //     $getAlexaGlobalRank = 100000;
 
 
     /**
