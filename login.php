@@ -37,19 +37,43 @@
 		</div>
 		<div class="row">
 			<div class="progressbar-test">
-				<div class="col-xs-6">
+				<div class="col-xs-3">
 					<div class="circle-progress">
-						<strong>100%</strong>
+						<strong>D</strong>
 					</div>
 				</div>
-				<div class="col-xs-6">
-					<div class="hor-bar-progress">
+				<div class="col-xs-3">
+					<div class="circle-progress">
+						<strong>D</strong>
+					</div>
+				</div>
+				<div class="col-xs-3">
+					<div class="img-circle-progress">
+						<strong>D</strong>
+					</div>
+				</div>
+				<div class="col-xs-3">
+					<div class="img-circle-progress">
+						<strong>D</strong>
 					</div>
 				</div>
 			</div>
 		</div>
 		<script>
 			$('.circle-progress').circleProgress({
+			    value: 0.9,
+			    size: 130,
+			    thickness: 10,
+			    startAngle: Math.PI / 2,
+			    fill: {
+			    	gradient: ['#1256c3', '#4cbfff'],
+			    	image: "assets/img/circle-progress-bg.png"
+			    }
+			});/*.on('circle-animation-progress', function(event, progress) {
+			    $(this).find('strong').html(parseInt(100 * progress) + '<i>%</i>');
+			});*/
+
+			$('.img-circle-progress').circleProgress({
 			    value: 0.99,
 			    startAngle: Math.PI / 2,
 			    fill: {gradient: ['#1256c3', '#4cbfff']}
