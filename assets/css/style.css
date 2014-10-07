@@ -4178,6 +4178,14 @@ body .radial-progress.cleanUrlScore strong.detail-rank {
     top: 20px;
     left: 41px;
 }
+body .radial-progress.trustworthiness strong.detail-rank {
+    top: 20px;
+    left: 36px;
+}
+body .radial-progress.childsafety strong.detail-rank {
+    top: 20px;
+    left: 36px;
+}
 .radial-progress-wide {
     width: 100% !important;
 }

@@ -681,9 +681,9 @@
                     </div>
                     </div>
                     <div class="radial-progress hidden-phone gps-radial trustworthiness">
-                        <strong class="detail"><?php echo $trustworthiness. "<br/>of 100"; ?></strong>
+                        <strong class="detail-rank"><?php echo $trustworthiness. "<br/>of 100"; ?></strong>
                         <script type="text/javascript">
-                            $('radial-progress.hidden-phone.gps-radial.trustworthiness').circleProgress({
+                            $('.radial-progress.hidden-phone.gps-radial.trustworthiness').circleProgress({
                                 value: <?php echo $trustworthiness / 100 ?>,
                                 size: 90,
                                 startAngle: Math.PI / 2,
@@ -748,9 +748,9 @@
                     </div>
                     </div>
                     <div class="radial-progress hidden-phone gps-radial childsafety">
-                        <strong class="detail"><?php echo $childsafety. "<br/>of 100" ?></strong>
+                        <strong class="detail-rank"><?php echo $childsafety. "<br/>of 100" ?></strong>
                         <script type="text/javascript">
-                            $('radial-progress.hidden-phone.gps-radial.childsafety').circleProgress({
+                            $('.radial-progress.hidden-phone.gps-radial.childsafety').circleProgress({
                                 value: <?php echo $childsafety / 100 ?>,
                                 size: 90,
                                 startAngle: Math.PI / 2,
