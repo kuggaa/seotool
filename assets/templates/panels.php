@@ -20,19 +20,11 @@
                     </div>
                     
                     <div class="radial-progress hidden-phone gps-radial">
-                        <style type="text/css">
-                            strong.detail {
-                                position: absolute;
-                                top: 50px;
-                                font-size: 20px;
-                                left: 45px;
-                            }
-                        </style>
                         <strong class="detail"><?php echo getLetterScore($SEOScore) ?></strong>
                     </div>  
                     <script>
                         $('.radial-progress.hidden-phone.gps-radial').circleProgress({
-                            value: <?php echo $SEOScore ?>,
+                            value: <?php echo $SEOScore / 100 ?>,
                             size: 90,
                             startAngle: Math.PI / 2,
                             fill: {gradient: ['#1256c3', '#4cbfff']}
