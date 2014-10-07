@@ -9,11 +9,7 @@
                     <div class="progress-bars visible-phone">
                         <span class="progress-label-left"><?php echo getLetterScore($SEOScore) ?></span>
                         <div class="progress bar-progress">
-                            <div class="progress-bar bar-3" role="progressbar" style="width: <?php echo $SEOScore ?>%; background:<?php 
-                                if($SEOScore >= 0 && $SEOScore <= 33)echo 'red';
-                                if($SEOScore > 33 && $SEOScore <= 66)echo 'orange';
-                                if($SEOScore > 66)echo 'green';
-                            ?>;">
+                            <div class="progress-bar bar-3" role="progressbar" style="width: <?php echo $SEOScore ?>%;">
                                 <span class="sr-only"><?php echo $SEOScore ?></span>
                             </div>
                         </div>
