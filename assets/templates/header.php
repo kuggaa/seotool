@@ -44,11 +44,6 @@ require_once "config/config.php";
 	<!--[if IE]><script type="text/javascript" src="js/excanvas.js"></script><![endif]-->
 	<script src="../../assets/js/jquery.knob.js"></script>
 	<script src="../../assets/js/circle-progress.js"></script>
-	<script>
-		$(function($) {
-			$(".knob").knob();
-		});
-	</script>
 </head>
 <body>
 	<div class="wrapper">

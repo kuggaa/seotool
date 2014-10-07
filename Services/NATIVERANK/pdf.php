@@ -321,11 +321,6 @@
 <script src="../../assets/js/jquery.min.js"></script>
 <script src="../../assets/js/bootstrap-progressbar.js"></script>
 <script src="../../assets/js/jquery.knob.js"></script>
-<script>
-    $(function($) {
-        $(".knob").knob();
-    });
-</script>
 
 <style type="text/css" media="all">
     .row {
