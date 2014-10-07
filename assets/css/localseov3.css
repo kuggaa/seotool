@@ -478,18 +478,8 @@ body .form-inline {
 }
 .bar-4,.bar-3,.bar-2,.bar-1 {
 	height: 6px;
-	background: #eb2123;
 	border-radius: 3px;
 	box-shadow: none;
-}
-.bar-2 {
-	background: #e57a1d;
-}
-.bar-3 {
-	background: #0071b3;
-}
-.bar-4 {
-	background: #04aa4f;
 }
 .bar-progress {
 	height: 6px;

@@ -373,33 +373,23 @@
                     <div class="progress-bars visible-phone">
                         <span class="progress-label-left"><?php echo getLetterScore($searchEngineScore) ?></span>
                         <div class="progress bar-progress">
-                            <div class="progress-bar bar-3" role="progressbar" style="width: <?php echo $searchEngineScore ?>%; background:<?php 
-                                if($searchEngineScore >= 0 && $searchEngineScore <= 33)echo 'red';
-                                if($searchEngineScore > 33 && $searchEngineScore <= 66)echo 'orange';
-                                if($searchEngineScore > 66)echo 'green';
-                            ?>;">
+                            <div class="progress-bar bar-3" role="progressbar" style="width: <?php echo $searchEngineScore ?>%;">
                                 <span class="sr-only"><?php echo $searchEngineScore ?></span>
                             </div>
                         </div>
                     </div>
                     
                     <div class="radial-progress hidden-phone gps-radial">
-                        <input class="knob-searchengines" data-fgColor="<?php 
-                            if($searchEngineScore >= 0 && $searchEngineScore <= 33)echo 'red';
-                            if($searchEngineScore > 33 && $searchEngineScore <= 66)echo 'orange';
-                            if($searchEngineScore > 66)echo 'green';
-                        ?>" data-step="1" data-min="0" data-max="100" data-thickness=".1" data-width="90" data-height="90" readonly value="<?php echo $searchEngineScore ?>">
-                    </div>  
-                    <script>
-                        $(function($) {
-                            $(".knob-searchengines").knob({
-                              'draw' : function () { 
-                                $(this.i).val('<?php echo getLetterScore($searchEngineScore) ?>')
-                              }
+                        <strong class="detail"><?php echo getLetterScore($searchEngineScore) ?></strong>
+                        <script type="text/javascript">
+                            $('.radial-progress.hidden-phone.gps-radial').circleProgress({
+                                value: <?php echo $searchEngineScore / 100 ?>,
+                                size: 90,
+                                startAngle: Math.PI / 2,
+                                fill: {gradient: ['#1256c3', '#4cbfff']}
                             });
-                            $(".knob-searchengines").css('font-family-size','25px').css('color','#666666').css('font-family','Segoe UI').css('font-weight','100').css('display','inline-block');
-                        });
-                    </script>
+                        </script>
+                    </div>
                 </div>
                 <div class="col-md-9 col-sm-9">
                     <span class="body-text">
@@ -815,33 +805,23 @@
                     <div class="progress-bars visible-phone">
                         <span class="progress-label-left"><?php echo getLetterScore($socialScore) ?></span>
                         <div class="progress bar-progress">
-                            <div class="progress-bar bar-3" role="progressbar" style="width: <?php echo $socialScore ?>%; background:<?php 
-                                if($socialScore >= 0 && $socialScore <= 33)echo 'red';
-                                if($socialScore > 33 && $socialScore <= 66)echo 'orange';
-                                if($socialScore > 66)echo 'green';
-                            ?>;">
+                            <div class="progress-bar bar-3" role="progressbar" style="width: <?php echo $socialScore ?>%;">
                                 <span class="sr-only"><?php echo $socialScore ?></span>
                             </div>
                         </div>
                     </div>
                     
                     <div class="radial-progress hidden-phone gps-radial">
-                        <input class="knob-social" data-fgColor="<?php 
-                            if($socialScore >= 0 && $socialScore <= 33)echo 'red';
-                            if($socialScore > 33 && $socialScore <= 66)echo 'orange';
-                            if($socialScore > 66)echo 'green';
-                        ?>" data-step="1" data-min="0" data-max="100" data-thickness=".1" data-width="90" data-height="90" readonly value="<?php echo $socialScore ?>">
-                    </div>  
-                    <script>
-                        $(function($) {
-                            $(".knob-social").knob({
-                              'draw' : function () { 
-                                $(this.i).val('<?php echo getLetterScore($socialScore) ?>')
-                              }
+                        <strong class="detail"><?php echo getLetterScore($socialScore) ?></strong>
+                        <script>
+                            $('.radial-progress.hidden-phone.gps-radial').circleProgress({
+                                value: <?php echo $socialScore / 100 ?>,
+                                size: 90,
+                                startAngle: Math.PI / 2,
+                                fill: {gradient: ['#1256c3', '#4cbfff']}
                             });
-                            $(".knob-social").css('font-family-size','25px').css('color','#666666').css('font-family','Segoe UI').css('font-weight','100').css('display','inline-block');
-                        });
-                    </script>
+                        </script>
+                    </div>
                 </div>
                 <div class="col-md-9 col-sm-9">
                     <span class="body-text">
@@ -980,33 +960,23 @@
                     <div class="progress-bars visible-phone">
                         <span class="progress-label-left"><?php echo getLetterScore($codeScore) ?></span>
                         <div class="progress bar-progress">
-                            <div class="progress-bar bar-3" role="progressbar" style="width: <?php echo $codeScore ?>%; background:<?php 
-                                if($codeScore >= 0 && $codeScore <= 33)echo 'red';
-                                if($codeScore > 33 && $codeScore <= 66)echo 'orange';
-                                if($codeScore > 66)echo 'green';
-                            ?>;">
+                            <div class="progress-bar bar-3" role="progressbar" style="width: <?php echo $codeScore ?>%;">
                                 <span class="sr-only"><?php echo $codeScore ?></span>
                             </div>
                         </div>
                     </div>
                     
                     <div class="radial-progress hidden-phone gps-radial">
-                        <input class="knob-code" data-fgColor="<?php 
-                            if($codeScore >= 0 && $codeScore <= 33)echo 'red';
-                            if($codeScore > 33 && $codeScore <= 66)echo 'orange';
-                            if($codeScore > 66)echo 'green';
-                        ?>" data-step="1" data-min="0" data-max="100" data-thickness=".1" data-width="90" data-height="90" readonly value="<?php echo $codeScore ?>">
-                    </div>  
-                    <script>
-                        $(function($) {
-                            $(".knob-code").knob({
-                              'draw' : function () { 
-                                $(this.i).val('<?php echo getLetterScore($codeScore) ?>')
-                              }
+                        <strong class="detail"><?php echo getLetterScore($codeScore) ?></strong>
+                        <script type="text/javascript">
+                            $('.radial-progress.hidden-phone.gps-radial').circleProgress({
+                                value: <?php echo $codeScore / 100 ?>,
+                                size: 90,
+                                startAngle: Math.PI / 2,
+                                fill: {gradient: ['#1256c3', '#4cbfff']}
                             });
-                            $(".knob-code").css('font-family-size','25px').css('color','#666666').css('font-family','Segoe UI').css('font-weight','100').css('display','inline-block');
-                        });
-                    </script>
+                        </script>
+                    </div>
                 </div>
                 <div class="col-md-9 col-sm-9">
                     <span class="body-text">
