@@ -1196,7 +1196,7 @@
                     </div>
                     
                     <div class="radial-progress gps-radial hidden-phone cleanUrlScore">
-                        <strong class="detail"><?php echo $arr[0] . "<br/>of " . $arr[1]; ?></strong>
+                        <strong class="detail-rank"><?php echo $arr[0] . "<br/>of " . $arr[1]; ?></strong>
                         <script type="text/javascript">
                             $('.radial-progress.hidden-phone.gps-radial.cleanUrlScore').circleProgress({
                                 value: <?php echo $cleanUrlScore / 100; ?>,
