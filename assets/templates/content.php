@@ -10,14 +10,6 @@
 			<div class="row">
 				<div class="col-md-3 col-sm-3 col-xs-3">
 					<div class="radial-progress overal-radial">
-                        <style type="text/css">
-                            strong {
-                                position: absolute;
-                                top: 71px;
-                                left: 60px;
-                                font-size: 20px
-                            }
-                        </style>
 						<strong><?php echo getLetterScore($totalScore) ?></strong>
 						<script>
 							$('.radial-progress.overal-radial').circleProgress({
@@ -336,21 +328,13 @@
 			<div class="row">
 				<div class="col-md-3 col-sm-3 col-xs-3">
 					<div class="radial-progress overal-radial">
-						<input class="knob-main" data-fgColor="#0073cc" data-thickness=".1" data-width="130" data-height="130" readonly value="<?php echo $totalScore ?>">
+						<strong><?php echo getLetterScore($totalScore) ?></strong>
 						<script>
-							$(function($) {
-								$(".knob-main").knob({
-							      'draw' : function () { 
-							        $(this.i).val('<?php echo getLetterScore($totalScore) ?>')
-							      }
-							    });
-								$(".knob-main").css('font-family-size','25px').css('color','#666666').css('font-family','Segoe UI').css('font-weight','100').css('display','inline-block');
-							});
-						</script>
-						<script>
-							$(function($) {
-								$(".knob").knob();
-								$(".knob").css('font-family-size','25px').css('color','#666666').css('font-family','Segoe UI').css('font-weight','100').css('display','inline-block');
+							$('.radial-progress.overal-radial').circleProgress({
+								value: <?php echo $totalScore / 100 ?>,
+								size: 130,
+								startAngle: Math.PI / 2,
+								fill: {gradient: ['#1256c3', '#4cbfff']}
 							});
 						</script>
 					</div>

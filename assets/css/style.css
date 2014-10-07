@@ -4152,6 +4152,12 @@ body .radial-progress {
     text-align: center;
     position:relative;
 }
+body .radial-progress strong {
+    position: absolute;
+    top: 71px;
+    left: 60px;
+    font-size: 20px;
+}
 .radial-progress-wide {
     width: 100% !important;
 }
