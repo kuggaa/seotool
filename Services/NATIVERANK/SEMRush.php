@@ -64,7 +64,10 @@ class SEMRush {
     }
 }
 
-$a = new SEMRush("http://yahoo.com/");
+//$a = new SEMRush("http://google.com/");
 //print_r($a->getSEMRushOrganicKeywords());
 //print_r($a->getSEMRushCompetitors());
-print_r($a->getSEMRushDomainPaidSearchKeywords());
+//$b = $a->getSEMRushDomainPaidSearchKeywords();
+//print_r($b);   
+
+
