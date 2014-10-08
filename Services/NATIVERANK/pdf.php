@@ -389,18 +389,10 @@
 
 <body style="width:770px;">
     <div style="color:#000;background-color: #EBEBEC;margin-left:15px;margin-right:15px;">
-        <?php if ($_SESSION['logo'] == 'nativerank'): ?>
-            <img src="../../assets/img/nativerank_logo.png" style="float:left" height="75"/>
-        <?php else: ?>
-            <img src="../../assets/img/logoPdf.png" style="float:left" height="75"/>
-        <?php endif; ?>
+        <img src="../../assets/img/nativerank_logo.png" style="float:left" height="75"/>
         <span style="float:right; background: url(../../assets/img/phonePdf.png) no-repeat scroll left center rgba(0, 0, 0, 0); color: #C90D0D; font-weight: 700; font-family: 'Alef',sans-serif;padding-left: 24px;margin-top: 25px;">
-        <?php if ($_SESSION['logo'] == 'nativerank'): ?>
             1 800-520-8850
-        <?php else: ?>
-            1 800-520-8850
-        <?php endif; ?>
-    </span>
+        </span>
     </div>
     <div id="main-container">
         <?php if (!is_null($url) && !is_null($finish)): ?>

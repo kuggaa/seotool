@@ -14,7 +14,6 @@
     $pdfName = $_SESSION['pdfName'];    
     if (!is_file($pdfName.'.pdf')) {
         file_put_contents($pdfName.'.html', render('pdf.php'));
-        //$command = "./wkhtmltopdf -T 20 -R 0 -L 0 -B 20 --header-html pdfHeader.html --header-spacing 20 --footer-html pdfHeader.html --footer-spacing 0 --viewport-size 1280x1024 {$pdfName}.html {$pdfName}.pdf";
         if ($_SESSION['logo'] == 'nativerank') {
             $command = "../../phantomjs ../../pdf.js {$pdfName}.html {$pdfName}.pdf NativeRank.com \"1 800-520-8850\"";
         } else {

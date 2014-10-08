@@ -38,7 +38,7 @@
 
 		<div class="accordion-group">
 			<div class="panel-heading sidebar-head">
-				<a class="accordion-toggle" data-scroll data-parent="#accordion" href="#searchengines-panel">
+				<a class="accordion-toggle" data-scroll data-parent="#accordion" href="#paidsearch-panel">
 					<span class="glyphicon glyphicon-chevron-right"></span>
 					<div class="headingtext">Paid Search</div>
 				</a>
