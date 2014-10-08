@@ -28,4 +28,9 @@ interface ApiKeys
     //      https://moz.com/products/api/keys
     const MOZSCAPE_ACCESS_ID  = '';
     const MOZSCAPE_SECRET_KEY = '';
+
+    /**
+     *  Config for SEMRUSH API.
+     */
+    const SEMRUSH_API_ACCESS_KEY = 'eb8148a9bc0385722a040b8fecc33342';
 }

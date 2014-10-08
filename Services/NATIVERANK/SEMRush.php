@@ -53,8 +53,18 @@ class SEMRush {
         }
         return $this->tmp;
     }
+
+    public function getSEMRushDomainPaidSearchKeywords() {
+        try{
+            $this->tmp = \SEOstats\Services\SemRush::getPaidSearchKeywords($this->page);
+        } catch (Exception $e) {
+            $this->tmp = 0;
+        }
+        return $this->tmp;
+    }
 }
 
-//$a = new SEMRush("http://yahoo.com/");
+$a = new SEMRush("http://yahoo.com/");
 //print_r($a->getSEMRushOrganicKeywords());
 //print_r($a->getSEMRushCompetitors());
+print_r($a->getSEMRushDomainPaidSearchKeywords());

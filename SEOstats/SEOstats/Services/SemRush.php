@@ -306,7 +306,7 @@ class SEMRush extends SEOstats
             self::exc('db');
         }
         else {
-            $widgetUrl = Config\Services::SEMRUSH_ADWORDS_API_URL;
+            $widgetUrl = Config\Services::SEMRUSH_DOMAINPAIDSEARCH_API_URL;
             return sprintf($widgetUrl, $reportType, $count, $columns, $domain, $database);
         }
     }
@@ -322,6 +322,19 @@ class SEMRush extends SEOstats
             substr( implode(", ", self::getDBs()), 0, -2) : $err;
         throw new E($e);
         exit(0);
+    }
+
+    private static function getPaidSearchKeywords($url = false, $db = false)
+    {
+        $db      = false !== $db ? $db : Config\DefaultSettings::SEMRUSH_DB;
+        $dataUrl = self::getAdWordsApiUrlBevolvedEdition($url, $db, 'domain_adwords', "Tt,Ds,Vu,Ur,Pc", 1);
+        $data    = parent::_getPage($dataUrl);
+        $data2 = explode("\n", $data);
+        $data2 = html_entity_decode($data2[1]);
+        $data2 = preg_replace_callback("/(&#[0-9]+;)/", function($m) { return mb_convert_encoding($m[1], "UTF-8", "HTML-ENTITIES"); }, $data2);
+        $data3 = explode(";", $data2);
+        //unset($data);
+        return (!is_array($data3) || strpos($data, 'NOTHING FOUND') !== false) ? parent::noDataDefaultValue() : $data3;
     }
 }
 
