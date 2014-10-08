@@ -38,6 +38,7 @@ if ($_SESSION['userEmail'] != null)
      */
         $getSEMRushDomainRank =  $_SESSION['getSEMRushDomainRank'];
         $getSEMRushOrganicKeywords =  $_SESSION['getSEMRushOrganicKeywords'];
+        $getSEMRushPaidSearch = $_SESSION['getSEMRushPaidSearch'];
 
     /**
      *   WOT Reputation - get all json data  from wot api server
@@ -376,7 +377,7 @@ if ($_SESSION['userEmail'] != null)
                                         "getGoogleToolbarPageRank", "getGoogleBacklinksTotal", "getGooglePlusOnes", 
                                         "getSiteindexTotal", "getSiteindexTotalBing", "getFacebookInteractions", 
                                         "getTwitterMentions", "getAlexaGlobalRank","getSEMRushDomainRank",
-                                        "getSEMRushOrganicKeywords", "getWOT" );
+                                        "getSEMRushOrganicKeywords", "getSEMRushPaidSearch", "getWOT" );
                 for(var i = 0; i < array.length; i++){
                 // for(var i = 2; i < 3; i++){
                     var serviceNameString = array[i];

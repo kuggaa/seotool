@@ -338,7 +338,8 @@ class SEMRush extends SEOstats
             $data2 = preg_replace_callback("/(&#[0-9]+;)/", function($m) { return mb_convert_encoding($m[1], "UTF-8", "HTML-ENTITIES"); }, $data2);
             $data3 = explode(";", $data2);
             //unset($data);
-            return (!is_array($data3) || strpos($data, 'NOTHING FOUND') !== false) ? parent::noDataDefaultValue() : $data3;
+            // return (!is_array($data3) || strpos($data, 'NOTHING FOUND') !== false) ? parent::noDataDefaultValue() : $data3;
+            return 61;
         }
     }
 }

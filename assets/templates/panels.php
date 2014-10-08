@@ -412,19 +412,19 @@
             <div class="row">
                 <div class="col-md-3 col-sm-3">
                     <div class="progress-bars visible-phone">
-                        <span class="progress-label-left"><?php echo getLetterScore($searchEngineScore) ?></span>
+                        <span class="progress-label-left"><?php echo getLetterScore($getSEMRushPaidSearch) ?></span>
                         <div class="progress bar-progress">
                             <div class="progress-bar bar-3" role="progressbar" style="width: <?php echo $searchEngineScore ?>%;">
-                                <span class="sr-only"><?php echo $searchEngineScore ?></span>
+                                <span class="sr-only"><?php echo $getSEMRushPaidSearch ?></span>
                             </div>
                         </div>
                     </div>
                     
                     <div class="radial-progress hidden-phone gps-radial paidSearch">
-                        <strong class="detail"><?php echo getLetterScore($searchEngineScore) ?></strong>
+                        <strong class="detail"><?php echo getLetterScore($getSEMRushPaidSearch) ?></strong>
                         <script type="text/javascript">
                             $('.radial-progress.hidden-phone.gps-radial.paidSearch').circleProgress({
-                                value: <?php echo $searchEngineScore / 100 ?>,
+                                value: <?php echo $getSEMRushPaidSearch / 100 ?>,
                                 size: 90,
                                 startAngle: Math.PI / 2,
                                 fill: {gradient: ['#1256c3', '#4cbfff']}

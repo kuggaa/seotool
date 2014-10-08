@@ -68,6 +68,7 @@
         $_SESSION['allstat'][$url]['adwords'] = $a->getSEMRushAdWords();
         $_SESSION['allstat'][$url]['domainRank'] = $a->getSEMRushDomainRank();
         $_SESSION['allstat'][$url]['organicKeywords'] = $a->getSEMRushOrganicKeywords();
+        $_SESSION['allstat'][$url]['getSEMRushPaidSearch'] = $a->getSEMRushDomainPaidSearchKeywords();
     }
 
 
@@ -179,13 +180,15 @@
             } else {
                 $output['error'] = 'Service not Found';
             } 
-        } else if ($serv == 'getSEMRushDomainRank' || $serv == 'getSEMRushOrganicKeywords') {
+        } else if ($serv == 'getSEMRushDomainRank' || $serv == 'getSEMRushOrganicKeywords' || $serv == 'getSEMRushPaidSearch') {
             require_once('SEMRush.php');
             $seo = new SEMRush($url);
             if($serv == 'getSEMRushDomainRank') {
                 $_SESSION['getSEMRushDomainRank'] = $output['getSEMRushDomainRank'] = $seo->getSEMRushDomainRank();
-            } else if('getSEMRushOrganicKeywords') {
+            } else if($serv == 'getSEMRushOrganicKeywords') {
                 $_SESSION['getSEMRushOrganicKeywords'] = $output['getSEMRushOrganicKeywords'] = $seo->getSEMRushOrganicKeywords();
+            } else if($serv == 'getSEMRushPaidSearch') {
+                $_SESSION['getSEMRushPaidSearch'] = $output['getSEMRushPaidSearch'] = $seo->getSEMRushDomainPaidSearchKeywords();
             } else {
                 $output['error'] = 'Service not Found';
             } 
