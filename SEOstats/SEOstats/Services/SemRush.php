@@ -324,7 +324,7 @@ class SEMRush extends SEOstats
         exit(0);
     }
 
-    private static function getPaidSearchKeywords($url = false, $db = false)
+    public static function getPaidSearchKeywords($url = false, $db = false)
     {
         $db      = false !== $db ? $db : Config\DefaultSettings::SEMRUSH_DB;
         $dataUrl = self::getAdWordsApiUrlBevolvedEdition($url, $db, 'domain_adwords', "Tt,Ds,Vu,Ur,Pc", 1);
