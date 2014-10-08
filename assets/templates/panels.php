@@ -401,48 +401,7 @@
           </div>
         </div>
     </div>
-
-<!-- Paid Searcn Paneel -->
-    <div class="row unbreakable">
-        <div id="paidsearch-panel" class="panel panel-default">
-            <div class="heading-main panel-heading section-heading">
-                PAID SEARCH - How do the Paid Search Engines See Your Business?
-          </div>
-          <div class="panel-body body-main">
-            <div class="row">
-                <div class="col-md-3 col-sm-3">
-                    <div class="progress-bars visible-phone">
-                        <span class="progress-label-left"><?php echo getLetterScore($getSEMRushPaidSearch) ?></span>
-                        <div class="progress bar-progress">
-                            <div class="progress-bar bar-3" role="progressbar" style="width: <?php echo $searchEngineScore ?>%;">
-                                <span class="sr-only"><?php echo $getSEMRushPaidSearch ?></span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="radial-progress hidden-phone gps-radial paidSearch">
-                        <strong class="detail"><?php echo getLetterScore($getSEMRushPaidSearch) ?></strong>
-                        <script type="text/javascript">
-                            $('.radial-progress.hidden-phone.gps-radial.paidSearch').circleProgress({
-                                value: <?php echo $getSEMRushPaidSearch / 100 ?>,
-                                size: 90,
-                                startAngle: Math.PI / 2,
-                                fill: {gradient: ['#1256c3', '#4cbfff']}
-                            });
-                        </script>
-                    </div>
-                </div>
-                <div class="col-md-9 col-sm-9">
-                    <span class="body-text">
-                        These ten tests, investigate how search engines like Google, Yahoo, and Bing see your bussiness and your website.<br/>
-                        Creating an amazing product or service is not enough you wouldn't open a new building with putting a sign on the door...
-                    </span>
-                </div>
-            </div>
-          </div>
-        </div>
-    </div>
-
+    
 <!--panel 6-->
     <div class="row unbreakable">
         <div id="gpr-panel" class="panel panel-default">
@@ -828,6 +787,46 @@
     </div>
 
 
+<!-- Paid Searcn Paneel -->
+    <div class="row unbreakable">
+        <div id="paidsearch-panel" class="panel panel-default">
+            <div class="heading-main panel-heading section-heading">
+                PAID SEARCH - How do the Paid Search Engines See Your Business?
+          </div>
+          <div class="panel-body body-main">
+            <div class="row">
+                <div class="col-md-3 col-sm-3">
+                    <div class="progress-bars visible-phone">
+                        <span class="progress-label-left"><?php echo getLetterScore($getSEMRushPaidSearch) ?></span>
+                        <div class="progress bar-progress">
+                            <div class="progress-bar bar-3" role="progressbar" style="width: <?php echo $searchEngineScore ?>%;">
+                                <span class="sr-only"><?php echo $getSEMRushPaidSearch ?></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="radial-progress hidden-phone gps-radial paidSearch">
+                        <strong class="detail"><?php echo getLetterScore($getSEMRushPaidSearch) ?></strong>
+                        <script type="text/javascript">
+                            $('.radial-progress.hidden-phone.gps-radial.paidSearch').circleProgress({
+                                value: <?php echo $getSEMRushPaidSearch / 100 ?>,
+                                size: 90,
+                                startAngle: Math.PI / 2,
+                                fill: {gradient: ['#1256c3', '#4cbfff']}
+                            });
+                        </script>
+                    </div>
+                </div>
+                <div class="col-md-9 col-sm-9">
+                    <span class="body-text">
+                        These ten tests, investigate how search engines like Google, Yahoo, and Bing see your bussiness and your website.<br/>
+                        Creating an amazing product or service is not enough you wouldn't open a new building with putting a sign on the door...
+                    </span>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
 
 
 
