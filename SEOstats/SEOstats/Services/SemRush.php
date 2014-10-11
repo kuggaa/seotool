@@ -332,7 +332,7 @@ class SEMRush extends SEOstats
         $data2 = explode("\n", $data);
         if (sizeof($data2) == 1)
         {
-            parent::noDataDefaultValue();
+            return 0;
         } else {
             $result = array();
             for($i = 1; $i < count($data2); $i++) {
@@ -342,7 +342,7 @@ class SEMRush extends SEOstats
                 array_push($result, $segs);
             }
             //unset($data);
-            return (!is_array($result) || strpos($data, 'NOTHING FOUND') !== false) ? parent::noDataDefaultValue() : $result;
+            return (!is_array($result) || strpos($data, 'NOTHING FOUND') !== false) ? 0 : $result;
 //            return 61;
         }
     }

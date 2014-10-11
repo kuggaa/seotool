@@ -188,7 +188,8 @@
             } else if($serv == 'getSEMRushOrganicKeywords') {
                 $_SESSION['getSEMRushOrganicKeywords'] = $output['getSEMRushOrganicKeywords'] = $seo->getSEMRushOrganicKeywords();
             } else if($serv == 'getSEMRushPaidSearch') {
-                $_SESSION['getSEMRushPaidSearch'] = $output['getSEMRushPaidSearch'] = $seo->getSEMRushDomainPaidSearchKeywords();
+                $getSEMRushDomainPaidSearchValueTemp = $seo->getSEMRushDomainPaidSearchKeywords();
+                $_SESSION['getSEMRushPaidSearch'] = $output['getSEMRushPaidSearch'] = ($getSEMRushDomainPaidSearchValueTemp == 0) ? 20 : 61;
             } else {
                 $output['error'] = 'Service not Found';
             } 
