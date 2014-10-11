@@ -56,6 +56,7 @@ class SEMRush {
 
     public function getSEMRushDomainPaidSearchKeywords() {
         try{
+//            $_SERVER['REMOTE_ADDR'] = $this->page;
             $this->tmp = \SEOstats\Services\SemRush::getPaidSearchKeywords($this->page);
         } catch (Exception $e) {
             $this->tmp = 0;
@@ -64,10 +65,11 @@ class SEMRush {
     }
 }
 
-//$a = new SEMRush("http://google.com/");
+//$a = new SEMRush("facebook.com");
 //print_r($a->getSEMRushOrganicKeywords());
 //print_r($a->getSEMRushCompetitors());
 //$b = $a->getSEMRushDomainPaidSearchKeywords();
-//print_r($b);   
+//var_dump($b);   
+//echo "\n";
 
 

@@ -327,19 +327,23 @@ class SEMRush extends SEOstats
     public static function getPaidSearchKeywords($url = false, $db = false)
     {
         $db      = false !== $db ? $db : Config\DefaultSettings::SEMRUSH_DB;
-        $dataUrl = self::getAdWordsApiUrlBevolvedEdition($url, $db, 'domain_adwords', "Tt,Ds,Vu,Ur,Pc", 1);
+        $dataUrl = self::getAdWordsApiUrlBevolvedEdition($url, $db, 'domain_adwords', "Ad,Ac,Tt,Ds,Vu,Ur,Pc,Tc,Cp", 3);
         $data    = parent::_getPage($dataUrl);
         $data2 = explode("\n", $data);
         if (sizeof($data2) == 1)
         {
-            return 0;
+            parent::noDataDefaultValue();
         } else {
-            $data2 = html_entity_decode($data2[1]);
-            $data2 = preg_replace_callback("/(&#[0-9]+;)/", function($m) { return mb_convert_encoding($m[1], "UTF-8", "HTML-ENTITIES"); }, $data2);
-            $data3 = explode(";", $data2);
+            $result = array();
+            for($i = 1; $i < count($data2); $i++) {
+                $line = html_entity_decode($data2[$i]);
+                $line = preg_replace_callback("/(&#[0-9]+;)/", function($m) { return mb_convert_encoding($m[1], "UTF-8", "HTML-ENTITIES"); }, $line);
+                $segs = explode(";", $line);
+                array_push($result, $segs);
+            }
             //unset($data);
-            // return (!is_array($data3) || strpos($data, 'NOTHING FOUND') !== false) ? parent::noDataDefaultValue() : $data3;
-            return 61;
+            return (!is_array($result) || strpos($data, 'NOTHING FOUND') !== false) ? parent::noDataDefaultValue() : $result;
+//            return 61;
         }
     }
 }
