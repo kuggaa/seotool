@@ -320,7 +320,7 @@
 
 <script src="../../assets/js/jquery.min.js"></script>
 <script src="../../assets/js/bootstrap-progressbar.js"></script>
-<script src="../../assets/js/jquery.knob.js"></script>
+<script src="../../assets/js/circle-progress.js"></script>
 
 <style type="text/css" media="all">
     .row {
@@ -389,7 +389,7 @@
 
 <body style="width:770px;">
     <div style="color:#000;background-color: #EBEBEC;margin-left:15px;margin-right:15px;">
-        <img src="../../assets/img/nativerank_logo.png" style="float:left" height="75"/>
+        <img src="../../assets/img/nr_logo.png" style="float:left" height="75"/>
         <span style="float:right; background: url(../../assets/img/phonePdf.png) no-repeat scroll left center rgba(0, 0, 0, 0); color: #C90D0D; font-weight: 700; font-family: 'Alef',sans-serif;padding-left: 24px;margin-top: 25px;">
             1 800-520-8850
         </span>
