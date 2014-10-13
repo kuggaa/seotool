@@ -1163,10 +1163,10 @@
                     </div>
                     </div>
                     <div class="radial-progress hidden-phone gps-radial imageAltScore">
-                        <strong class="detail"><?php echo $imageAltScore . "<br/>of " . $arr[1]; ?></strong>
+                        <strong class="detail"><?php echo $arr[0] . "<br/>of " . $arr[1]; ?></strong>
                         <script type="text/javascript">
                             $('.radial-progress.hidden-phone.gps-radial.imageAltScore').circleProgress({
-                                value: <?php echo $imageAltScore / $arr[1]; ?>,
+                                value: <?php echo $arr[0] / $arr[1]; ?>,
                                 size: 90,
                                 startAngle: Math.PI / 2,
                                 fill: {gradient: ['#1256c3', '#4cbfff']}
