@@ -10,16 +10,11 @@
         }
         return $content;
     }
-    session_start();                      
+    session_start();
     $pdfName = $_SESSION['pdfName'];    
     if (!is_file($pdfName.'.pdf')) {
         file_put_contents($pdfName.'.html', render('pdf.php'));
-        if ($_SESSION['logo'] == 'nativerank') {
-            $command = "../../phantomjs ../../pdf.js {$pdfName}.html {$pdfName}.pdf NativeRank.com \"1 800-520-8850\"";
-        } else {
-            $command = "../../phantomjs ../../pdf.js {$pdfName}.html {$pdfName}.pdf LocalSEO.com \"1 800-520-8850\"";
-        }
-
+        $command = "../../phantomjs ../../pdf.js {$pdfName}.html {$pdfName}.pdf NativeRank.com \"1 800-520-8850\"";
         exec($command);
     }
     header($_SERVER["SERVER_PROTOCOL"] . " 200 OK");
@@ -29,10 +24,6 @@
     header("Content-Length:".filesize($pdfName.'.pdf'));   
     $url =  parse_url($_SESSION['url']);
     echo $url;
-    if ($_SESSION['logo'] == 'nativerank') {
-        header("Content-Disposition: attachment; filename=\"{$url['host']} NativeRank Analysis.pdf\"");
-    } else {
-        header("Content-Disposition: attachment; filename=\"{$url['host']} LocalSEO Analysis.pdf\"");     
-    }                                  
+    header("Content-Disposition: attachment; filename=\"{$url['host']} NativeRank Analysis.pdf\"");
     readfile($pdfName.'.pdf');
     die();

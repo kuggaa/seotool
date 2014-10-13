@@ -300,7 +300,7 @@ body .form-inline {
     position: relative;
     top: 0;
     right: 15px;
-    height: 25px;
+    height: 30px;
     width: 38px;
     background: #f3f1f2;
     font-family: Arial;
@@ -465,18 +465,14 @@ body .form-inline {
 }
 .bar-4,.bar-3,.bar-2,.bar-1 {
     height: 6px !important;
-    background: #eb2123 !important;
     border-radius: 3px !important;
     box-shadow: none !important;
 }
 .bar-2 {
-    background: #e57a1d !important;
 }
 .bar-3 {
-    background: #0071b3 !important;
 }
 .bar-4 {
-    background: #04aa4f !important;
 }
 .bar-progress {
     height: 6px !important;
@@ -501,7 +497,25 @@ body .form-inline {
     font-size: 20px !important;
 }
 .progress-bars {
-    height: 42px !important;
+    float: left;
+    width: 0;
+    height: 100%;
+    font-size: 11px;
+    line-height: 17px;
+    color: #fff;
+    text-align: center;
+    background-color: #1259c3;
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr=#1259c3, endColorstr=#32a2e1);
+    background-image: -moz-linear-gradient(left, #1259c3 0%, #32a2e1 100%);
+    background-image: -webkit-linear-gradient(left, #1259c3 0%, #32a2e1 100%);
+    background-image: -ms-linear-gradient(left, #1259c3 0%, #32a2e1 100%);
+    background-image: linear-gradient(left, #1259c3 0%, #32a2e1 100%);
+    background-image: -o-linear-gradient(left, #1259c3 0%, #32a2e1 100%);
+    background-image: -webkit-gradient(linear, left bottom, right bottom, color-stop(0%,#1259c3), color-stop(100%,#32a2e1));
+    -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+    -webkit-transition: width .6s ease;
+    transition: width .6s ease;
 }
 .progress {
     width: 100% !important;
