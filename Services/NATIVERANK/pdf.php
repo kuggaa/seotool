@@ -11,8 +11,6 @@
     *   Domain Age
     */
     $getDomainAge = json_decode($_SESSION['getDomainAge'],true);
-    //file_put_contents("/tmp/my.log",$_SESSION['getDomainAge'].'\r\n',FILE_APPEND);
-    //file_put_contents("/tmp/my.log",$getDomainAge['created'],FILE_APPEND);
     /*
     *   End Domain Age
     */

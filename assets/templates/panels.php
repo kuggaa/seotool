@@ -24,6 +24,9 @@
                             size: 90,
                             startAngle: Math.PI / 2,
                             fill: {gradient: ['#1256c3', '#4cbfff']}
+                            <?php if ($pdfModeFlag == true) { ?>
+                            ,animation: {duration: 0, easing: 'circleProgressEasing'}
+                            <?php } ?>
                         });
                     </script>
                 </div>
@@ -387,6 +390,9 @@
                                 size: 90,
                                 startAngle: Math.PI / 2,
                                 fill: {gradient: ['#1256c3', '#4cbfff']}
+                                <?php if ($pdfModeFlag == true) { ?>
+                                ,animation: {duration: 0, easing: 'circleProgressEasing'}
+                                <?php } ?>
                             });
                         </script>
                     </div>
@@ -441,6 +447,9 @@
                                 size: 90,
                                 startAngle: Math.PI / 2,
                                 fill: {gradient: ['#1256c3', '#4cbfff']}
+                                <?php if ($pdfModeFlag == true) { ?>
+                                ,animation: {duration: 0, easing: 'circleProgressEasing'}
+                                <?php } ?>
                             });
                         </script>
                     </div>  
@@ -688,6 +697,9 @@
                                 size: 90,
                                 startAngle: Math.PI / 2,
                                 fill: {gradient: ['#1256c3', '#4cbfff']}
+                                <?php if ($pdfModeFlag == true) { ?>
+                                ,animation: {duration: 0, easing: 'circleProgressEasing'}
+                                <?php } ?>
                             });
                         </script>
                     </div>
@@ -755,6 +767,9 @@
                                 size: 90,
                                 startAngle: Math.PI / 2,
                                 fill: {gradient: ['#1256c3', '#4cbfff']}
+                                <?php if ($pdfModeFlag == true) { ?>
+                                ,animation: {duration: 0, easing: 'circleProgressEasing'}
+                                <?php } ?>
                             });
                         </script>
                     </div>
@@ -813,6 +828,9 @@
                                 size: 90,
                                 startAngle: Math.PI / 2,
                                 fill: {gradient: ['#1256c3', '#4cbfff']}
+                                <?php if ($pdfModeFlag == true) { ?>
+                                ,animation: {duration: 0, easing: 'circleProgressEasing'}
+                                <?php } ?>
                             });
                         </script>
                     </div>
@@ -856,6 +874,9 @@
                                 size: 90,
                                 startAngle: Math.PI / 2,
                                 fill: {gradient: ['#1256c3', '#4cbfff']}
+                                <?php if ($pdfModeFlag == true) { ?>
+                                ,animation: {duration: 0, easing: 'circleProgressEasing'}
+                                <?php } ?>
                             });
                         </script>
                     </div>
@@ -1011,6 +1032,9 @@
                                 size: 90,
                                 startAngle: Math.PI / 2,
                                 fill: {gradient: ['#1256c3', '#4cbfff']}
+                                <?php if ($pdfModeFlag == true) { ?>
+                                ,animation: {duration: 0, easing: 'circleProgressEasing'}
+                                <?php } ?>
                             });
                         </script>
                     </div>
@@ -1102,6 +1126,9 @@
                                 size: 90,
                                 startAngle: Math.PI / 2,
                                 fill: {gradient: ['#1256c3', '#4cbfff']}
+                                <?php if ($pdfModeFlag == true) { ?>
+                                ,animation: {duration: 0, easing: 'circleProgressEasing'}
+                                <?php } ?>
                             });
                         </script>
                     </div>
@@ -1170,6 +1197,9 @@
                                 size: 90,
                                 startAngle: Math.PI / 2,
                                 fill: {gradient: ['#1256c3', '#4cbfff']}
+                                <?php if ($pdfModeFlag == true) { ?>
+                                ,animation: {duration: 0, easing: 'circleProgressEasing'}
+                                <?php } ?>
                             });
                         </script>
                     </div>
@@ -1243,6 +1273,9 @@
                                 size: 90,
                                 startAngle: Math.PI / 2,
                                 fill: {gradient: ['#1256c3', '#4cbfff']}
+                                <?php if ($pdfModeFlag == true) { ?>
+                                ,animation: {duration: 0, easing: 'circleProgressEasing'}
+                                <?php } ?>
                             });
                         </script>
                     </div>

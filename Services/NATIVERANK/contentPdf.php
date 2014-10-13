@@ -317,7 +317,10 @@
         </div>
     <?php endif ?>
 
-<?php include ('../../assets/templates/panels.php'); ?>
+<?php 
+    $pdfModeFlag = true;
+    include ('../../assets/templates/panels.php'); 
+?>
 
     <div class="row">
         <div class="panel" id="overall-perf">
