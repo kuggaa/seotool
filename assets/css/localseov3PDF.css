@@ -296,19 +296,19 @@ body .form-inline {
 .panel-label-icon-dns,.panel-label-icon-www,.panel-label-icon-h1, .panel-label-icon-ip, .panel-label-icon-ico,
 .panel-label-icon-size, .panel-label-icon-lang, .panel-label-icon-charset, .panel-label-icon-seo, .panel-label-icon-searchengines, 
 .panel-label-icon-code, .panel-label-icon-social {
-    display: inline-block !important;
-    position: relative !important;
-    bottom: 10px !important;
-    right: 15px !important;
-    height: 46px !important;
-    width: 46px !important;
-    background: #830b0f !important;
-    font-family: Arial !important;
-    font-weight: Bold !important;
-    color: #fffcd5 !important;
-    font-size: 22px !important;
-    padding-top: 8px !important;
-    padding-left: 6px !important;
+    display: inline-block;
+    position: relative;
+    top: 0;
+    right: 15px;
+    height: 30px;
+    width: 38px;
+    background: #f3f1f2;
+    font-family: Arial;
+    font-weight: Bold;
+    color: #9C9C9C;
+    font-size: 22px;
+    padding-top: 8px;
+    padding-left: 6px;
 }
 .donaimname {
     padding-left: 5px !important;
@@ -380,9 +380,8 @@ body .form-inline {
     padding-left: 12px !important;
 }
 .panel-fa-icon-robots {
-    background: #1b3281 !important;
-    padding-top: 10px !important;
-    padding-left: 12px !important;
+    padding-top: 0px;
+    padding-left: 10px;
 }
 .panel-fa-icon-sitemap {
     background: #1e398d !important;
@@ -431,7 +430,7 @@ body .form-inline {
     font-style: normal !important;
     font-weight: normal !important;
     text-decoration: inherit !important;
-    color: #fffcd5 !important;
+    
     font-size: 24px !important;
 }
 .panel-fa-icon-twitter ,.panel-fa-icon-g-plus,.panel-fa-icon-facebook {
@@ -539,7 +538,7 @@ body .form-inline {
     padding-left: 9px !important;
 }
 .fa-check-circle-sm {
-    background: #1b3281 !important;
+    
     margin-left: 5px !important;
     padding-left: 9px !important;
 }
@@ -591,7 +590,7 @@ body .form-inline {
     font-family: Arial !important;
     font-weight: bold !important;
     font-size: 20px !important;
-    color: #fffcd5 !important;
+    
 }
 .fa-twitter-sm,.fa-facebook-sm,.fa-google-plus-sm,.fa-file-o-sm,.fa-sitemap-sm,.fa-check-circle-sm,.fa-dashboard-sm,.fa-picture-o-sm,.fa-chain-sm:before {   
     font-family: FontAwesome !important;
@@ -599,7 +598,7 @@ body .form-inline {
     font-weight: normal !important;
     text-decoration: inherit !important;
 /*--adjust as necessary--*/
-    color: #fffcd5 !important;
+    
     font-size: 22px !important;
 }
 .fa-file-o-sm,.fa-sitemap-sm,.fa-check-circle-sm:before {   
@@ -627,7 +626,7 @@ body .form-inline {
     font-family: Arial !important;
     font-weight: bold !important;
     font-size: 20px !important;
-    color: #fffcd5 !important;
+    
 }
 .pr-icon-sm {
     background: #f15a22 !important;
@@ -642,7 +641,7 @@ body .form-inline {
     font-family: Arial !important;
     font-weight: bold !important;
     font-size: 20px !important;
-    color: #fffcd5 !important;
+    
 }
 /*--sidebar-sm*/    
 
@@ -681,7 +680,7 @@ body .form-inline {
     margin-left: -5px !important;
 }
 .fa-check-circle-xs,.fa-check-circle-smm {
-    background: #1b3281 !important;
+    
     margin-left: 0px !important;
     padding-left: 9px !important;
 }
@@ -739,7 +738,7 @@ body .form-inline {
     font-family: Arial !important;
     font-weight: bold !important;
     font-size: 18px !important;
-    color: #fffcd5 !important;
+    
 }
 .fa-check-circle-xs,.fa-file-o-xs,.fa-file-o-smm,.fa-sitemap-smm,.fa-check-circle-smm,.fa-twitter-smm,.fa-facebook-smm,.fa-google-plus-smm,.fa-dashboard-smm,.fa-picture-o-smm,.fa-chain-smm:before {   
     font-family: FontAwesome !important;
@@ -747,7 +746,7 @@ body .form-inline {
     font-weight: normal !important;
     text-decoration: inherit !important;
 /*--adjust as necessary--*/
-    color: #fffcd5 !important;
+    
     font-size: 18px !important;
 }
 .fa-check-circle-xs,.fa-file-o-xs,.fa-file-o-smm,.fa-sitemap-smm,.fa-check-circle-smm:before { 
@@ -781,7 +780,7 @@ body .form-inline {
     font-family: Arial !important;
     font-weight: bold !important;
     font-size: 18px !important;
-    color: #fffcd5 !important;
+    
 }
 .pr-icon-smm {
     background: #f15a22 !important;
@@ -804,7 +803,7 @@ body .form-inline {
     padding-left:75px !important;
     font-family: "Segoe UI" !important;
     font-size: 16px !important;
-    color: #fffcd5 !important;
+    
 }
 .inner-link-text-seo  {
 }
@@ -871,9 +870,6 @@ body .form-inline {
 .gbc-a {
     background: #faa61a !important;
 }
-.rf-a {
-    background: #1b3281 !important;
-}
 .sitemap-a {
     background: #1e398d !important;
 }
@@ -912,7 +908,7 @@ body .form-inline {
     font-family: Arial !important;
     font-weight: bold !important;
     font-size: 20px !important;
-    color: #fffcd5 !important;
+    
 }
 .seo-icon {
 }
@@ -937,7 +933,6 @@ body .form-inline {
     font-weight: normal !important;
     text-decoration: inherit !important;
 /*--adjust as necessary--*/
-    color: #fffcd5 !important;
     font-size: 22px !important;
     *padding-right: 0em !important;
 
