@@ -300,7 +300,7 @@ body .form-inline {
     position: relative;
     top: 0;
     right: 15px;
-    height: 30px;
+    height: 25px;
     width: 38px;
     background: #f3f1f2;
     font-family: Arial;
@@ -317,113 +317,111 @@ body .form-inline {
     height: 60px !important;
 }
 .panel-fa-icon-gps {
-    background: #a1141a !important;
-    height: 46px !important;
-    padding-top: 9px !important;
-    padding-left: 10px !important;
+    padding-top: 0px;
+    padding-left: 10px;
 }
 .panel-fa-icon-itc {
-    background: #b8181e !important;
-    padding-top: 9px !important;
-    padding-left: 10px !important;
+    padding-top: 0px;
+    padding-left: 10px;
 }
 .panel-fa-icon-cuc {
-    background: #cc0000 !important;
-    padding-top: 12px !important;
-    padding-left: 12px !important;
-    height: 46px !important;
+    padding-top: 2px;
+    padding-left: 10px;
 }
-.panel-label-icon-gpr{
-    background: #f15a22 !important;
-    padding-left: 8px !important;
-    height: 46px !important;
-    bottom: 10px !important;
+.panel-label-icon-gpr {
+    background: #9C9C9C;
+    padding-left: 4px;
+    color: white;
+    padding-top: 1px;
+    margin-top: -2px;
 }
 .panel-label-icon-dns{
-    font-size: 17px !important;
-    padding-top: 11px !important;
+    font-size: 17px;
+    padding-top: 2px;
 }
 .panel-label-icon-ip{
-    font-size: 23px !important;
-    padding-left: 13px !important;
+    font-size: 23px;
+    padding-left: 12px;
+    padding-top: 0;
+    margin-top: -3px;
 }
 .panel-label-icon-lang{
-    font-size: 20px !important;
-    padding-top: 10px !important;
+    font-size: 20px;
+    padding-top: 0;
+    margin-top: -1px;
 }
 .panel-label-icon-charset{
-    font-size: 18px !important;
-    padding-top: 11px !important;
+    font-size: 18px;
+    padding-top: 1px;
 }
 .panel-label-icon-size{
-    font-size: 23px !important;
-    padding-left: 10px !important;
+    font-size: 23px;
+    padding-left: 10px;
+    padding-top: 0;
+    margin-top: -2px;
 }
 .panel-label-icon-ico{
-    padding-left: 8px !important;
+    padding-left: 8px;
+    padding-top: 0;
+    margin-top: -2px;
 }
 .panel-label-icon-h1{
     font-size: 23px !important;
     padding-left: 10px !important;
 }
-.panel-label-icon-www{
-    font-size: 12px !important;
-    padding-top: 15px !important;
+.panel-label-icon-www {
+    font-size: 12px;
+    padding-top: 6px;
 }
 .panel-label-icon-gpi {
-    background: #f3811f !important;
-    padding-left: 16px !important;
+    background: #9C9C9C;
+    padding-left: 14px;
+    color: white;
+    padding-top: 1px;
+    margin-top: -2px;
 }
 .panel-fa-icon-g-chain {
-    background: #faa61a !important;
-    padding-top: 12px !important;
-    padding-left: 12px !important;
+    padding-top: 2px;
+    padding-left: 8px;
+    color: #9C9C9C;
 }
 .panel-fa-icon-robots {
     padding-top: 0px;
     padding-left: 10px;
 }
 .panel-fa-icon-sitemap {
-    background: #1e398d !important;
-    padding-top: 10px !important;
-    padding-left: 12px !important;
+    padding-top: 2px;
+    padding-left: 12px;
 }
 .panel-fa-icon-pt {
-    background: #034ea2 !important;
-    height: 46px !important;
-    padding-top: 10px !important;
-    padding-left: 14px !important;
+    padding-top: 2px;
+    padding-left: 12px;
 }
 .panel-label-icon-meta-d {
-    background: #005baa !important;
-    padding-top: 7px !important;
-    padding-left: 9px !important;
+    padding-top: 0;
+    padding-left: 12px;
+    margin-top: -3px;
 }
 .panel-label-icon-meta-k {
-    background: #1268b3 !important;
-    padding-top: 9px !important;
-    padding-left: 6px !important;
+    padding-top: 0;
+    padding-left: 6px;
 }
 .panel-label-icon-wc {
-    background: #0073cc !important;
-    padding-top: 9px !important;
-    padding-left: 7px !important;
+    padding-top: 0;
+    padding-left: 5px;
+    margin-top: -3px;
 }
 .panel-fa-icon-twitter  {
-    background: #0db14b !important;
-    padding-top: 11px !important;
-    padding-left: 12px !important;
+    padding-top: 2px;
+    padding-left: 13px;
 }
 .panel-fa-icon-facebook  {
-    background: #72bf44 !important;
-    height: 46px !important;
-    padding-top: 11px !important;
-    padding-left: 16px !important;
+    padding-top: 3px;
+    padding-left: 16px;
 }
 .panel-fa-icon-g-plus  {
-    background: #90d03f !important;
-    padding-top: 11px !important;
-    padding-left: 12px !important;
+    padding-top: 2px;
+    padding-left: 12px;
 }
 .panel-fa-icon-itc ,.panel-fa-icon-g-plus,.panel-fa-icon-facebook,.panel-fa-icon-twitter,.panel-fa-icon-pt,.panel-fa-icon-sitemap,.panel-fa-icon-robots,.panel-fa-icon-g-chain,.panel-fa-icon-cuc,.panel-fa-icon-gps:before {   
     font-family: FontAwesome !important;
@@ -434,10 +432,15 @@ body .form-inline {
     font-size: 24px !important;
 }
 .panel-fa-icon-twitter ,.panel-fa-icon-g-plus,.panel-fa-icon-facebook {
-    color: #e4f2e7 !important;
+    color: #9C9C9C;
 }
 .panel-label-icon-wc,.panel-label-icon-meta-k,.panel-label-icon-meta-d,.panel-fa-icon-pt,.panel-fa-icon-sitemap,.panel-fa-icon-robots {
     
+}
+.panel-label-icon-w3 {
+    padding-top: 0;
+    margin-top: -1px;
+    padding-left: 5px;
 }
 .pb-relative {
     position: relative !important;
@@ -809,6 +812,7 @@ body .form-inline {
 }
 .panel-heading {
     height: 40px;
+    background-color: #f3f1f2;
     border-bottom: solid 2px #e5e5e5;
 }
 .panel-heading a:hover {
