@@ -364,9 +364,14 @@
         -webkit-print-color-adjust: exact !important;
     }
     .panel-default > .panel-heading {
-        background-color: #f5f5f5 !important;
-        border-color: #ddd !important;
-        color: #333 !important;
+        font-family: "Segoe UI";
+        font-size: 18px;
+        color: #b0b0b0;
+        background-color: #f3f1f2;
+        border-radius: 0px;
+        margin: -1px;
+        border: solid 2px #dadcdb;
+        padding: 5px 20px;
     }
     .panel-default {
         border-color: #ddd !important;
@@ -389,7 +394,7 @@
 
 <body style="width:770px;">
     <div style="color:#000;background-color: #EBEBEC;margin-left:15px;margin-right:15px;">
-        <img src="../../assets/img/nr_logo.png" style="float:left" height="75"/>
+        <img src="../../assets/img/nr-logo.png" style="float:left" height="75"/>
         <span style="float:right; background: url(../../assets/img/phonePdf.png) no-repeat scroll left center rgba(0, 0, 0, 0); color: #C90D0D; font-weight: 700; font-family: 'Alef',sans-serif;padding-left: 24px;margin-top: 25px;">
             1 800-520-8850
         </span>
