@@ -18,6 +18,7 @@ require_once "config/config.php";
 	<meta name="HandheldFriendly" content="True">
 	<meta name="MobileOptimized" content="320">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="../../assets/img/nativerank_favicon.png">
 
 	<!-- Stylesheets -->
 	<link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
