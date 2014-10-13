@@ -36,6 +36,7 @@
     */
     $getSEMRushDomainRank =  $_SESSION['getSEMRushDomainRank'];
     $getSEMRushOrganicKeywords =  $_SESSION['getSEMRushOrganicKeywords'];
+    $getSEMRushPaidSearch = $_SESSION['getSEMRushPaidSearch'];
     /*
     *   END SEMRush
     */
