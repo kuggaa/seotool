@@ -16,7 +16,8 @@
                                 value: <?php echo $totalScore / 100 ?>,
                                 size: 130,
                                 startAngle: Math.PI / 2,
-                                fill: {gradient: ['#1256c3', '#4cbfff']}
+                                fill: {gradient: ['#1256c3', '#4cbfff']},
+                                animation: {duration: 0, easing: 'circleProgressEasing'}
                             });
                         </script>
                     </div>
@@ -335,7 +336,8 @@
                                 value: <?php echo $totalScore / 100 ?>,
                                 size: 130,
                                 startAngle: Math.PI / 2,
-                                fill: {gradient: ['#1256c3', '#4cbfff']}
+                                fill: {gradient: ['#1256c3', '#4cbfff']},
+                                animation: {duration: 0, easing: 'circleProgressEasing'}
                             });
                         </script>
                     </div>
