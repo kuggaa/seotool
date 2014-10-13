@@ -497,6 +497,10 @@ body .form-inline {
     font-size: 20px !important;
 }
 .progress-bars {
+    height: 42px;
+}
+
+.progress-bar {
     float: left;
     width: 0;
     height: 100%;
