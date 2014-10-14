@@ -65,7 +65,7 @@ class SEMRush {
     }
 }
 
-$a = new SEMRush("facebook.com");
+$a = new SEMRush("getads.com");
 //print_r($a->getSEMRushOrganicKeywords());
 //print_r($a->getSEMRushCompetitors());
 $b = $a->getSEMRushDomainPaidSearchKeywords();
