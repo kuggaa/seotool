@@ -1,6 +1,7 @@
 <?php
 require_once '../../SEOstats/vendor/autoload.php';
 use \SEOstats\Services\Alexa as Alexa;
+use \SEOStats\Services\Google as Google;
 //class AlocateSeostatException extends Exception {}
 
 class SEO {
@@ -132,6 +133,7 @@ for($i = 0; $i < count($page); $i++){
 //print_r($a->getGooglePlusOnes());
 //print_r($a->getSiteindexTotal());
 //print_r($a->getPagespeedScore());
+//echo "\n";
 /*
 echo 'Google Backlinks Total site of '.$page.' is '.$a->getGoogleBacklinksTotal().'<br/>';
 echo 'Google+ PlusOnes site of '.$page.' is '.$a->getGooglePlusOnes().'<br/>';

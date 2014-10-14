@@ -95,10 +95,14 @@ class Google extends SEOstats
         }
 
         $url = parent::getUrl($url);
+        $_SERVER['REMOTE_ADDR'] = gethostbyname ( $url );
         $url = sprintf(Config\Services::GOOGLE_PAGESPEED_URL,
-            $url, Config\ApiKeys::GOOGLE_SIMPLE_API_ACCESS_KEY);
-
+            $url, Config\ApiKeys::GOOGLE_SIMPLE_API_ACCESS_KEY); 
+            
+//        echo $url."\n";
         $ret = parent::_getPage($url);
+        
+//        var_dump($ret);
 
         return Helper\Json::decode($ret);
     }
@@ -107,6 +111,7 @@ class Google extends SEOstats
     {
         $url = parent::getUrl($url);
         $ret = self::getPagespeedAnalysis($url);
+//        var_dump($ret);
 
         return !$ret->score ? parent::noDataDefaultValue() :
             intval($ret->score);
