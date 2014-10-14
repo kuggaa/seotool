@@ -327,10 +327,10 @@ class SEMRush extends SEOstats
     public static function getPaidSearchKeywords($url = false, $db = false)
     {
         $db      = false !== $db ? $db : Config\DefaultSettings::SEMRUSH_DB;
-        $dataUrl = self::getAdWordsApiUrlBevolvedEdition($url, $db, 'domain_adwords', "Ad,Ac,Tt,Ds,Vu,Ur,Pc,Tc,Cp", 3);
+        $dataUrl = self::getAdWordsApiUrlBevolvedEdition($url, $db, 'domain_adwords', "Ph,Cp,Tc", 3);
         $data    = parent::_getPage($dataUrl);
         $data2 = explode("\n", $data);
-        if (sizeof($data2) == 1)
+        if (sizeof($data2) < 2)
         {
             return 0;
         } else {

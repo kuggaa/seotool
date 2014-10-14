@@ -65,11 +65,11 @@ class SEMRush {
     }
 }
 
-//$a = new SEMRush("facebook.com");
+$a = new SEMRush("facebook.com");
 //print_r($a->getSEMRushOrganicKeywords());
 //print_r($a->getSEMRushCompetitors());
-//$b = $a->getSEMRushDomainPaidSearchKeywords();
-//var_dump($b);   
+$b = $a->getSEMRushDomainPaidSearchKeywords();
+var_dump($b);   
 //echo "\n";
 
 
