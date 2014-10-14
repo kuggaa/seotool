@@ -341,9 +341,28 @@ class SEMRush extends SEOstats
                 $segs = explode(";", $line);
                 array_push($result, $segs);
             }
-            //unset($data);
             return (!is_array($result) || strpos($data, 'NOTHING FOUND') !== false) ? 0 : $result;
-//            return 61;
+        }
+    }
+
+    public static function getPaidSearchMonthlyBudget($url = false, $db = false)
+    {
+        $db      = false !== $db ? $db : Config\DefaultSettings::SEMRUSH_DB;
+        $dataUrl = self::getAdWordsApiUrlBevolvedEdition($url, $db, 'domain_rank', "Ad,Ac", 3);
+        $data    = parent::_getPage($dataUrl);
+        $data2 = explode("\n", $data);
+        if (sizeof($data2) < 2)
+        {
+            return 0;
+        } else {
+            $result = array();
+            for($i = 1; $i < count($data2); $i++) {
+                $line = html_entity_decode($data2[$i]);
+                $line = preg_replace_callback("/(&#[0-9]+;)/", function($m) { return mb_convert_encoding($m[1], "UTF-8", "HTML-ENTITIES"); }, $line);
+                $segs = explode(";", $line);
+                array_push($result, $segs);
+            }
+            return (!is_array($result) || strpos($data, 'NOTHING FOUND') !== false) ? 0 : $result;
         }
     }
 }
