@@ -63,6 +63,15 @@ class SEMRush {
         }
         return $this->tmp;
     }
+
+    public function getSEMRushDomainPaidSearchMonthlyBudget() {
+        try{
+            $this->tmp = \SEOstats\Services\SemRush::getPaidSearchKeywords($this->page);
+        } catch (Exception $e) {
+            $this->tmp = 0;
+        }
+        return $this->tmp;
+    }
 }
 
 $a = new SEMRush("facebook.com");
