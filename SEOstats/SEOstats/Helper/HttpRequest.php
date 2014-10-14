@@ -49,8 +49,8 @@ class HttpRequest
         }
         curl_setopt($ch, CURLOPT_HTTPHEADER, array('X-Real-IP: '.$_SERVER['REMOTE_ADDR']));
 
-//        $response = curl_exec($ch);
-        var_dump($response);
+        $response = curl_exec($ch);
+//        var_dump($response);
         $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         curl_close($ch);
 
