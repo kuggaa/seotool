@@ -74,12 +74,12 @@ class SEMRush {
     }
 }
 
-$a = new SEMRush("getads.com");
+//$a = new SEMRush("facebook.com");
 //print_r($a->getSEMRushOrganicKeywords());
 //print_r($a->getSEMRushCompetitors());
 // $b = $a->getSEMRushDomainPaidSearchKeywords();
-$b = $a->getSEMRushDomainPaidSearchMonthlyBudget();
-var_dump($b);   
+//$b = $a->getSEMRushDomainPaidSearchMonthlyBudget();
+//var_dump($b);   
 //echo "\n";
 
 
