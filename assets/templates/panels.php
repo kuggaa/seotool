@@ -849,14 +849,14 @@
     if ($getSEMRushPaidSearch != 0) {
 ?>
     <div class="row unbreakable">
-    <style>
-        div#top3Keywords-panel tr td {
-            padding: 2px 10px;
-        }
-        div#top3Keywords-panel th {
-            padding: 2px 10px;
-        }
-    </style>
+        <style>
+            div#top3Keywords-panel tr td {
+                padding: 2px 10px;
+            }
+            div#top3Keywords-panel th {
+                padding: 2px 10px;
+            }
+        </style>
         <div id="top3Keywords-panel" class="panel panel-default">
           <div class="panel-heading heading-main">
             <span class="panel-label-icon-gpi pull-left">$</span>
@@ -868,11 +868,11 @@
             <div class="row">
                 <div class="col-md-3 col-sm-3">
                     <div class="progress-bars visible-phone">
-                        <span class="progress-label-left"><?php echo $childsafety ?> <span style="font-size: 12px;">of 100</span></span></span>
-                        <span class="pull-right"><?php echo $childsafety ?><span style="font-size: 12px;">%</span></span>
+                        <span class="progress-label-left"><?php echo $getSEMRushPaidSearchDomainOverview[0][1] ?> <span style="font-size: 12px;">for $getSEMRushPaidSearchDomainOverview[0][0]</span></span></span>
+                        <span class="pull-right"><?php echo $getSEMRushPaidSearchDomainOverview[0][1] ?><span style="font-size: 12px;">%</span></span>
                         <div class="progress bar-progress">
                             <div class="progress-bar bar-3" role="progressbar" style="width: <?php echo $childsafety ?>%;">
-                                <span class="sr-only"><?php echo $childsafety ?>% Complete</span>
+                                <span class="sr-only"><?php echo $getSEMRushPaidSearchDomainOverview[0][1] ?>% Complete</span>
                             </div>
                         </div>
                     </div>
@@ -898,6 +898,60 @@
                                 <td><?php echo $getSEMRushPaidSearch[$i][2]; ?></td>
                             </tr>
                             <?php } ?>
+                        </tbody>
+                    </table>
+                    <span class="source-label pull-left">SOURCE: SEMRUSH</span>
+                    <span class="influence-label pull-right">INFLUENCE:
+                    <span class="glyphicon glyphicon-plus-sign"></span>
+                    <span class="glyphicon glyphicon-plus-sign"></span>
+                    <span class="glyphicon glyphicon-plus-sign"></span>
+                    <span class="glyphicon glyphicon-plus-sign"></span>
+                    <span class="glyphicon glyphicon-plus-sign"></span>
+                    </span>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="row unbreakable">
+        <style>
+            div#estimagedBudget-panel tr td {
+                padding: 2px 10px;
+            }
+            div#estimagedBudget-panel th {
+                padding: 2px 10px;
+            }
+        </style>
+        <div id="estimagedBudget-panel" class="panel panel-default">
+          <div class="panel-heading heading-main">
+            <span class="panel-label-icon-gpi pull-left">$</span>
+                Estimated budget
+            <span class="glyphicon glyphicon-ok-circle'> pull-right"></span>
+          </div>
+          
+          <div class="panel-body body-main">
+            <div class="row">
+                <div class="col-md-3 col-sm-3">
+                    <p class="passed">Estimated.</p>    
+
+                </div>
+                <div class="col-md-9 col-sm-9">
+                    <span class="body-text">Top 3 keywords of your domain</span>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>The recommended PPC budget</td>
+                                <td><?php echo "\$" . $_SESSION['recommendBudget']['recommendedPPCBudget'] . "/month"; ?></td>
+                            </tr>
+                            <tr>
+                                <td>Monthly PPC management fee</td>
+                                <td><?php echo "\$" . $_SESSION['recommendBudget']['monthlyPPCManageFee'] . "/month"; ?></td>
+                            </tr>
+                            <tr>
+                                <td>Total PPC cost for client</td>
+                                <td><?php echo "\$" . $_SESSION['recommendBudget']['totalPPCCost'] . "/month"; ?></td>
+                            </tr>
                         </tbody>
                     </table>
                     <span class="source-label pull-left">SOURCE: SEMRUSH</span>
