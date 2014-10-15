@@ -44,12 +44,20 @@ if ($_SESSION['userEmail'] != null)
         *   Recommended Budget from Nativerank
         */
             function setRecommendedBudget() {
-                //if (count($getSEMRushPaidSearch) == 0) {
-//                    return;
+                global $getSEMRushPaidSearch;
+                if (count($getSEMRushPaidSearch) == 0) {
+                    return;
 //                    exit;
-//                }   
+                }   
                     
                 $avgCpc = (floatval($getSEMRushPaidSearch[0][1]) + floatval($getSEMRushPaidSearch[1][1]) + floatval($getSEMRushPaidSearch[2][1]) + floatval($getSEMRushPaidSearch[3][1]) + floatval($getSEMRushPaidSearch[4][1])) / 5;
+                
+//                var_dump($_SESSION);
+//                var_dump($getSEMRushPaidSearch);
+//                echo floatval($getSEMRushPaidSearch[1][1]);  echo "<br/>";
+//                echo floatval($getSEMRushPaidSearch[2][1]);  echo "<br/>";
+//                echo floatval($getSEMRushPaidSearch[3][1]);  echo "<br/>";
+//                echo floatval($getSEMRushPaidSearch[4][1]);  echo "<br/>";
                 $expConv = 10;
                 $convRate = 5;
                 $recBudget = ceil(($avgCpc * ($expConv / $convRate)) / 100) * 100;
@@ -72,6 +80,8 @@ if ($_SESSION['userEmail'] != null)
             }
             
         setRecommendedBudget();
+//        var_dump($_SESSION['recommendBudget']);
+//        exit;
 
     /**
      *   WOT Reputation - get all json data  from wot api server
