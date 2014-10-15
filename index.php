@@ -58,18 +58,17 @@ if ($_SESSION['userEmail'] != null)
                 $expConv = 10;
                 $convRate = 0.05;
                 $recBudget = ceil(($avgCpc * ($expConv / $convRate)) / 100) * 100;
-                function manFee() {
-                    global $recBudget;
-                    if ($recBudget < 1499.99) {
+                function manFee($val) {
+                    if ($val < 1499.99) {
                         return 250;
-                    } else if ($recBudget < 9999) {
+                    } else if ($val < 9999) {
                         return ceil($recBudget * 0.2);
                     } else {
-                        ceil($recBudget * 0.15);
+                        ceil($val * 0.15);
                     }
                 }
                 
-                $manFee = manFee();
+                $manFee = manFee($recBudget);
                 $totalCost = ceil($recBudget + $manFee);
                 $recommendBudget['recommendedPPCBudget'] = $recBudget;
                 $recommendBudget['monthlyPPCManageFee'] = $manFee;
