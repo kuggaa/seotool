@@ -49,7 +49,7 @@ if ($_SESSION['userEmail'] != null)
 //                    exit;
 //                }   
                     
-                $avgCpc = ($getSEMRushPaidSearch[0][1] + $getSEMRushPaidSearch[1][1] + $getSEMRushPaidSearch[2][1] + $getSEMRushPaidSearch[3][1] + $getSEMRushPaidSearch[4][1]) / 5;
+                $avgCpc = (floatval($getSEMRushPaidSearch[0][1]) + floatval($getSEMRushPaidSearch[1][1]) + floatval($getSEMRushPaidSearch[2][1]) + floatval($getSEMRushPaidSearch[3][1]) + floatval($getSEMRushPaidSearch[4][1])) / 5;
                 $expConv = 10;
                 $convRate = 5;
                 $recBudget = ceil(($avgCpc * ($expConv / $convRate)) / 100) * 100;
