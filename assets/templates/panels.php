@@ -859,7 +859,7 @@
         </style>
         <div id="top3Keywords-panel" class="panel panel-default">
           <div class="panel-heading heading-main">
-            <span class="panel-label-icon-gpi pull-left">KW</span>
+            <span class="panel-label-icon-gpi pull-left">#</span>
                 Top 3 Paid Keywords
             <span class="glyphicon glyphicon-ok-circle'> pull-right"></span>
           </div>
