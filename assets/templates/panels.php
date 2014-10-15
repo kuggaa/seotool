@@ -814,17 +814,17 @@
                     <div class="progress-bars visible-phone">
                         <span class="progress-label-left"><?php echo getLetterScore(($getSEMRushPaidSearch == 0) ? 20 : 61) ?></span>
                         <div class="progress bar-progress">
-                            <div class="progress-bar bar-3" role="progressbar" style="width: <?php echo $searchEngineScore ?>%;">
-                                <span class="sr-only"><?php echo ($getSEMRushPaidSearch == 0) ? 20 : 61) ?></span>
+                            <div class="progress-bar bar-3" role="progressbar" style="width: <?php echo (($getSEMRushPaidSearch ==0) ? 20 : 61); ?>%;">
+                                <span class="sr-only"><?php echo ($getSEMRushPaidSearch == 0) ? 20 : 61 ?></span>
                             </div>
                         </div>
                     </div>
                     
                     <div class="radial-progress hidden-phone gps-radial paidSearch">
-                        <strong class="detail"><?php echo getLetterScore(($getSEMRushPaidSearch == 0) ? 20 : 61)) ?></strong>
+                        <strong class="detail"><?php echo getLetterScore(($getSEMRushPaidSearch == 0) ? 20 : 61) ?></strong>
                         <script type="text/javascript">
                             $('.radial-progress.hidden-phone.gps-radial.paidSearch').circleProgress({
-                                value: <?php echo ($getSEMRushPaidSearch == 0) ? 20 : 61) / 100 ?>,
+                                value: <?php echo (($getSEMRushPaidSearch == 0) ? 20 : 61) / 100 ?>,
                                 size: 90,
                                 startAngle: Math.PI / 2,
                                 fill: {gradient: ['#1256c3', '#4cbfff']}
@@ -845,9 +845,78 @@
           </div>
         </div>
     </div>
+<?php
+    if ($getSEMRushPaidSearch != 0) {
+?>
+    <div class="row unbreakable">
+    <style>
+        div#top3Keywords-panel tr td {
+            padding: 2px 10px;
+        }
+        div#top3Keywords-panel th {
+            padding: 2px 10px;
+        }
+    </style>
+        <div id="top3Keywords-panel" class="panel panel-default">
+          <div class="panel-heading heading-main">
+            <span class="panel-label-icon-gpi pull-left">$</span>
+                Top 3 Paid Keywords
+            <span class="glyphicon glyphicon-ok-circle'> pull-right"></span>
+          </div>
+          
+          <div class="panel-body body-main">
+            <div class="row">
+                <div class="col-md-3 col-sm-3">
+                    <div class="progress-bars visible-phone">
+                        <span class="progress-label-left"><?php echo $childsafety ?> <span style="font-size: 12px;">of 100</span></span></span>
+                        <span class="pull-right"><?php echo $childsafety ?><span style="font-size: 12px;">%</span></span>
+                        <div class="progress bar-progress">
+                            <div class="progress-bar bar-3" role="progressbar" style="width: <?php echo $childsafety ?>%;">
+                                <span class="sr-only"><?php echo $childsafety ?>% Complete</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="radial-progress hidden-phone gps-radial childsafety">
+                        <strong class="detail-rank"><?php echo "\$" . $getSEMRushPaidSearchDomainOverview[0][1] . " for " . $getSEMRushPaidSearchDomainOverview[0][0] ?></strong>  
+                    </div> 
+                    <p class="passed">Passed</p>    
 
-
-
+                </div>
+                <div class="col-md-9 col-sm-9">
+                    <span class="body-text">Top 3 keywords of your domain</span>
+                    <table>
+                        <thead>
+                            <th>Keyword</th>
+                            <th>Cost Per Click</th>
+                            <th>Traffic Cost</th>
+                        </thead>
+                        <tbody>
+                            <?php for($i = 0; $i < 3; $i++) { ?>
+                            <tr>
+                                <td><?php echo $getSEMRushPaidSearch[$i][0]; ?></td>
+                                <td><?php echo $getSEMRushPaidSearch[$i][1]; ?></td>
+                                <td><?php echo $getSEMRushPaidSearch[$i][2]; ?></td>
+                            </tr>
+                            <?php } ?>
+                        </tbody>
+                    </table>
+                    <span class="source-label pull-left">SOURCE: SEMRUSH</span>
+                    <span class="influence-label pull-right">INFLUENCE:
+                    <span class="glyphicon glyphicon-plus-sign"></span>
+                    <span class="glyphicon glyphicon-plus-sign"></span>
+                    <span class="glyphicon glyphicon-plus-sign"></span>
+                    <span class="glyphicon glyphicon-plus-sign"></span>
+                    <span class="glyphicon glyphicon-plus-sign"></span>
+                    </span>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+<?php
+    }
+?>
+<!--    End of Paid Search Panel -->
 
     <div class="row unbreakable">
         <div id="social-panel" class="panel panel-default">

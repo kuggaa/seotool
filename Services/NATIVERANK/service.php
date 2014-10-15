@@ -189,7 +189,9 @@
                 $_SESSION['getSEMRushOrganicKeywords'] = $output['getSEMRushOrganicKeywords'] = $seo->getSEMRushOrganicKeywords();
             } else if($serv == 'getSEMRushPaidSearch') {
                 $getSEMRushDomainPaidSearchValueTemp = $seo->getSEMRushDomainPaidSearchKeywords();
+                $getSEMRushPaidSearchDomainOverview = $seo->getSEMRushDomainPaidSearchDomainOverview();
                 $_SESSION['getSEMRushPaidSearch'] = $output['getSEMRushPaidSearch'] = $getSEMRushDomainPaidSearchValueTemp;
+                $_SESSION['getSEMRushPaidSearchDomainOverview'] = $output['getSEMRushPaidSearchDomainOverview'] = $getSEMRushPaidSearchDomainOverview;
             } else {
                 $output['error'] = 'Service not Found';
             } 

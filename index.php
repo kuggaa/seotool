@@ -39,6 +39,39 @@ if ($_SESSION['userEmail'] != null)
         $getSEMRushDomainRank =  $_SESSION['getSEMRushDomainRank'];
         $getSEMRushOrganicKeywords =  $_SESSION['getSEMRushOrganicKeywords'];
         $getSEMRushPaidSearch = $_SESSION['getSEMRushPaidSearch'];
+        $getSEMRushPaidSearchDomainOverview = $_SESSION['getSEMRushPaidSearchDomainOverview'];
+        /**
+        *   Recommended Budget from Nativerank
+        */
+            function setRecommendedBudget() {
+                //if (count($getSEMRushPaidSearch) == 0) {
+//                    return;
+//                    exit;
+//                }   
+                    
+                $avgCpc = ($getSEMRushPaidSearch[0][1] + $getSEMRushPaidSearch[1][1] + $getSEMRushPaidSearch[2][1] + $getSEMRushPaidSearch[3][1] + $getSEMRushPaidSearch[4][1]) / 5;
+                $expConv = 10;
+                $convRate = 5;
+                $recBudget = ceil(($avgCpc * ($expConv / $convRate)) / 100) * 100;
+                function manFee() {
+                    if ($recBudget < 1499.99) {
+                        return 250;
+                    } else if ($recBudget < 9999) {
+                        return ceil($recBudget * 0.2);
+                    } else {
+                        ceil($recBudget * 0.15);
+                    }
+                }
+                
+                $manFee = manFee();
+                $totalCost = ceil($recBudget + $manFee);
+                $recommendBudget['recommendedPPCBudget'] = $recBudget;
+                $recommendBudget['monthlyPPCManageFee'] = $manFee;
+                $recommendBudget['totalPPCCost'] = $totalCost;
+                $_SESSION['recommendBudget'] = $recommendBudget;
+            }
+            
+        setRecommendedBudget();
 
     /**
      *   WOT Reputation - get all json data  from wot api server

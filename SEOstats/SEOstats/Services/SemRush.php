@@ -327,7 +327,8 @@ class SEMRush extends SEOstats
     public static function getPaidSearchKeywords($url = false, $db = false)
     {
         $db      = false !== $db ? $db : Config\DefaultSettings::SEMRUSH_DB;
-        $dataUrl = self::getAdWordsApiUrlBevolvedEdition($url, $db, 'domain_adwords', "Ph,Cp,Tc", 3);
+        $dataUrl = self::getAdWordsApiUrlBevolvedEdition($url, $db, 'domain_organic', "Ph,Cp,Tc", 5);
+//        $dataUrl = self::getAdWordsApiUrlBevolvedEdition($url, $db, 'domain_adwords', "Ph,Cp,Tc", 5);
         $data    = parent::_getPage($dataUrl);
         $data2 = explode("\n", $data);
         if (sizeof($data2) < 2)
@@ -345,10 +346,10 @@ class SEMRush extends SEOstats
         }
     }
 
-    public static function getPaidSearchMonthlyBudget($url = false, $db = false)
+    public static function getPaidSearchDomainOverview($url = false, $db = false)
     {
         $db      = false !== $db ? $db : Config\DefaultSettings::SEMRUSH_DB;
-        $dataUrl = self::getAdWordsApiUrlBevolvedEdition($url, $db, 'domain_rank', "Ad,Ac", 3);
+        $dataUrl = self::getAdWordsApiUrlBevolvedEdition($url, $db, 'domain_rank', "Ad,Ac", 5);
         $data    = parent::_getPage($dataUrl);
         $data2 = explode("\n", $data);
         if (sizeof($data2) < 2)

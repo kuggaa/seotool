@@ -32,7 +32,7 @@ interface Services
     const SEMRUSH_API_URL = 'http://%s.api.semrush.com/?action=report&type=%s&key=eb8148a9bc0385722a040b8fecc33342&display_limit=%s&export=api&export_columns=Dn&domain=%s';
     const SEMRUSH_API_URL2 = 'http://%s.api.semrush.com/?action=report&type=%s&key=eb8148a9bc0385722a040b8fecc33342&display_limit=%s&export=api&export_columns=Dn,Np&domain=%s';
     const SEMRUSH_ADWORDS_API_URL = 'http://api.semrush.com/?type=%s&key=eb8148a9bc0385722a040b8fecc33342&display_limit=%s&export_columns=%s&domain=%s&database=%s';
-    const SEMRUSH_DOMAINPAIDSEARCH_API_URL = 'http://api.semrush.com/?type=%s&key=eb8148a9bc0385722a040b8fecc33342&display_limit=%s&export_columns=%s&domain=%s&database=%s';
+    const SEMRUSH_DOMAINPAIDSEARCH_API_URL = 'http://api.semrush.com/?type=%s&key=eb8148a9bc0385722a040b8fecc33342&display_limit=%s&export_columns=%s&domain=%s&database=%s&display_sort=cp_desc';
     const SEMRUSH_GRAPH_URL = 'http://semrush.com/archive/graphs.php?domain=%s&db=%s&type=%s&w=%s&h=%s&lc=%s&dc=%s&l=%s';
     const SEMRUSH_WIDGET_URL2 = 'http://%s.api.semrush.com/?action=report&type=%s&key=eb8148a9bc0385722a040b8fecc33342&display_limit=%s&export_columns=Ph,Po&export=api&domain=%s';
 

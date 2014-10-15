@@ -64,9 +64,9 @@ class SEMRush {
         return $this->tmp;
     }
 
-    public function getSEMRushDomainPaidSearchMonthlyBudget() {
+    public function getSEMRushDomainPaidSearchDomainOverview() {
         try{
-            $this->tmp = \SEOstats\Services\SemRush::getPaidSearchMonthlyBudget($this->page);
+            $this->tmp = \SEOstats\Services\SemRush::getPaidSearchDomainOverview($this->page);
         } catch (Exception $e) {
             $this->tmp = 0;
         }
@@ -74,11 +74,11 @@ class SEMRush {
     }
 }
 
-//$a = new SEMRush("facebook.com");
+//$a = new SEMRush("ebay.com");
 //print_r($a->getSEMRushOrganicKeywords());
 //print_r($a->getSEMRushCompetitors());
 // $b = $a->getSEMRushDomainPaidSearchKeywords();
-//$b = $a->getSEMRushDomainPaidSearchMonthlyBudget();
+//$b = $a->getSEMRushDomainPaidSearchDomainOverview();
 //var_dump($b);   
 //echo "\n";
 
