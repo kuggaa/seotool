@@ -937,7 +937,7 @@
 
                 </div>
                 <div class="col-md-9 col-sm-9">
-                    <span class="body-text">Top 3 keywords of your domain</span>
+                    <span class="body-text">We recommend a minimum budget of $<?php echo $_SESSION['recommendBudget']['totalPPCCost']; ?>.00 Monthly. </span>
                     <table>
                         <tbody>
                             <tr>
