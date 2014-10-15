@@ -51,7 +51,7 @@ if ($_SESSION['userEmail'] != null)
                     
                 $avgCpc = (floatval($getSEMRushPaidSearch[0][1]) + floatval($getSEMRushPaidSearch[1][1]) + floatval($getSEMRushPaidSearch[2][1]) + floatval($getSEMRushPaidSearch[3][1]) + floatval($getSEMRushPaidSearch[4][1])) / 5;
                 $expConv = 10;
-                $convRate = 5;
+                $convRate = 0.05;
                 $recBudget = ceil(($avgCpc * ($expConv / $convRate)) / 100) * 100;
                 function manFee() {
                     if ($recBudget < 1499.99) {
