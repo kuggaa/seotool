@@ -59,6 +59,7 @@ if ($_SESSION['userEmail'] != null)
                 $convRate = 0.05;
                 $recBudget = ceil(($avgCpc * ($expConv / $convRate)) / 100) * 100;
                 function manFee() {
+                    global $recBudget;
                     if ($recBudget < 1499.99) {
                         return 250;
                     } else if ($recBudget < 9999) {
