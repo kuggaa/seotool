@@ -64,7 +64,7 @@ if ($_SESSION['userEmail'] != null)
                     } else if ($val < 9999) {
                         return ceil($recBudget * 0.2);
                     } else {
-                        ceil($val * 0.15);
+                        return ceil($val * 0.15);
                     }
                 }
                 
