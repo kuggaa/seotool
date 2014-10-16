@@ -37,6 +37,44 @@
     $getSEMRushDomainRank =  $_SESSION['getSEMRushDomainRank'];
     $getSEMRushOrganicKeywords =  $_SESSION['getSEMRushOrganicKeywords'];
     $getSEMRushPaidSearch = $_SESSION['getSEMRushPaidSearch'];
+    $getSEMRushPaidSearchDomainOverview = $_SESSION['getSEMRushPaidSearchDomainOverview'];
+    /**
+    *   Recommended Budget from Nativerank
+    */
+        function setRecommendedBudget() {
+            global $getSEMRushPaidSearch;
+            if (count($getSEMRushPaidSearch) == 0) {
+                return;
+            }   
+                
+            $avgCpc = (
+                floatval($getSEMRushPaidSearch[0][1]) + 
+                floatval($getSEMRushPaidSearch[1][1]) + 
+                floatval($getSEMRushPaidSearch[2][1]) + 
+                floatval($getSEMRushPaidSearch[3][1]) + 
+                floatval($getSEMRushPaidSearch[4][1])) / 5;
+            $expConv = 10;
+            $convRate = 0.05;
+            $recBudget = ceil(($avgCpc * ($expConv / $convRate)) / 100) * 100;
+            function manFee($val) {
+                if ($val < 1499.99) {
+                    return 250;
+                } else if ($val < 9999) {
+                    return ceil($recBudget * 0.2);
+                } else {
+                    return ceil($val * 0.15);
+                }
+            }
+            
+            $manFee = manFee($recBudget);
+            $totalCost = ceil($recBudget + $manFee);
+            $recommendBudget['recommendedPPCBudget'] = $recBudget;
+            $recommendBudget['monthlyPPCManageFee'] = $manFee;
+            $recommendBudget['totalPPCCost'] = $totalCost;
+            $_SESSION['recommendBudget'] = $recommendBudget;
+        }
+        
+    setRecommendedBudget();
     /*
     *   END SEMRush
     */
