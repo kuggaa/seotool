@@ -378,27 +378,6 @@
         height:0px;
         visibility: hidden;
     }
-    .progress-bar {
-        float: left;
-        width: 0;
-        height: 100%;
-        font-size: 11px;
-        line-height: 17px;
-        color: #fff;
-        text-align: center;
-        background-color: #1259c3;
-        filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr=#1259c3, endColorstr=#32a2e1);
-        background-image: -moz-linear-gradient(left, #1259c3 0%, #32a2e1 100%);
-        background-image: -webkit-linear-gradient(left, #1259c3 0%, #32a2e1 100%);
-        background-image: -ms-linear-gradient(left, #1259c3 0%, #32a2e1 100%);
-        background-image: linear-gradient(left, #1259c3 0%, #32a2e1 100%);
-        background-image: -o-linear-gradient(left, #1259c3 0%, #32a2e1 100%);
-        background-image: -webkit-gradient(linear, left bottom, right bottom, color-stop(0%,#1259c3), color-stop(100%,#32a2e1));
-        -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
-        box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
-        -webkit-transition: width .6s ease;
-        transition: width .6s ease;
-    }
     .progress-label-right1, .progress-label-right2, .progress-label-right3, .progress-label-right4 {
         float: right !important;
         width: 50px !important;
